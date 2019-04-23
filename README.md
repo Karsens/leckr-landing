@@ -46,6 +46,7 @@ Of course, you should deliver on the value propositions, so keep it simple. If y
 * Stage E) FiF & Seed
 * Stage F) Grow
 
+![Idea to Scale](./idea_to_scale.jpg)
 
 ## A) Ideas & Conceptualization (±8h):
 The most important step not to skip. Perfection may take up to a few days, but a first version can be made within ±4 hours.
