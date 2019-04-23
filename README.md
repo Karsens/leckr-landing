@@ -67,17 +67,17 @@ Goal: Figure out if it's probably viable
 ## B) Prototype & Pre-validation (±16h and $±1000,-)
 If the concept doesn't feel good, quit. If the concept feels and looks good on paper, it's time to prototype & pre-validate. Before making the app, it's important to get some feedback.
 
-B1) Create assets (#4)
+B1) Read about techniques that suit validating and prototyping your SaaS product: Examples: [1](https://ryanbattles.com/post/product-validation-techniques) [2](https://briancasel.com/validating-a-saas-product-step-by-step/) and more (search for [SaaS validation](https://www.google.com/search?q=saas+validation&oq=saas+validation&aqs=chrome..69i57j69i60l2.1416j0j4&sourceid=chrome&ie=UTF-8).)
 
-B2) Ad -> Simple form -> follow up form (#2)
+B2) Create a landing page
 
-B3) Ad -> Basic landing page -> Email -> Form -> Follow up form (#1)
+B3) Create assets
 
-B4) ProductHunt announcement, Reddit, Show HN, Forums, Friends
+B4) Funnel 1: Ad -> Basic landing page -> Email -> Form -> Follow up form
 
-B5) Evaluation
+B5) Funnel 2: ProductHunt announcement, Reddit, Show HN, Forums, Friends
 
-Evaluate KPI's and feedback, send this to advisors & potential investors.
+B6) Evaluation: Evaluate KPI's and feedback, send this to advisors & potential investors.
 
 Goal: at least 100 filled in forms.
 
