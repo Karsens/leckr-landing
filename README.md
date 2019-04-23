@@ -52,7 +52,13 @@ The most important step not to skip. Perfection may take up to a few days, but a
 
 A1) Get ideas
 
-A2) Market research & discussion with friends
+A2) Market research
+
+A3) Discussion with friends
+
+A4) Look if there's demand through sites like Udemy. A course can teach you what people want, if you bring it in an app.
+- [Example](https://www.udemy.com/courses/search/?src=ukw&q=network+building)
+- [Example 2](https://www.udemy.com/courses/search/?q=relationship%20building&src=sac&kw=building%20re)
 
 A3) Extensive Lean Canvas (why, how, rough USP definition, virality estimation, marketing estimation, business model, critical mass, chicken and egg estimation, estimated money needed to be viable, sales needed estimation)
 
