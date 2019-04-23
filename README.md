@@ -38,12 +38,14 @@ Of course, you should deliver on the value propositions, so keep it simple. If y
 
 
 # The Stages
-Stage A) Ideas & Conceptualization
-Stage B) Prototype & Pre-Validation
-Stage C) PoC & Validation
-Stage D) MVP & PMF
-Stage E) FiF & Seed
-Stage F) Grow
+
+* Stage A) Ideas & Conceptualization
+* Stage B) Prototype & Pre-Validation
+* Stage C) PoC & Validation
+* Stage D) MVP & PMF
+* Stage E) FiF & Seed
+* Stage F) Grow
+
 
 ## A) Ideas & Conceptualization (±8h):
 The most important step not to skip. Perfection may take up to a few days, but a first version can be made within ±4 hours.
