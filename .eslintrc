@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "quotes": ["warn", "double"],
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-has-content": "off"
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}
