@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "reactstrap";
 
 import PageLayout from "../../components/PageLayout";
+import Settings from "settings/index";
 
 /**
  * A FAQ page
@@ -9,8 +10,8 @@ import PageLayout from "../../components/PageLayout";
 const PrivacyPage = () => (
   <PageLayout internalPage>
     <Container>
-      Progen Works built their apps as a freemium app. This SERVICE is provided
-      by Progen Works and is intended for use as is.
+      {Settings.companyName} built their apps as a freemium app. This SERVICE is provided
+      by {Settings.companyName} and is intended for use as is.
       <br /> <br />
       This page is used to inform website visitors regarding my policies with
       the collection, use, and disclosure of Personal Information if anyone

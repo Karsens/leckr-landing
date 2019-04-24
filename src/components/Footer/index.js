@@ -4,17 +4,9 @@ import { Container } from "reactstrap";
 import normalize from "../../services/normalize-string";
 import "./style.css";
 
-const LINKS = [
-  {
-    title: "Privacy",
-    link: "/privacy"
-  },
+import Settings from "settings/index";
 
-  {
-    title: "Communify Open",
-    link: "https://github.com/EAT-CODE-KITE-REPEAT/communify-open"
-  }
-];
+const LINKS = Settings.footerLinks;
 
 /**
  * The footer presentational component
@@ -22,7 +14,7 @@ const LINKS = [
 const Footer = () => (
   <footer>
     <Container>
-      <p>&copy; 2017 Communify. All Rights Reserved.</p>
+      <p>&copy; {Settings.copyrightYear} {Settings.appName}. All Rights Reserved.</p>
       <ul className="list-inline">
         {LINKS.map(({ title, link }) => (
           <li className="list-inline-item" key={normalize(title)}>
