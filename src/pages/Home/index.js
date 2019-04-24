@@ -64,7 +64,7 @@ class HomePage extends React.Component {
       featured = data.web.featured;
       mediumArticles = data.web.mediumArticles;
 
-      stats = `Join ${users} users in ${communities} communities`;
+      stats = `Join ${users} coworkers in ${communities} communities`;
     }
 
     return (
@@ -81,6 +81,8 @@ class HomePage extends React.Component {
         <News posts={mediumArticles} />
 
         <Drift appId="p87nxp8v5kyi" />
+
+
       </PageLayout>
     );
   }
