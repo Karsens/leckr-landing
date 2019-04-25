@@ -5,40 +5,16 @@ import "simple-line-icons/css/simple-line-icons.css";
 import "html5-device-mockups/dist/device-mockups.css";
 import React from "react";
 import Drift from "react-driftjs";
-import PageLayout from "../../components/PageLayout";
-import Masthead from "../../components/Masthead";
-import Directory from "../../components/Directory";
-import News from "../../components/News";
-import Icon from "../../components/Icon";
-import demoScreen from "./images/app.gif";
+import PageLayout from "components/PageLayout";
+import Masthead from "components/Masthead";
+import Directory from "components/Directory";
+import News from "components/News";
 import "./style.css";
+import Settings from "settings/index";
 
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
-const SECTIONS = [
-  {
-    title: "Download",
-    id: "masthead"
-  },
-  {
-    title: "Explore",
-    id: "directory"
-  },
-  {
-    title: "Blog",
-    id: "news"
-  }
-];
-const SOCIAL_NETWORKS = [
-  {
-    id: "facebook",
-    text: "Like us",
-    icon: <Icon family="fa" name="facebook" />,
-    color: "#717fea",
-    link: "https://www.facebook.com/CommunifyCoworking/"
-  }
-];
 
 /**
  * The home page
@@ -68,19 +44,19 @@ class HomePage extends React.Component {
     }
 
     return (
-      <PageLayout sections={SECTIONS}>
+      <PageLayout sections={Settings.sections}>
         <Masthead
           query={this.props.location.search}
-          socialNetworks={SOCIAL_NETWORKS}
-          googlePlayDownloadLink="https://play.google.com/store/apps/details?id=com.progenworks.communify"
-          appStoreDownloadLink="https://itunes.apple.com/gb/app/communify/id1366552547?mt=8"
-          demoScreen={demoScreen}
+          socialNetworks={Settings.socialNetworks}
+          googlePlayDownloadLink={Settings.downloadPlaystoreUrl}
+          appStoreDownloadLink={Settings.downloadAppstoreUrl}
+          demoScreen={Settings.assets.demoScreen}
         />
 
         <Directory firstLine={stats} featured={featured} />
         <News posts={mediumArticles} />
 
-        <Drift appId="p87nxp8v5kyi" />
+        <Drift appId={Settings.driftId} />
 
 
       </PageLayout>
