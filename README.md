@@ -1,6 +1,6 @@
 # LECKR-Landing
 
-## 4th of May, 2019
+## `#todo` 4th of May, 2019
 
 The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
 
@@ -20,30 +20,49 @@ The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
 - [x] extract `Navigation`
 - [x] extract `News`
 - [x] Make it look the same for Communify 
-- [ ] publish Communify from this new codebase
+- [x] publish Communify from this new codebase
 
-### Cleanup #later
+### DNS
 
-- [ ] better naming for communify-specific components and pages like `CommunityDirectory` instead of `Directory` and `communifyUnsubscribe` instead of `unsubscribe`
+- [x] Setup DNS for Dunbar.site, Dunbar.vip, Dunbar.club, and all others.
 
-### Dunbar & CSS (2h)
 
-- [ ] Try it for Dunbar. Extract unnessecary stuff
-- [ ] Figure out how to also extract CSS from JS file; one CSS source of truth could be a good start (and some cleanup wouldn't be too bad either)
-- [ ] extract `styles/_variables.js`
+### Other differentiations 
 
-### White Labeling (2h)
+- [ ] Change of title
+- [ ] Change of favicon
+- [ ] Change of main colors
+- [ ] Change of bg pattern
+- [ ] Change which sections to include `Settings.sections: string[]`
+- [ ] Change wether or not to use the GraphQL API
 
-- [ ] Figure out white label stuff (see LECKR/Communify/issues/white-labeling). Make it possible to deploy all white-labeled setting files at once with a single command (or just deploy a single one)
+### New sections `#toplan`
 
-### Landing page online with A/B (2h)
-
-- [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
-- [ ] Deploy & set up DNS right
+- [ ] Story Section
+- [ ] Features section (Copy OVFiets)
+- [ ] Improve Blogs Section
+- [ ] Team Section
 
 ### Copy
 
-- [ ] Get copy from [beta blog](https://karsens.com/dunbar-beta), put it in different landing pages.
+- [ ] Get copy from [beta blog](https://karsens.com/dunbar-beta) (and Typeform), put it in different landing pages.
+
+### Cleanup
+
+- [ ] better naming for communify-specific components and pages like `CommunityDirectory` instead of `Directory` and `communifyUnsubscribe` instead of `unsubscribe`
+
+### Dynamic CSS
+
+- [x] Try it for Dunbar. Extract unnessecary stuff
+- [ ] Figure out how to also extract CSS from JS file; one CSS source of truth could be a good start (and some cleanup wouldn't be too bad either)
+- [ ] extract `styles/_variables.js`
+
+
+
+### Landing page online with A/B (2h)
+
+- [ ] See if it's possible to A/B test with top-level domain.
+- [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
 
 ### Email collection
 
@@ -60,8 +79,24 @@ This Share Section should be able to make an estimation of virality of the app.
 - [ ] Create nice short links that still can be tracked
 - [ ] Measure clicks on links in whatsapp messages
 
-Today I want a slick website for Dunbar with many possibilities
-All are in feature flags and can be turned on or off
+--------------------
+
+
+## After PHIA
+
+### Tuesday: Dunbar, LECKR, Booki, Dyme, Deploy
+
+- [ ] Fill in basics for leckr, booki & dyme too
+- [ ] Deploy and set up DNS correctly. That's a start!
+
+### Pricing Page with Payment Gateway
+
+- [ ] Add pricing page on landing-page
+- [ ] Add multiple monetization options in the json-object (Fixed price and recurring, for now)
+- [ ] Fill in options in json
+- [ ] Link pay button to payment screen
+- [ ] Add mollie or stripe or something else [like rcur](https://rcur.nl/) that lets you get a subscripition in a WebView (like Spotify)
+- [ ] After doing rcur, come back to landing-page success page
 
 ### More design
 
@@ -69,38 +104,42 @@ All are in feature flags and can be turned on or off
 - [ ] sketch challenge
 - [ ] .gif with all 4 screenshots
 
-## After PHIA
+## `#later`
 
-### Add more Sections and possibilities
+### Add more Sections and possibilities `#toPlan #later` 
 
-- [ ] Story Section
+These are all only interesting in later stages, when there are already active users, and money is coming in. 
+
 - [ ] Video Section
 - [ ] Presskit Page
-- [ ] Pricing Page with Payment Gateway (see #5)
 - [ ] Reviews Section
-- [ ] Improve Blogs Section
-- [ ] Team Section 
 - [ ] Privacy Policy, Terms of Use, Data Policy, Cookie Policy
-- [ ] Contact button or page
-- [ ] Careers (show off, look big)
-- [ ] A/B testing as many of these features and feature flags and content as you want
+- [ ] More detailed contacting page
+- [ ] Careers
 
-### Dunbar, LECKR, Booki, Dyme, Deploy
+### Set up universal `leckr-landing-api` `#later`
 
-- [ ] Fill in basics for leckr, booki & dyme too
-- [ ] Deploy and set up DNS correctly. That's a start!
-
-
-### Set up universal `leckr-landing-api`
+Figure out what' s needed for endpoints (probably subscriptions and email collection, however, it might be able to be done without backend at all, so don't do this too fast)
 
 - [ ] Simply use Node JS, Express, REST, SQLite on Linode 
-- [ ] Figure out what' s needed for endpoints (probably subscriptions and email collection, however, it might be able to be done without backend at all, so don't do this too fast)
 - [ ] Every thing needs other endpoints. For example, you also may need to unsubscribe, or settings accessible from the email. It's hard to provide a universal api for this as it's integrated with the userbase. Therefore, the endpoint could be listed in the settings of the landingpage
 
 
+### Simple deploy script (great for white labeling) `#later`
+
+This would be nice, especially if I end up making small changes that I want to deploy to many many websites. However, I think it's not relly needed yet if I just have a couple of sites. Deploying them all takes about 30 seconds per site anyway. No big deal. 
+
+- [ ] Create a single bash script that deploys all sites
+- [ ] Get all files (except index) inside settings folder. 
+- [ ] Copy file to `index.js`, overwrite older index.
+- [ ] Run `yarn build` && `yarn deploy{sitename}`
+- [ ] Do this for all sites in a single script.
+
+------------
 
 
-## Stages of B2C SaaS Startups
+
+# Stages of B2C SaaS Startups
 
 LECKR Landing makes it possible to make landing pages very quickly to test a value proposition. 
 
@@ -108,6 +147,7 @@ With leckr-landing, all strategies and software for execution of them will be th
 
 
 ## Goal
+
 * Know projected Cost Per Install (CPI)
 * Know viral reach per install per retention attempt (VRPIPRA)
 * Know purchase ratio (CPP)
@@ -122,6 +162,7 @@ Then, of course, it's still the question wether or not people will actually use 
 Also, it's a question wether or not people will pay, but you can even test this before making the app!
 
 ## Ideal flow of new ideas
+
 Instead of making a new app every time and work 6 months before converting anything, the flow should be more like this:
 
 1) Buy a domain
@@ -150,7 +191,8 @@ Of course, you should deliver on the value propositions, so keep it simple. If y
 
 ![Idea to Scale](./idea_to_scale.jpg)
 
-## A) Ideas & Conceptualization (±8h):
+## A) Ideas & Conceptualization (±8h)
+
 The most important step not to skip. Perfection may take up to a few days, but a first version can be made within ±4 hours.
 
 A1) Get ideas
@@ -167,24 +209,33 @@ A3) Extensive Lean Canvas (why, how, rough USP definition, virality estimation, 
 
 Goal: Figure out if it's probably viable
 
-## B) Prototype & Pre-validation (±16h and $±1000,-)
+## B) Prototype & Pre-validation (±16h)
+
 If the concept doesn't feel good, quit. If the concept feels and looks good on paper, it's time to prototype & pre-validate. Before making the app, it's important to get some feedback.
 
 B1) Read about techniques that suit validating and prototyping your SaaS product: Examples: [1](https://ryanbattles.com/post/product-validation-techniques) [2](https://briancasel.com/validating-a-saas-product-step-by-step/) and more (search for [SaaS validation](https://www.google.com/search?q=saas+validation&oq=saas+validation&aqs=chrome..69i57j69i60l2.1416j0j4&sourceid=chrome&ie=UTF-8).)
 
-B2) Create a landing page
+B2) Create a landing page, assets and copy for multiple target-audiences and/or varying copy
 
-B3) Create assets
+B3) Set up nice basic landing page funnel "BLPF": Basic landing page -> Email -> Form -> Follow up form -> Status updates
+NB: You can also enable pre-launch sharability features and pre-order options, in order to measure CPP and VF
 
-B4) Funnel 1: Ad -> Basic landing page -> Email -> Form -> Follow up form
+B4) Add Channels that lead early adopters to the BLPF:
 
-B5) Funnel 2: ProductHunt announcement, Reddit, Show HN, Forums, Friends
+- FB, Google & other Ads ($0.01C per view, ±$1-5 per click)
+- ProductHunt announcement
+- Reddit
+- Show HN
+- Forums
+- Organize or join meetups, events, conferences
+- Invite a group of friends for a feedback session
 
-B6) Evaluation: Evaluate KPI's and feedback, send this to advisors & potential investors.
+B5) Evaluation: Evaluate KPI's and feedback, tweak website copy, send this to advisors & potential investors.
 
 Goal: at least 100 filled in forms.
 
 ## C) PoC & Validation (±80h)
+
 If the ads conversions and form-feedback are promising, continue. Otherwise, go back to the ideas stage, or give up. Now it's time to really spend some time.
 
 C1) Build & test the app myself
@@ -202,6 +253,7 @@ C6) Measure KPI's (especially retention and virality), possibly by sending a few
 Goal: Lots of feedback and good KPI indication to decide to continue and in which direction
 
 ## D) MVP & PMF (±160h and $±10k for Ads)
+
 If users keep using it and it still looks promising, it's time to really make a monetizable product out of this, and invest at least the same $ as your time is worth on advertising to get a little userbase going. 
 
 D1) Define & Build product into a monetizable thing, ready for growth, analytics & virality
@@ -215,6 +267,7 @@ D4) Estimate KPI's, make them promising
 Goal: Earn money back as fast as possible, or quit if you figure out you won't
 
 ## E) FiF & Seed (±80h)
+
 At this point, you're either deciding to bootstrap or raise money, based on circumstances. Of course, this step can be skipped if you plan to bootstrap for sure. This step almost always overlaps with the previous one.
 
 E1) Show KPI's to potential investors (can also be the crowd)
@@ -226,12 +279,14 @@ E3) Go with the best deal, or not.
 Goal: Get some funding for a bit of equity to be able to grow much faster.
 
 ## F) Grow (±∞)
+
 Now, tweaking growth should be the main goal. There are many KPI's for this. Some very interesting ones are the Viral Factor, TTEYMB (Time to earn your money back), and the more famous CAC:CLV ratio. Also, userbase churn should not be forgotten. 
 
+---------
 
 
-Total time estimation: 344 hours + ∞. That's 3.5 months for Dunbar, but 1,5 month's already done. So it can be done by the end of june, more or less. However, I have no focus.... :(
 
+# LECKR-Landing is based on....
 
 A React implementation of the [New Age theme by Start Bootstrap](https://github.com/BlackrockDigital/startbootstrap-new-age) that showcases how to approach the components architecture for a React app with self-contained presentational components.
 

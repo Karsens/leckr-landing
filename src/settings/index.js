@@ -1,3 +1,3 @@
-import Settings from "./communify";
+import Settings from "./dunbar";
 
 export default Settings;

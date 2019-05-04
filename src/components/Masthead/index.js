@@ -58,7 +58,7 @@ const Masthead = ({
                 </div>
 
                 <div>
-                  <h1 style={{ fontFamily: "Times" }}>
+                  <h1 style={{ fontFamily: "\"ff-meta-serif-web-pro\",\"PT Serif\",Georgia,\"Droid Serif\",serif;" }}>
                     <b>{title}</b>
                   </h1>
                 </div>
