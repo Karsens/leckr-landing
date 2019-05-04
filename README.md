@@ -25,6 +25,12 @@
 
 ## `#later`
 
+### Improved title/favicon
+
+Try React helmet for dynamic favicon, and better way to set title than I do now
+https://github.com/nfl/react-helmet
+
+
 ### Add more Sections and possibilities `#toPlan #later` 
 
 These are all only interesting in later stages, when there are already active users, and money is coming in. 
@@ -49,8 +55,10 @@ Figure out what' s needed for endpoints (probably subscriptions and email collec
 This would be nice, especially if I end up making small changes that I want to deploy to many many websites. However, I think it's not relly needed yet if I just have a couple of sites. Deploying them all takes about 30 seconds per site anyway. No big deal. 
 
 - [ ] Create a single bash script that deploys all sites
-- [ ] Get all files (except index) inside settings folder. 
+- [ ] Get next `.js-file` (skip `index.js`) inside settings folder. 
 - [ ] Copy file to `index.js`, overwrite older index.
+- [ ] Get next `.scss-file` (skip `_variables.scss`) inside settings folder.
+- [ ] Copy file to `_variables.scss`, overwrite older one.
 - [ ] Run `yarn build` && `yarn deploy{sitename}`
 - [ ] Do this for all sites in a single script.
 

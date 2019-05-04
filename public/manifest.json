@@ -1,9 +1,9 @@
 {
-  "short_name": "Communify",
-  "name": "Communify",
+  "short_name": "LECKR Productions",
+  "name": "LECKR Productions",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "",
       "sizes": "192x192",
       "type": "image/png"
     }

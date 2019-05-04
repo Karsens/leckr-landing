@@ -1,20 +1,28 @@
 // Global Styles
+import React from "react";
+import Drift from "react-driftjs";
+import { gql } from "apollo-boost";
+import { graphql } from "react-apollo";
+
 import "typeface-catamaran"; // eslint-disable-line
 import "font-awesome/css/font-awesome.css";
 import "simple-line-icons/css/simple-line-icons.css";
 import "html5-device-mockups/dist/device-mockups.css";
-import React from "react";
-import Drift from "react-driftjs";
+
+
 import PageLayout from "components/PageLayout";
-import Masthead from "components/Masthead";
-import Directory from "components/Directory";
-import News from "components/News";
 import "./style.css";
+
+// settings
 import Settings from "settings/index";
+import { getCopySettings } from "util/index";
 
-import { gql } from "apollo-boost";
-import { graphql } from "react-apollo";
+// components
+import Masthead from "components/Masthead";
+import Stats from "components/Stats";
+import Blog from "components/Blog";
 
+const Video = Blog;// not really
 
 /**
  * The home page
@@ -26,37 +34,78 @@ class HomePage extends React.Component {
     this.state = {};
   }
 
+
+  // setting the title:
+  componentDidMount() {
+    const copySettings = getCopySettings(this.props.location.search);
+    document.title = copySettings.siteTitle;
+    // #todo - work with react helmet instead
+  }
+
   render() {
     const data = this.props.data;
     if (data.eror) {
       console.log(data.error);
     }
 
-    let stats = Settings.home.statsLoading;
-    let featured = {};
-    let mediumArticles = [];
+    const mediumArticles = data.web && data.web.mediumArticles;
 
-    if (data.web) {
-      const users = data.web.users;
-      const communities = data.web.communities;
-      featured = data.web.featured;
-      mediumArticles = data.web.mediumArticles;
-
-      stats = Settings.home.stats.format(users, communities);
-    }
 
     return (
       <PageLayout sections={Settings.sections}>
-        <Masthead
-          query={this.props.location.search}
-          socialNetworks={Settings.socialNetworks}
-          googlePlayDownloadLink={Settings.downloadPlaystoreUrl}
-          appStoreDownloadLink={Settings.downloadAppstoreUrl}
-          demoScreen={Settings.assets.demoScreen}
-        />
 
-        <Directory firstLine={stats} featured={featured} />
-        <News posts={mediumArticles} />
+
+        {Settings.homeSections.map(section => {
+          console.log("section", section);
+          switch (section) {
+            case "masthead":
+
+              return (<Masthead
+                query={this.props.location.search}
+                socialNetworks={Settings.socialNetworks}
+                googlePlayDownloadLink={Settings.downloadPlaystoreUrl}
+                appStoreDownloadLink={Settings.downloadAppstoreUrl}
+                demoScreen={Settings.assets.demoScreen}
+              />);
+
+            case "video":
+
+              return (<Video
+                url={Settings.videoUrl}
+              />);
+
+            case "stats":
+
+                return <Stats data={data} />;
+
+            case "story":
+              console.log("story block");
+
+              break;
+            case "features":
+              console.log("features block");
+
+              break;
+            case "blogs":
+
+            return <Blog posts={mediumArticles} />;
+
+
+            case "reviews":
+
+              console.log("reviews block");
+
+              break;
+            case "team":
+
+              console.log("team block");
+
+              break;
+
+            default:
+              console.log("Hmmmm", section);
+          }
+        })}
 
         <Drift appId={Settings.driftId} />
 

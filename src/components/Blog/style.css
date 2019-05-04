@@ -15,9 +15,9 @@
       .cta .cta-content h2 {
         font-size: 80px; } }
   .cta .overlay {
-    background: url("./images/bg-pattern.png"), #4a5f94;
-    background: url("./images/bg-pattern.png"), -webkit-linear-gradient(to left, #4a5f94, #4a5f94);
-    background: url("./images/bg-pattern.png"), linear-gradient(to left, #4a5f94, #4a5f94);
+    background: "", #000;
+    background: "", -webkit-linear-gradient(to left, #000, #000);
+    background: "", linear-gradient(to left, #000, #000);
     position: absolute;
     top: 0;
     left: 0;

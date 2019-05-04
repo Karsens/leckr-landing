@@ -11,13 +11,12 @@ import { ApolloProvider } from "react-apollo";
 
 import Settings from "settings/index";
 
-
 const client = new ApolloClient({
   uri: Settings.apiUrl
 });
 
 
-const Routes = props => (
+const Routes = (props) => (
   <ApolloProvider client={client}>
     <Router {...props} basename={process.env.PUBLIC_URL}>
       <div>
@@ -29,5 +28,11 @@ const Routes = props => (
     </Router>
   </ApolloProvider>
 );
+// class Routes extends React.Component {
+//   render() {
+//     const { props } = this;
+//     return
+//   }
+// }
 
 export default Routes;

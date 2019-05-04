@@ -28,12 +28,16 @@ The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
 
 ### Other differentiations 
 
-- [ ] Change of title
-- [ ] Change of favicon
-- [ ] Change of main colors
-- [ ] Change of bg pattern
-- [ ] Change which sections to include `Settings.sections: string[]`
-- [ ] Change wether or not to use the GraphQL API
+- [x] Change of title
+- [x] Remove favicon
+- [x] Change of main colors
+- [x] Change/removal of bg pattern
+- [ ] Make it possible to change which sections to include `Settings.sections: string[]`
+
+### Dynamic CSS
+
+- [x] Try it for Dunbar. Extract unnessecary stuff
+- [x] extract `styles/_variables.js` and add all css variables needed there
 
 ### New sections `#toplan`
 
@@ -49,13 +53,6 @@ The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
 ### Cleanup
 
 - [ ] better naming for communify-specific components and pages like `CommunityDirectory` instead of `Directory` and `communifyUnsubscribe` instead of `unsubscribe`
-
-### Dynamic CSS
-
-- [x] Try it for Dunbar. Extract unnessecary stuff
-- [ ] Figure out how to also extract CSS from JS file; one CSS source of truth could be a good start (and some cleanup wouldn't be too bad either)
-- [ ] extract `styles/_variables.js`
-
 
 
 ### Landing page online with A/B (2h)

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Row, Col } from "reactstrap";
 
 import Settings from "settings/index";
+import { getCopySettings } from "util/index";
 
 import SocialButton from "../SocialButton";
 
@@ -11,7 +12,6 @@ import "./style.css";
 import googlePlayBadge from "./images/google-play-badge.svg";
 import appStoreBadge from "./images/app-store-badge.svg";
 
-import { getLinkObject } from "../../import";
 
 const propTypes = {
   query: PropTypes.string.isRequired,
@@ -31,13 +31,10 @@ const Masthead = ({
   demoScreen,
   socialNetworks,
 }) => {
-  const obj = query && getLinkObject(query);
+  const copySettings = getCopySettings(query);
 
-  const key = obj.user || "default";
 
-  const mastHeadSettings = Settings.mastHead[key] || Settings.mastHead.default;
-
-  const { title, text } = mastHeadSettings;
+  const { title, text } = copySettings;
 
   return (
     <header className="masthead">
@@ -57,8 +54,14 @@ const Masthead = ({
                   />
                 </div>
 
-                <div>
-                  <h1 style={{ fontFamily: "\"ff-meta-serif-web-pro\",\"PT Serif\",Georgia,\"Droid Serif\",serif;" }}>
+                <div style={{
+                      height: 100,
+                      display: "flex",
+                      // #toRemember: display flex is needed to do flexbox things, otherwise it does nothing.
+                      alignItems: "center",
+                  }}
+                >
+                  <h1 style={{ fontFamily: Settings.title.fontFamily }}>
                     <b>{title}</b>
                   </h1>
                 </div>

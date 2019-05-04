@@ -5,24 +5,39 @@ import * as assets from "./assets_dunbar/index";
 
 const Settings = {
 
-  mastHead: {
+
+  homeSections: ["masthead", "story", "features", "reviews", "team"],
+  // sections. Possibilities: video, masthead, stats, blogs,  "story", "features", "reviews", "team"
+
+  title: {
+    fontFamily: "Times",
+  },
+
+  copy: {
 
     default: { // entrepreneur audience
-      title: "Personal CRM for Entrepreneurs",
+      siteTitle: "Dunbar - CRM for your Friends",
+      title: "CRM for your Friends",
       text: "According to Dunbar, the limit of active stable relationships is 150. With Dunbar, we help you to organize, analyze and improve your personal and professional relationships."
     },
-    broad: {
+
+    broad: { // broad audience
+      siteTitle: "Dunbar - Put meaning into your relationships",
       title: "Put meaning into your relationships",
       text: "Dunbars Limit (150) is the limit of maintainable stable relationships. Most people have more, but very sparsified relationships. Spending less time on each relationship makes them less valuable. Dunbar helps you get less but more worthwhile connections."
-    }
+    },
 
+    lonely: {
+      siteTitle: "Dunbar - Reconnect. Engage. Bond.",
+      title: "Reconnect. Engage. Bond.",
+      text: "I care about my friends, but FB, other Social Media, and contact apps make it hard to really maintain my relationships. I want to decide who I care about, and not let the algorithms decide who I get information about (e.g. on the FB Timeline). I want to do more meaningful activities with my friends, rather than using flat communication platforms like WhatsApp, Facebook and SnapChat. I want fewer, but stronger friendships."
+    }
 
   },
 
-
-  home: {
-    statsLoading: "Loading stats...",
-    stats: "Join {0} coworkers in {1} communities"
+  stats: {
+    loadingText: "Loading stats...",
+    text: "Join {0} coworkers in {1} communities"
   },
 
   apiUrl: "",
@@ -65,10 +80,6 @@ const Settings = {
       link: "/privacy"
     },
 
-    // {
-    //   title: "Communify Open",
-    //   link: "https://github.com/EAT-CODE-KITE-REPEAT/communify-open"
-    // }
   ],
 
   companyName: "ProGen Works",

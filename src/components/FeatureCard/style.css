@@ -10,8 +10,8 @@
     font-size: 80px;
     display: block;
     margin-bottom: 15px;
-    background: -webkit-linear-gradient(to left, #4a5f94, #4a5f94);
-    background: linear-gradient(to left, #4a5f94, #4a5f94);
+    background: -webkit-linear-gradient(to left, #000, #000);
+    background: linear-gradient(to left, #000, #000);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; }

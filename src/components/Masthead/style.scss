@@ -1,4 +1,4 @@
-@import "../../styles/_variables";
+@import '../../settings/_variables';
 
 // Styling for the download section
 .contact {
@@ -51,13 +51,15 @@
   padding-bottom: 100px;
 
   color: white;
-  background: url("./images/bg-pattern.png"), $theme-secondary;
-  background: url("./images/bg-pattern.png"),
-    -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
-  background: url("./images/bg-pattern.png"),
-    linear-gradient(to left, $theme-secondary, $theme-tertiary);
+  background-color: $theme-secondary;
+  background: $bg-pattern, $theme-secondary;
+  // background: $bg-pattern,
+  //   -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
+  // background: $bg-pattern,
+  //   linear-gradient(to left, $theme-secondary, $theme-tertiary);
 
   .header-content {
+
     max-width: 500px;
     margin-bottom: 100px;
 
