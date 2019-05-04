@@ -31,16 +31,18 @@ class HomePage extends React.Component {
     if (data.eror) {
       console.log(data.error);
     }
-    let stats = "Loading stats";
+
+    let stats = Settings.home.statsLoading;
     let featured = {};
     let mediumArticles = [];
+
     if (data.web) {
       const users = data.web.users;
       const communities = data.web.communities;
       featured = data.web.featured;
       mediumArticles = data.web.mediumArticles;
 
-      stats = `Join ${users} coworkers in ${communities} communities`;
+      stats = Settings.home.stats.format(users, communities);
     }
 
     return (

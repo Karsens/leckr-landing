@@ -12,6 +12,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
+import Settings from "settings/index";
 
 import "./style.css";
 
@@ -60,10 +61,10 @@ class Navigation extends Component {
       window.pageYOffset !== undefined
         ? window.pageYOffset
         : (
-            document.documentElement ||
+          document.documentElement ||
             document.body.parentNode ||
             document.body
-          ).scrollTop;
+        ).scrollTop;
     const isScrollBottom =
       window.innerHeight + position >= document.body.scrollHeight;
 
@@ -113,7 +114,7 @@ class Navigation extends Component {
       >
         <Container>
           <Link to="/" className="navbar-brand">
-            Communify
+            {Settings.appName}
           </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

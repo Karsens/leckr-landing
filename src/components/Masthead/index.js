@@ -1,21 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "reactstrap";
+
+import Settings from "settings/index";
+
 import SocialButton from "../SocialButton";
 
 import DeviceMockup from "../DeviceMockup";
 import "./style.css";
 import googlePlayBadge from "./images/google-play-badge.svg";
 import appStoreBadge from "./images/app-store-badge.svg";
-import logo from "./images/logo_small.png";
 
 import { getLinkObject } from "../../import";
 
 const propTypes = {
-  text: PropTypes.string.isRequired,
+  query: PropTypes.string.isRequired,
   googlePlayDownloadLink: PropTypes.string.isRequired,
   appStoreDownloadLink: PropTypes.string.isRequired,
-  demoScreen: PropTypes.string.isRequired
+  demoScreen: PropTypes.string.isRequired,
+  socialNetworks: PropTypes.object.isRequired
 };
 
 /**
@@ -26,20 +29,15 @@ const Masthead = ({
   googlePlayDownloadLink,
   appStoreDownloadLink,
   demoScreen,
-  socialNetworks
+  socialNetworks,
 }) => {
   const obj = query && getLinkObject(query);
-  let title = "The Coworking Community Builder";
 
-  let text =
-    "All Coworking spaces need a platform where their Coworkers can find eachother and see what they are working on. Slack is too impersonal, Facebook groups are too messy and covered up between other FB posts. The good news? Communify solves this.";
+  const key = obj.user || "default";
 
-  if (obj.user) {
-    if (obj.user === "fbads1") {
-      title = "Where Coworkers Thrive";
-      text = "Discover other coworkers, chat, connect, collaborate";
-    }
-  }
+  const mastHeadSettings = Settings.mastHead[key] || Settings.mastHead.default;
+
+  const { title, text } = mastHeadSettings;
 
   return (
     <header className="masthead">
@@ -52,21 +50,21 @@ const Masthead = ({
               <div style={{ overflow: "hidden" }}>
                 <div style={{ float: "left" }}>
                   <img
-                    alt="Communify Logo"
-                    src={logo}
+                    alt={`${Settings.appName} logo`}
+                    src={Settings.assets.logo}
                     width={100}
                     height={100}
                   />
                 </div>
 
-                <div style={{}}>
-                  <h1>
+                <div>
+                  <h1 style={{ fontFamily: "Times" }}>
                     <b>{title}</b>
                   </h1>
                 </div>
               </div>
 
-              <h4>{text}</h4>
+              <h4 style={{ marginTop: 20 }}>{text}</h4>
 
               <div className="badges">
                 <div className="badge-item">

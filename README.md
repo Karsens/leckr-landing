@@ -6,23 +6,25 @@ The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
 
 ### Assets
 
-- [ ] Logo
-- [ ] Design: homescreen, actions,  insights (sketch), challenge (sketch)
-- [ ] .gif with those 4 screenshots
+- [x] Logo
+- [x] Design: homescreen, actions
 
 ### Set up new boilerplate (3h)
 
 - [x] Pick Communify react folder, put it in `leckr-landing`
 - [x] Start some extraction...
 - [x] extract `pages/Unsubscribe`
-- [ ] extract `pages/Home/images`
-- [ ] extract `pages/Home/index`
-- [ ] extract `pages/Home/style`
+- [x] extract `pages/Home/images`
+- [x] extract `pages/Home/index`
+- [x] extract `MastHead`
+- [x] extract `Navigation`
+- [x] extract `News`
+- [x] Make it look the same for Communify 
+- [ ] publish Communify from this new codebase
+
+### Cleanup #later
+
 - [ ] better naming for communify-specific components and pages like `CommunityDirectory` instead of `Directory` and `communifyUnsubscribe` instead of `unsubscribe`
-- [ ] extract `MastHead`
-- [ ] extract `Navigation`
-- [ ] extract `News`
-- [ ] Make it look the same (a bit better though), publish Communify from this new codebase
 
 ### Dunbar & CSS (2h)
 
@@ -60,6 +62,12 @@ This Share Section should be able to make an estimation of virality of the app.
 
 Today I want a slick website for Dunbar with many possibilities
 All are in feature flags and can be turned on or off
+
+### More design
+
+- [ ] sketch insights
+- [ ] sketch challenge
+- [ ] .gif with all 4 screenshots
 
 ## After PHIA
 
