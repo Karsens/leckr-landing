@@ -1,4 +1,98 @@
-# Stages of B2C SaaS Startups
+# LECKR-Landing
+
+## 4th of May, 2019
+
+The #todo today: Fix MVP Dunbar landing page with leads aquiring possibility.
+
+### Assets
+
+- [ ] Logo
+- [ ] Design: homescreen, actions,  insights (sketch), challenge (sketch)
+- [ ] .gif with those 4 screenshots
+
+### Set up new boilerplate (3h)
+
+- [x] Pick Communify react folder, put it in `leckr-landing`
+- [x] Start some extraction...
+- [x] extract `pages/Unsubscribe`
+- [ ] extract `pages/Home/images`
+- [ ] extract `pages/Home/index`
+- [ ] extract `pages/Home/style`
+- [ ] better naming for communify-specific components and pages like `CommunityDirectory` instead of `Directory` and `communifyUnsubscribe` instead of `unsubscribe`
+- [ ] extract `MastHead`
+- [ ] extract `Navigation`
+- [ ] extract `News`
+- [ ] Make it look the same (a bit better though), publish Communify from this new codebase
+
+### Dunbar & CSS (2h)
+
+- [ ] Try it for Dunbar. Extract unnessecary stuff
+- [ ] Figure out how to also extract CSS from JS file; one CSS source of truth could be a good start (and some cleanup wouldn't be too bad either)
+- [ ] extract `styles/_variables.js`
+
+### White Labeling (2h)
+
+- [ ] Figure out white label stuff (see LECKR/Communify/issues/white-labeling). Make it possible to deploy all white-labeled setting files at once with a single command (or just deploy a single one)
+
+### Landing page online with A/B (2h)
+
+- [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
+- [ ] Deploy & set up DNS right
+
+### Copy
+
+- [ ] Get copy from [beta blog](https://karsens.com/dunbar-beta), put it in different landing pages.
+
+### Email collection
+
+- [ ] Collect email on MastHead in order to download app. If this flag is true, remove iOS and Android buttons, just show form to fill in e-mail.
+- [ ] Set up third-party backend for this, like mailchimp.
+- [ ] Make it work, make it automatically send an email with some data, when we receive form-submission
+
+### Share section
+
+This Share Section should be able to make an estimation of virality of the app.
+
+- [ ] Share button to share on WhatsApp (or in other places)
+- [ ] Measure clicks on this
+- [ ] Create nice short links that still can be tracked
+- [ ] Measure clicks on links in whatsapp messages
+
+Today I want a slick website for Dunbar with many possibilities
+All are in feature flags and can be turned on or off
+
+## After PHIA
+
+### Add more Sections and possibilities
+
+- [ ] Story Section
+- [ ] Video Section
+- [ ] Presskit Page
+- [ ] Pricing Page with Payment Gateway (see #5)
+- [ ] Reviews Section
+- [ ] Improve Blogs Section
+- [ ] Team Section 
+- [ ] Privacy Policy, Terms of Use, Data Policy, Cookie Policy
+- [ ] Contact button or page
+- [ ] Careers (show off, look big)
+- [ ] A/B testing as many of these features and feature flags and content as you want
+
+### Dunbar, LECKR, Booki, Dyme, Deploy
+
+- [ ] Fill in basics for leckr, booki & dyme too
+- [ ] Deploy and set up DNS correctly. That's a start!
+
+
+### Set up universal `leckr-landing-api`
+
+- [ ] Simply use Node JS, Express, REST, SQLite on Linode 
+- [ ] Figure out what' s needed for endpoints (probably subscriptions and email collection, however, it might be able to be done without backend at all, so don't do this too fast)
+- [ ] Every thing needs other endpoints. For example, you also may need to unsubscribe, or settings accessible from the email. It's hard to provide a universal api for this as it's integrated with the userbase. Therefore, the endpoint could be listed in the settings of the landingpage
+
+
+
+
+## Stages of B2C SaaS Startups
 
 LECKR Landing makes it possible to make landing pages very quickly to test a value proposition. 
 
