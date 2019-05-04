@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import Navigation, { sectionShape } from '../Navigation';
-import Footer from '../Footer';
-import './style.css';
+import Navigation from "../Navigation";
+import Footer from "../Footer";
+import "./style.css";
 
 
 const propTypes = {
@@ -12,13 +12,12 @@ const propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  sections: PropTypes.arrayOf(sectionShape),
   internalPage: PropTypes.bool,
 };
 
 const defaultProps = {
   children: null,
-  sections: [],
+  menu: [],
   internalPage: false,
 };
 
@@ -27,11 +26,11 @@ const defaultProps = {
  */
 const PageLayout = ({
   children,
-  sections,
+  menu,
   internalPage,
 }) => (
-  <div className={classnames('app', { 'internal-page': internalPage })}>
-    <Navigation sections={sections} />
+  <div className={classnames("app", { "internal-page": internalPage })}>
+    <Navigation menu={menu} />
     {children}
     <Footer />
   </div>

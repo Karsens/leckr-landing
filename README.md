@@ -23,6 +23,41 @@
 - [ ] sketch challenge
 - [ ] .gif with all 4 screenshots
 
+
+
+### New sections
+
+- [x] Make it possible to add multiple of the same section (with different values)
+- [ ] Add Features section (Copy OVFiets)
+- [ ] Add Story Section
+- [ ] Improve Blog Section
+- [ ] Add Team Section
+- [ ] Add Reviews Section
+
+
+### Landing page online with A/B (2h)
+
+- [ ] See if it's possible to A/B test with top-level domain. (easy: https://www.w3schools.com/js/js_window_location.asp)
+- [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
+
+### FB Pixel for ads
+
+### New Phone design
+
+#### Huawei mate X design
+
+It's brilliant. Just like putting a hot girl in front of your Volkswagen. Just like a guy driving a Lamborghini when all they sell is a watch. Just like celebrating love and happiness when selling Coca Cola.
+
+When selling our app, we can show it being rendered on a Huawei Mate X. This will look expensive, as it is. 
+
+![huawei](https://user-images.githubusercontent.com/1976888/56899590-16b25200-6a94-11e9-8dcb-2dd36e9bac99.jpg)
+On the right half, contacts will be shown. On the left half, the statistics will be rendered. It will be purrfect!
+
+#### Copy Dyme
+
+More easier, would be the design of DYME x2: Left and right, so you can add two screen shots.
+
+
 ## `#later`
 
 ### Improved title/favicon

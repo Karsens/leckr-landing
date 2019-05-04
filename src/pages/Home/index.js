@@ -52,15 +52,15 @@ class HomePage extends React.Component {
 
 
     return (
-      <PageLayout sections={Settings.sections}>
+      <PageLayout sections={Settings.menu}>
 
 
-        {Settings.homeSections.map(section => {
-          console.log("section", section);
-          switch (section) {
+        {Settings.homeSections.map(({ type, options }) => {
+          switch (type) {
             case "masthead":
 
               return (<Masthead
+                options={options}
                 query={this.props.location.search}
                 socialNetworks={Settings.socialNetworks}
                 googlePlayDownloadLink={Settings.downloadPlaystoreUrl}
@@ -70,7 +70,9 @@ class HomePage extends React.Component {
 
             case "video":
 
+
               return (<Video
+                options={options}
                 url={Settings.videoUrl}
               />);
 
@@ -103,7 +105,7 @@ class HomePage extends React.Component {
               break;
 
             default:
-              console.log("Hmmmm", section);
+              console.log("Hmmmm", type);
           }
         })}
 

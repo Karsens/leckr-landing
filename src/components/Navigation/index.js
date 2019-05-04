@@ -22,11 +22,11 @@ export const sectionShape = PropTypes.shape({
 });
 
 const propTypes = {
-  sections: PropTypes.arrayOf(sectionShape)
+  menu: PropTypes.arrayOf(sectionShape)
 };
 
 const defaultProps = {
-  sections: []
+  menu: []
 };
 
 /**
@@ -88,7 +88,7 @@ class Navigation extends Component {
     if (this.state.sectionNodes.length > 0) return;
     this.setState({
       ...this.state,
-      sectionNodes: this.props.sections.map(({ id }) => {
+      sectionNodes: this.props.menu.map(({ id }) => {
         const { offsetTop } = document.getElementById(id) || {};
         return { id, position: offsetTop };
       })
@@ -119,7 +119,7 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="navbar-nav ml-auto">
-              {this.props.sections.map(({ id, title }) => (
+              {this.props.menu.map(({ id, title }) => (
                 <NavItem key={id}>
                   <NavLink
                     href={`#${id}`}
