@@ -58,3 +58,6 @@ To set it all up, I did the following things:
 - [x] Create `/success-signup` that also shows download links.
 - [x] Edit MailChimp campain so it looks good, and says you'll get the app later, you're enrolled for the beta.
 - [x] How not to get in SPAM? [Read this](https://mailchimp.com/resources/avoid-spam-filters/)
+
+
+audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save

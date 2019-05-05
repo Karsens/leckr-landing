@@ -24,7 +24,14 @@ This technique can be used to do this.
 - [ ] also, a tag for when a user that churned after putting in the email, should be noted. 
 - [ ] retargeting after a user downloaded the app but didn't do much with it. with tags I can basically know if a user is active and how much the user uses the app. However, this is probably easier to do from firebase... I don't know... I think I should just try...
 
+- [ ] It would be ideal to add a new subscriber to multiple lists with one signup. Possible lists:
+        - Critical List: Only critical news updates (Big updates, releases, etc.) --> Barely send anything.
+        - Beta List: Feedback requests forms & asking for questions
+        - Blog List: Get e-mails whenever there are new posts, or, for example, one mail per week/month with blog updates
+        - Newsletter List: Weekly or monthly newsletter, success stories, tips, tricks, new features, etc.
+        - Onboarding List: Why, How, What, etc.
 
+- [ ] Marnix suggested adding checkboxes for these lists so you can choose not to subscribe to everything. If we do this, the form should have info about all lists in type MailChimpList = { url: string, title: string, description: string, optin: boolean, disabled: boolean, hidden: boolean }. There are many possibilites, and it's unsure (and may differ per segment) what people like, and what gets a high conversion rate.
 
 ## Sharing Feature
 

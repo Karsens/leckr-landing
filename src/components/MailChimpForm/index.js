@@ -65,6 +65,7 @@ class MailChimpForm extends React.Component {
                         fontSize:30,
                         color:"#FFF",
                         marginLeft:10,
+                        width: "30%",
                         backgroundColor: Settings.colors.primary,
                         borderTopColor: Settings.colors.primaryLighter,
                         borderBottomColor: Settings.colors.primaryDarker,
@@ -72,6 +73,7 @@ class MailChimpForm extends React.Component {
                         borderLeftColor: Settings.colors.primaryLighter,
 
                     }}
+                    
                     type="submit" 
                     value="Get it" 
                     name="subscribe" 

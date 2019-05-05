@@ -69,8 +69,9 @@ const Masthead = ({
                 </div>
               </div>
 
-              <ReactMarkdown source={text} linkTarget="_blank" />
-
+              <div style={{ marginTop: 10 }}>
+                <ReactMarkdown source={text} linkTarget="_blank" />
+              </div>
               <MailChimpForm url={Settings.mailChimpSubscribeUrl} />
 
               <div className="badges">
