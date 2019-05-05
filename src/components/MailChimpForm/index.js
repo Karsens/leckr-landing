@@ -37,7 +37,6 @@ class MailChimpForm extends React.Component {
 
               <input 
                 style={{float: "left", borderRadius:10, fontSize: 30, paddingLeft:10,
-            
                 //backgroundColor: Settings.colors.primary,
                 borderTopColor: Settings.colors.primaryLighter,
                 borderBottomColor: Settings.colors.primaryDarker,

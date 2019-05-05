@@ -1,12 +1,35 @@
 
-## `#todo`, After PHIA
+# `#todo`, After PHIA
 
-### Tuesday: Dunbar, LECKR, Booki, Dyme, Deploy
+## Tuesday: Dunbar, LECKR, Booki, Dyme, Deploy
+
 
 - [ ] Fill in basics for leckr, booki & dyme too
 - [ ] Deploy and set up DNS correctly. That's a start!
 
-### Pricing Page with Payment Gateway
+## MailChimp Advanced Features 
+
+- [ ] `#later` Integrate with [SimpleTexting](https://mailchimp.com/integrations/sms-and-text-message-marketing/) to ask for phone numbers and send SMS with app links instead.
+- [ ] `#later` it would be ideal if we can also connect the e-mail to user-data (pixel and other trackers, ad segment) and actual in-app data (if we also track a user there with the same trackers). This is definitely possible. I can tag whatever I want and they have an API and Zapier integrations so there's many possibilities to connect in-app events to a mail account. Maybe I can even build my own site to app connector, based on device info, ip, time, geo-location, whatever. 
+- [ ] `#later` it would also be necessary to be able to tag payments information with [rcur](https://rcur.nl)
+- [ ] also, a tag for when a user that churned after putting in the email, should be noted. 
+- [ ] retargeting after a user downloaded the app but didn't do much with it. with tags I can basically know if a user is active and how much the user uses the app. However, this is probably easier to do from firebase... I don't know... I think I should just try...
+
+
+
+## Sharing Feature
+
+Button which can be added to multiple different sections
+
+This Share Section should be able to make an estimation of virality of the app.
+
+- [ ] Share button to share on WhatsApp (or in other places)
+- [ ] Measure clicks on this
+- [ ] Create nice short links that still can be tracked
+- [ ] Measure clicks on links in whatsapp messages
+
+
+## Pricing Page with Payment Gateway
 
 - [ ] Add pricing page on landing-page
 - [ ] Add multiple monetization options in the json-object (Fixed price and recurring, for now)
@@ -15,7 +38,7 @@
 - [ ] Add mollie or stripe or something else [like rcur](https://rcur.nl/) that lets you get a subscripition in a WebView (like Spotify)
 - [ ] After doing rcur, come back to landing-page success page
 
-### More design
+## More design
 
 - [ ] sketch insights
 - [ ] sketch challenge
@@ -23,7 +46,7 @@
 
 
 
-### New sections
+## New sections
 
 - [x] Make it possible to add multiple of the same section (with different values)
 - [ ] Add Features section (Copy OVFiets)
@@ -33,7 +56,7 @@
 - [ ] Add Reviews Section
 
 
-### Landing page online with A/B (2h)
+## Landing page online with A/B (2h)
 
 - [ ] See if it's possible to A/B test with top-level domain. (easy: https://www.w3schools.com/js/js_window_location.asp)
 - [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia

@@ -4,16 +4,16 @@ import * as assets from "./assets_dunbar/index";
 
 /**
  * todo:
- * 
+ *
  * make sure that I start typing this better.
- * 
+ *
  * add the proper (newer) version of javascript/react/babel. On dunbar, it's all fine. Here it doesn't accept types, gives many stupid eslint errors... I should have the same compiler and rules.
- * 
- * // 
+ *
+ * //
   // in video component for example, there could be a secondary video url that's not the default, in options.
   // there could even be a tertriary video url inside copy.
-  // there could be an order in which things are sorted. 
-  // for example, in the settings, everything is sorted by key of the section type. 
+  // there could be an order in which things are sorted.
+  // for example, in the settings, everything is sorted by key of the section type.
   // the section type has a name dependent on UI and structure
   // then, those types also appear inside copy[refKey] and inside options
   // let's do this, and type it way better, cuz it's rather complex.
@@ -24,26 +24,26 @@ import * as assets from "./assets_dunbar/index";
   // 5) preferably, get rid of all SCSS. It's so fucking annoy. I just want React Style Objects. Inline or outline, I don't care.
 */
 
- type Section = {
-  type: string;
-  options: any;
-}
-// options should contain all stuff that's not default for the type. For example, there could be a features section that takes stuff from copy, but there could be a secondary features section that has 
+//  type Section = {
+//   type: string;
+//   options: any;
+// }
+// options should contain all stuff that's not default for the type. For example, there could be a features section that takes stuff from copy, but there could be a secondary features section that has
 
 const Settings = {
 
   // to make sure people and on yourwebsite.com/emailsuccess, please do this:
   // In MailChimp, audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
-    mailChimpSubscribeUrl: "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=74a7bddfd2",    //nb: with post-json instead of post, you'll get JSON in return instead.
-    emailSuccessText: "Thanks for your interest. Your email is underway, which contains information about how to get the app.",
-  colors:{
+  mailChimpSubscribeUrl: "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=74a7bddfd2", // nb: with post-json instead of post, you'll get JSON in return instead.
+  emailSuccessText: "Thanks for your interest. Your email is underway, which contains information about how to get the app.",
+  colors: {
     primary: "#0054b8",
     primaryLighter: "#0064dc",
     primaryDarker: "#00306a"
   },
 
   homeSections: [
-    {type:"masthead"},{type:"features"},{type:"reviews"},{type:"team"},{type:"blog"}
+    { type: "masthead" }, { type: "features" }, { type: "reviews" }, { type: "team" }, { type: "blog" }
   ],
   // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
 
