@@ -1,6 +1,15 @@
 
 # `#todo`, After PHIA
 
+
+## Png to Gif
+First, show the regular screenshot. A small size png. 
+After it's loaded, show a gif 3D animation (made with Rotato.xyz)
+https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-website-855020fb41ae
+
+This technique can be used to do this. 
+
+
 ## Tuesday: Dunbar, LECKR, Booki, Dyme, Deploy
 
 

@@ -6,6 +6,8 @@ import Settings from "settings/index";
 import { getCopySettings } from "util/index";
 
 import SocialButton from "../SocialButton";
+import ReactMarkdown from "react-markdown";
+
 
 import DeviceMockup from "../DeviceMockup";
 import "./style.css";
@@ -45,12 +47,12 @@ const Masthead = ({
           <Col lg="7" xs="12" className="my-auto">
             <div className="header-content mx-auto">
               <div style={{ overflow: "hidden" }}>
-                <div style={{ float: "left" }}>
+                <div style={{ float: "left", marginRight: 20, marginTop: 5 }}>
                   <img
                     alt={`${Settings.appName} logo`}
                     src={Settings.assets.logo}
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                   />
                 </div>
 
@@ -67,7 +69,7 @@ const Masthead = ({
                 </div>
               </div>
 
-              <h4 style={{ marginTop: 20 }}>{text}</h4>
+              <ReactMarkdown source={text} linkTarget="_blank" />
 
               <MailChimpForm url={Settings.mailChimpSubscribeUrl} />
 

@@ -7,12 +7,12 @@ body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif'; }
 
 a {
-  color: #000;
+  color: #cccccc;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s; }
   a:hover, a:focus {
-    color: black; }
+    color: #fff; }
 
 hr {
   max-width: 100px;

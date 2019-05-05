@@ -56,7 +56,7 @@ const Settings = {
     default: { // entrepreneur audience
       siteTitle: "Dunbar - CRM for your Friends",
       title: "CRM for your Friends",
-      text: "According to Dunbar, the limit of active stable relationships is 150. With Dunbar, we help you to organize, analyze and improve your personal and professional relationships."
+      text: "According to Robin Dunbar, an extraordinary anthropologist and evolutionary psychologist, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). With Dunbar, we help you to organize, analyze and improve your personal and professional relationships."
     },
 
     broad: { // broad audience
