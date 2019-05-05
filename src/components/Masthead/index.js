@@ -9,9 +9,9 @@ import SocialButton from "../SocialButton";
 
 import DeviceMockup from "../DeviceMockup";
 import "./style.css";
-import googlePlayBadge from "./images/google-play-badge.svg";
-import appStoreBadge from "./images/app-store-badge.svg";
-
+import googlePlayBadge from "../../settings/assets/google-play-badge.svg";
+import appStoreBadge from "../../settings/assets/app-store-badge.svg";
+import MailChimpForm from "components/MailChimpForm/index";
 
 const propTypes = {
   query: PropTypes.string.isRequired,
@@ -68,6 +68,8 @@ const Masthead = ({
               </div>
 
               <h4 style={{ marginTop: 20 }}>{text}</h4>
+
+              <MailChimpForm url={Settings.mailChimpSubscribeUrl} />
 
               <div className="badges">
                 <div className="badge-item">

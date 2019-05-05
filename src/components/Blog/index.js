@@ -9,9 +9,30 @@ const propTypes = {
 };
 
 /**
- * A presentational component for a 'call to action' section
+ * Responsibility: This blog thingy now gets an input of blogs, but blogs are always gotten from the internet. So why don't I just put an API here? It's better because then it kind of becomes a CMS powered page, not hardcoded.
+ *
+ * It could have multiple purposes:
+ *
+ * - Blogging for ourselves, on Medium.
+ * - Blogging for ourselves on Ghost
+ * - Crossposting interesting blogs I read before.
+ * - Linking to interesting websites (medium articles) of other people, that are social proof of the truth of my app
+ * - Linking to scientific evidence
+ * - Linking to books, maybe?
+ *
+ * This component is just presentational now. That's good.
+ * I can make a wise wrapper that gets an api url (and, optionally, a transformMap to transform wrong structures). This wise thing, then gives the blogs to the presentational component.
+ *
+ * This presentational component can also present the same structure in different ways.
+ *
+ * - Grid view
+ * - List view
+ * - Just pictures
+ * - Carousel, even
+ *
+ * In the end, it would be brilliant if people can even choose to subscribe to different of these kind of feeds (by email, and by push notifications, and by whatever). But let's not go there yet.
  */
-const News = ({ posts }) => (
+const Blog = ({ posts }) => (
   <header className="cta overlay">
     <a name="news" />
     <Container>
@@ -20,10 +41,9 @@ const News = ({ posts }) => (
       <div style={{ flexDirection: "row", display: "flex", flexWrap: "wrap" }}>
         {posts &&
           posts.length > 0 &&
-          posts.map((c, i) => {
-            return (
-              <a key={i} href={c.link} target="_blank">
-                <div
+          posts.map((c, i) => (
+            <a key={i} href={c.link} target="_blank">
+              <div
                   style={{
                     margin: 10,
                     textAlign: "center"
@@ -60,14 +80,13 @@ const News = ({ posts }) => (
                     {c.title}
                   </p>
                 </div>
-              </a>
-            );
-          })}
+            </a>
+            ))}
       </div>
     </Container>
   </header>
 );
 
-News.propTypes = propTypes;
+Blog.propTypes = propTypes;
 
-export default News;
+export default Blog;

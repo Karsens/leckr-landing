@@ -32,12 +32,20 @@ import * as assets from "./assets_dunbar/index";
 
 const Settings = {
 
+  // to make sure people and on yourwebsite.com/emailsuccess, please do this:
+  // In MailChimp, audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
+    mailChimpSubscribeUrl: "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=74a7bddfd2",    //nb: with post-json instead of post, you'll get JSON in return instead.
+    emailSuccessText: "Thanks for your interest. Your email is underway, which contains information about how to get the app.",
+  colors:{
+    primary: "#0054b8",
+    primaryLighter: "#0064dc",
+    primaryDarker: "#00306a"
+  },
 
   homeSections: [
     {type:"masthead"},{type:"features"},{type:"reviews"},{type:"team"},{type:"blog"}
   ],
   // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
-
 
   title: {
     fontFamily: "Times",
