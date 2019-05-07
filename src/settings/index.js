@@ -1,3 +1,3 @@
-import Settings from "./dunbar";
+import Settings from "./booki";
 
 export default Settings;

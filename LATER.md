@@ -1,25 +1,10 @@
 
-# `#todo`, After PHIA
-
-
-## Png to Gif
-First, show the regular screenshot. A small size png. 
-After it's loaded, show a gif 3D animation (made with Rotato.xyz)
-https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-website-855020fb41ae
-
-This technique can be used to do this. 
-
-
-## Tuesday: Dunbar, LECKR, Booki, Dyme, Deploy
-
-
-- [ ] Fill in basics for leckr, booki & dyme too
-- [ ] Deploy and set up DNS correctly. That's a start!
+# Todo after T.N.W
 
 ## MailChimp Advanced Features 
 
 - [ ] `#later` Integrate with [SimpleTexting](https://mailchimp.com/integrations/sms-and-text-message-marketing/) to ask for phone numbers and send SMS with app links instead.
-- [ ] `#later` it would be ideal if we can also connect the e-mail to user-data (pixel and other trackers, ad segment) and actual in-app data (if we also track a user there with the same trackers). This is definitely possible. I can tag whatever I want and they have an API and Zapier integrations so there's many possibilities to connect in-app events to a mail account. Maybe I can even build my own site to app connector, based on device info, ip, time, geo-location, whatever. 
+- [ ] `#later` it would be ideal if we can also connect the e-mail to user-data (pixel and other trackers, ad segment) and actual in-app data (if we also track a user there with the same trackers). This is definitely possible. I can tag whatever I want and they have an API and Zapier integrations so there's many possibilities to connect in-app events to a mail account. Maybe I can even build my own site to app connector, based on device info, ip, time, geo-location, whatever.
 - [ ] `#later` it would also be necessary to be able to tag payments information with [rcur](https://rcur.nl)
 - [ ] also, a tag for when a user that churned after putting in the email, should be noted. 
 - [ ] retargeting after a user downloaded the app but didn't do much with it. with tags I can basically know if a user is active and how much the user uses the app. However, this is probably easier to do from firebase... I don't know... I think I should just try...
@@ -45,6 +30,15 @@ This Share Section should be able to make an estimation of virality of the app.
 - [ ] Measure clicks on links in whatsapp messages
 
 
+## Png to Gif
+
+First, show the regular screenshot. A small size png. 
+After it's loaded, show a gif 3D animation (made with Rotato.xyz)
+https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-website-855020fb41ae
+
+This technique can be used to do this. 
+
+
 ## Pricing Page with Payment Gateway
 
 - [ ] Add pricing page on landing-page
@@ -53,23 +47,6 @@ This Share Section should be able to make an estimation of virality of the app.
 - [ ] Link pay button to payment screen
 - [ ] Add mollie or stripe or something else [like rcur](https://rcur.nl/) that lets you get a subscripition in a WebView (like Spotify)
 - [ ] After doing rcur, come back to landing-page success page
-
-## More design
-
-- [ ] sketch insights
-- [ ] sketch challenge
-- [ ] .gif with all 4 screenshots
-
-
-
-## New sections
-
-- [x] Make it possible to add multiple of the same section (with different values)
-- [ ] Add Features section (Copy OVFiets)
-- [ ] Add Story Section
-- [ ] Improve Blog Section
-- [ ] Add Team Section
-- [ ] Add Reviews Section
 
 
 ## Landing page online with A/B (2h)
@@ -97,13 +74,6 @@ More easier, would be the design of DYME x2: Left and right, so you can add two 
 ### Personalization
 
 The https://unless.com/ idea. Brilliant.
-
-## `#later`
-
-### Improved title/favicon
-
-Try React helmet for dynamic favicon, and better way to set title than I do now
-https://github.com/nfl/react-helmet
 
 
 ### Add more Sections and possibilities `#toPlan #later` 

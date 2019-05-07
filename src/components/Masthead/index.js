@@ -32,12 +32,22 @@ const Masthead = ({
   appStoreDownloadLink,
   demoScreen,
   socialNetworks,
+  isNoPhone
 }) => {
   const copySettings = getCopySettings(query);
 
 
   const { title, text } = copySettings;
 
+  const img = (
+    <img
+      src={demoScreen}
+      className="img-fluid"
+      alt=""
+      width="100%"
+      height="100%"
+    />
+  );
   return (
     <header className="masthead">
       {/* eslint-disable-next-line */}
@@ -72,7 +82,7 @@ const Masthead = ({
               <div style={{ marginTop: 10 }}>
                 <ReactMarkdown source={text} linkTarget="_blank" />
               </div>
-              <MailChimpForm url={Settings.mailChimpSubscribeUrl} />
+              {Settings.mailChimpSubscribeUrl && <MailChimpForm url={Settings.mailChimpSubscribeUrl} />}
 
               <div className="badges">
                 <div className="badge-item">
@@ -100,15 +110,7 @@ const Masthead = ({
             </div>
           </Col>
           <Col lg="5" xs="12" className="my-auto">
-            <DeviceMockup device="iPhone7" orientation="portrait" color="black">
-              <img
-                src={demoScreen}
-                className="img-fluid"
-                alt=""
-                width="100%"
-                height="100%"
-              />
-            </DeviceMockup>
+            {isNoPhone ? img : <DeviceMockup device="iPhone7" orientation="portrait" color="black">{img}</DeviceMockup>}
           </Col>
         </Row>
       </Container>

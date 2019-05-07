@@ -66,6 +66,7 @@ class HomePage extends React.Component {
                 googlePlayDownloadLink={Settings.downloadPlaystoreUrl}
                 appStoreDownloadLink={Settings.downloadAppstoreUrl}
                 demoScreen={Settings.assets.demoScreen}
+                isNoPhone={Settings.isNoPhone}
               />);
 
             case "video":
