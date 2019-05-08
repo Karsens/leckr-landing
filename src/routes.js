@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import PrivacyPage from "./pages/Privacy";
 import EmailSuccessPage from "./pages/EmailSuccess";
+import UserProfilePage from "./pages/UserProfile";
 import UnsubscribePage from "./pages/Unsubscribe";
 import RedirectPage from "./pages/Redirect";
 
@@ -24,6 +25,7 @@ const Routes = (props) => (
         <Route exact path="/" component={HomePage} />
         <Route path="/privacy" component={PrivacyPage} />
         <Route path="/emailsuccess" component={EmailSuccessPage} />
+        <Route path="/u" component={UserProfilePage} />
         <Route path="/unsubscribe" component={UnsubscribePage} />
         <Route path="/app" component={RedirectPage} />
       </div>

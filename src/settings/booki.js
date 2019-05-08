@@ -54,16 +54,16 @@ const Settings = {
 
   copy: {
 
-    default: { // entrepreneur audience
+    opposite: {
       siteTitle: "Go basic. Go Booki",
       title: "Go Basic. Go Booki",
-      text: "Smartphones are the new sigarettes, and multitasking has proven to be very unhealthy. Privacy is gone. Booki is a structured pocketbook the size of your phone that has the same key functionalities, but analog. It solves it all."
+      text: "In an age of distraction, we all fight for our attention and focus. Your smartphone isn't making it easy. Booki gives you back your calm, focus and attention."
     },
 
-    opposite: { // broad audience
-      siteTitle: "Go Booki. Go Basic",
-      title: "Go Booki. Go Basic",
-      text: "In an age of distraction, we all fight for our attention and focus. Your smartphone isn't making it easy. Booki gives you back your calm, focus and attention."
+    default: {
+      siteTitle: "Go Basic. Go Booki",
+      title: "Go Basic. Go Booki",
+      text: "Smartphones are the new sigarettes, and multitasking has proven to be very unhealthy. Privacy is gone, and it's only getting worse... Booki is a structured pocketbook the size of your phone that has the same key functionalities as a smartphone, but analog."
     },
 
     // lonely: {

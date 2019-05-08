@@ -44,7 +44,7 @@
     "communifydeployhack": "yarn build && yarn hack && surge build communify.cc",
     "dunbardeploy": "yarn build && surge build dunbar.site && surge build dunbar.vip && surge build dunbar.club",
     "leckrdeploy": "yarn build && surge build leckr.io",
-    "bookideploy": "yarn build && surge build booki.ws"
+    "bookideploy": "yarn build && surge build gobooki.co"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
