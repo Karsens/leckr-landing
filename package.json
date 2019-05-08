@@ -42,7 +42,7 @@
     "fastpush": "git add . && git commit -m \"Small Improvements\" && git push",
     "communifydeploy": "yarn build && surge build communify.cc",
     "communifydeployhack": "yarn build && yarn hack && surge build communify.cc",
-    "dunbardeploy": "yarn build && surge build dunbar.site && surge build dunbar.vip && surge build dunbar.club",
+    "dunbardeploy": "yarn build && mv build/index.html build/200.html && surge build dunbar.site && surge build dunbar.vip && surge build dunbar.club",
     "leckrdeploy": "yarn build && surge build leckr.io",
     "bookideploy": "yarn build && surge build gobooki.co"
   },
