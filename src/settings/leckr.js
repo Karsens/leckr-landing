@@ -57,7 +57,7 @@ const Settings = {
     default: {
       siteTitle: "LECKR",
       title: "Let's Eat Code Kite Repeat",
-      text: "Let's Eat Code Kite Repeat is a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible. \n\n [More info](https://medium.com/leckr-react-native-graphql-apollo-tutorials/lets-eat-code-kite-repeat-240d7be3b45)"
+      text: "Let's Eat Code Kite Repeat is a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible. \n\n [Why I started LECKR](https://medium.com/leckr-react-native-graphql-apollo-tutorials/lets-eat-code-kite-repeat-240d7be3b45)"
     },
 
     // lonely: {
