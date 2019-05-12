@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "components/Icon";
-import * as assets from "./assets_booki/index";
+import * as assets from "./assets_leckr/index";
 
 /**
  * todo:
