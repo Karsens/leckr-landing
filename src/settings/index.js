@@ -1,3 +1,3 @@
-import Settings from "./leckr";
+import Settings from "./karsens";
 
 export default Settings;
