@@ -1,0 +1,14 @@
+.features .section-heading {
+  margin-bottom: 100px; }
+  .features .section-heading h2 {
+    margin-top: 0; }
+  .features .section-heading p {
+    margin-bottom: 0; }
+
+.features .device-container {
+  max-width: 325px;
+  margin: 0 auto;
+  margin-bottom: 100px; }
+  @media (min-width: 992px) {
+    .features .device-container {
+      margin-bottom: 0; } }

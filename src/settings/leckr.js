@@ -2,34 +2,6 @@ import React from "react";
 import Icon from "components/Icon";
 import * as assets from "./assets_leckr/index";
 
-/**
- * todo:
- *
- * make sure that I start typing this better.
- *
- * add the proper (newer) version of javascript/react/babel. On dunbar, it's all fine. Here it doesn't accept types, gives many stupid eslint errors... I should have the same compiler and rules.
- *
- * //
-  // in video component for example, there could be a secondary video url that's not the default, in options.
-  // there could even be a tertriary video url inside copy.
-  // there could be an order in which things are sorted.
-  // for example, in the settings, everything is sorted by key of the section type.
-  // the section type has a name dependent on UI and structure
-  // then, those types also appear inside copy[refKey] and inside options
-  // let's do this, and type it way better, cuz it's rather complex.
-  // 1) update package.json things
-  // 2) get the right babel, compiler, eslint, prettier, etc.
-  // 3) make proper types of the settings file
-  // 4) get rid of all those annoying red lines everywhere that don't even resolve themselves (ESLINT SHIT)
-  // 5) preferably, get rid of all SCSS. It's so fucking annoy. I just want React Style Objects. Inline or outline, I don't care.
-*/
-
-//  type Section = {
-//   type: string;
-//   options: any;
-// }
-// options should contain all stuff that's not default for the type. For example, there could be a features section that takes stuff from copy, but there could be a secondary features section that has
-
 const Settings = {
 
   isNoPhone: true,

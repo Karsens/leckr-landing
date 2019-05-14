@@ -1,3 +1,13 @@
+# Done
+
+## Improved Surge (Or Netlify)
+
+- [x] Fix 404
+
+## Dunbar, LECKR, Booki
+
+- [x] Fill in basics for leckr, booki (& dyme?) too
+- [x] Deploy and set up DNS correctly. That's a start!
 
 ### Assets
 

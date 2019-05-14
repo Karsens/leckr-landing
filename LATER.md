@@ -18,16 +18,6 @@
 
 - [ ] Marnix suggested adding checkboxes for these lists so you can choose not to subscribe to everything. If we do this, the form should have info about all lists in type MailChimpList = { url: string, title: string, description: string, optin: boolean, disabled: boolean, hidden: boolean }. There are many possibilites, and it's unsure (and may differ per segment) what people like, and what gets a high conversion rate.
 
-## Sharing Feature
-
-Button which can be added to multiple different sections
-
-This Share Section should be able to make an estimation of virality of the app.
-
-- [ ] Share button to share on WhatsApp (or in other places)
-- [ ] Measure clicks on this
-- [ ] Create nice short links that still can be tracked
-- [ ] Measure clicks on links in whatsapp messages
 
 
 ## Png to Gif
@@ -39,20 +29,9 @@ https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-websit
 This technique can be used to do this. 
 
 
-## Pricing Page with Payment Gateway
-
-- [ ] Add pricing page on landing-page
-- [ ] Add multiple monetization options in the json-object (Fixed price and recurring, for now)
-- [ ] Fill in options in json
-- [ ] Link pay button to payment screen
-- [ ] Add mollie or stripe or something else [like rcur](https://rcur.nl/) that lets you get a subscripition in a WebView (like Spotify)
-- [ ] After doing rcur, come back to landing-page success page
-
-
 ## Landing page online with A/B (2h)
 
-- [ ] See if it's possible to A/B test with top-level domain. (easy: https://www.w3schools.com/js/js_window_location.asp)
-- [ ] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
+- [x] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
 
 ### FB Pixel for ads
 
@@ -82,7 +61,6 @@ These are all only interesting in later stages, when there are already active us
 
 - [ ] Video Section
 - [ ] Presskit Page
-- [ ] Reviews Section
 - [ ] Privacy Policy, Terms of Use, Data Policy, Cookie Policy
 - [ ] More detailed contacting page
 - [ ] Careers

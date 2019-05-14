@@ -21,6 +21,7 @@ import { getCopySettings } from "util/index";
 import Masthead from "components/Masthead";
 import Stats from "components/Stats";
 import Blog from "components/Blog";
+import Features from "components/Features";
 
 const Video = Blog;// not really
 
@@ -77,6 +78,14 @@ class HomePage extends React.Component {
                 url={Settings.videoUrl}
               />);
 
+            case "features":
+
+                return (<Features
+                  title={Settings.features.title}
+                  subtitle={Settings.features.subtitle}
+                  features={Settings.features.features}
+                  demoScreen={Settings.assets.demoScreen}
+                />);
             case "stats":
 
                 return <Stats data={data} />;
