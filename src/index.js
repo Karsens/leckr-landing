@@ -1,21 +1,11 @@
-// Global Styles
-import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import registerServiceWorker from "./services/service-worker";
+
+// Global Styles
+import "bootstrap/dist/css/bootstrap.css";
+
+import registerServiceWorker from "./util/service-worker";
 import Routes from "./routes";
 
-String.prototype.format = function () {
-  let a = this;
-  for (const k in arguments) {
-    a = a.replace(`{${k}}`, arguments[k]);
-  }
-  return a;
-};
-
-
-ReactDOM.render(
-  <Routes />,
-  document.getElementById("root"),
-);
+ReactDOM.render(<Routes />, document.getElementById("root"));
 registerServiceWorker();

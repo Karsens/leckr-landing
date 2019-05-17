@@ -1,5 +1,4 @@
-
-import demoScreen from "./me.jpg";
+import image1 from "./me.jpg";
 import logo from "./logo.jpg";
 
-export { demoScreen, logo };
+export { image1, logo };

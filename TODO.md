@@ -1,75 +1,35 @@
 # TODO
 
-## Upgrade dependencies
+## Cleanup
 
- Add the proper (newer) version of javascript/react/babel. On dunbar, it's all fine. Here it doesn't accept types, gives many stupid ESLint errors... I should have the same compiler and rules.
- 
-  1) update package.json things
-  2) get the right babel, compiler, eslint, prettier, etc.
-  3) get rid of all those annoying red lines everywhere that don't even resolve themselves (ESLINT SHIT)
-  4) Make sure I can use types and optional chaining.
- 
-## Better typing of Settings
+- [x] Fix all sections bugs so it gets it all properly from sections
+- [x] Remove all pages, put the necessary in sections (& keep needed styles)
+- [x] Split components into ui and sections
+- [ ] Fix ESLint
+- [ ] Get rid of all warnings
+- [ ] Show something for every section, see which ones fail, clean them up
 
-There is a simple structure in Settings:
+## Proper headers
 
-  type Settings = { pages: Page[], assets: Assets, ...Global }
-  
-  type Page = { title: string, showInMenu: boolean, showInFooter: boolean, sections: Section[] }
-  type Section = { type: enum, options: Options[] }
-  type Options = { ref?: string, ...options: any }
-  
-  type Assets = { logo: img, image1: img, image2: img }
+- [ ] Try React helmet for dynamic favicon + title https://github.com/nfl/react-helmet
 
-  type Global = { appName: string, copyrightYear: string, apiUrl: string, driftId: string, companyName: string, colors: Colors, style: Style }
-
-  type Colors = { primary, primaryDarker, primaryLighter }
-  type Style = { fontFamily: { title, text } }
-
-
-  To summarize, all pages are just a set of sections, which can have options or no options to use default options. If multiple options are given, the right options are chosen based on the ref key.
-
-
-
-## New sections
+## Sections
 
 - [x] Make it possible to add multiple of the same section (with different values)
 - [x] Add Features section (Copy OVFiets)
 - [ ] Add Story Section
-- [ ] Add Timeline Section
-- [ ] Improve Blog Section
+- [ ] Add Timeline/Roadmap Section
+- [ ] Improve Blog Section (no backend, ghost support, plain object support)
 - [ ] Add Team Section
 - [ ] Add Blurp Section
 
-## Improved title/favicon
+## Components
 
-Try React helmet for dynamic favicon, and better way to set title than I do now
-https://github.com/nfl/react-helmet
+### Download Component
 
+- [ ] Should have the mailchimp form or download button(s) or QR code, dependent on global settings
 
-## Profile feature for Dunbar
-
-- [ ] Route https://dunbar.site/u?x=y&a=b&c=d should simply render those values, with the first as title.
-
-## Add content + assets
-
-- [ ] Dunbar.site , Dunbar.club , Dunbar.vip
-- [ ] LECKR.io
-- [ ] GoBooki.co
-- [ ] Karsens.com
-- [ ] OVFiets.net
-- [ ] Colivingnet.com
-- [ ] CoworkerEvents.com
-- [ ] Hood.li
-- [ ] Dyme.karsens.com
-
-## MailChimp (for all above websites)
-
-- [ ] Set up mailaddress (noreply) through outlook, gmail or ImprovMX
-- [ ] Create MailChimp audience
-- [ ] Add audience ID to script
-
-## Sharing Feature
+### Sharing Component
 
 Button which can be added to multiple different sections
 
@@ -80,17 +40,49 @@ This Share Section should be able to make an estimation of virality of the app.
 - [ ] Create nice short links that still can be tracked
 - [ ] Measure clicks on links in whatsapp messages
 
+## Profile feature for Dunbar
+
+- [ ] Route https://dunbar.site/u?x=y&a=b&c=d should simply render those values, with the first as title.
+
+## Add content + assets
+
+- [ ] Dunbar.site,club (Free install, club for €42 for 42, Premium beta for €10/month)
+- [ ] Dunbar.vip (super premium, coaching, affiliate)
+- [ ] Dunbar.doctor/help (psychological help)
+- [ ] Dunbar.business (b2b sales to companies)
+- [ ] Dunbar.id (people API)
+- [ ] Communify.cc (Dunbar for communities)
+- [ ] LECKR.io (codebase + lifestyle)
+- [ ] GoBooki.co (€42 beta + medium blog + b2b)
+- [ ] Karsens.com (about + projects + blog + newsletters)
+- [ ] OVFiets.net (vision + better layout + roadmap + )
+- [ ] Colivingnet.com (vision + resources)
+- [ ] CoworkerEvents.com (vision + resources + newsletter)
+- [ ] Hood.li (vision + resources + newsletter)
+- [ ] Dyme.karsens.com (copy/paste for dyme)
+
+## MailChimp (for all above websites)
+
+- [ ] Setup FastMail
+- [ ] Set up mailaddress (\*@domain.com) through FastMail
+- [ ] Create MailChimp audience
+- [ ] Add audience ID to script
+- [ ] Make some mail automation for every site
 
 ## Pricing Page with Payment Gateway
 
-- [ ] Add pricing page on landing-page
+- [ ] Add pricing section
 - [ ] Add multiple monetization options in the json-object (Fixed price and recurring, for now)
 - [ ] Fill in options in json
-- [ ] Link pay button to payment screen
-- [ ] Add mollie or stripe or something else [like rcur](https://rcur.nl/) that lets you get a subscripition in a WebView (like Spotify)
-- [ ] After doing rcur, come back to landing-page success page
+- [ ] Talk to mollie developer, if possible
+- [ ] Link pay button to [mollie](https://mollie.com) or [rcur](https://rcur.nl/) gateway
+- [ ] After payment, go to postpayment page to show success or failure
+- [ ] Email user after payment is succesful
+- [ ] Have a way to activate premium with a code or so
+- [ ] Have a way to check if a certain recurring payment is still valid
 
+## Feedback
 
-## Get rid of SCSS
+Getting feedback isn't that easy. I shouldn't ask it by whatsapp or mail. I should really plan a face to face session in which I let someone see the site for the first time and ask them for their first honest impression. Since I got 10+ websites
 
-  preferably, get rid of all SCSS. It's so fucking annoy. I just want React Style Objects. Inline or outline, I don't care.
+- [ ] Plan some feedback sessions in the park, for dinner, or for lunch.

@@ -1,13 +1,18 @@
+const getLinkObject = query => {
+  const linkDetails = query && query.substring(1, query.length).split("&");
 
-import { getLinkObject } from "../import";
-import Settings from "../settings/index";
+  const linkObject =
+    linkDetails &&
+    linkDetails.reduce(
+      (result, detail) => ({
+        ...result,
+        [detail.split("=")[0]]: detail.split("=")[1]
+      }),
+      {}
+    );
 
-const getCopySettings = query => {
-  const ref = (query && getLinkObject(query).ref) || "default";
-  const copySettings = Settings.copy[ref] || Settings.copy.default;
-  return copySettings;
+  return linkObject;
 };
-
 
 const firstLetters = text =>
   text
@@ -25,7 +30,9 @@ const stringToNumber = t =>
     10
   ) % 1000000;
 
-const colors = "#1abc9c, #f1c40f, #f39c12, #2ecc71, #27ae60, #27ae60, #e67e22, #3498db, #2980b9, #e74c3c, #c0392b, #9b59b6, #9b59b6, #ecf0f1, #bdc3c7, #34495e, #2c3e50, #2c3e50, #7f8c8d".split(", ");
+const colors = "#1abc9c, #f1c40f, #f39c12, #2ecc71, #27ae60, #27ae60, #e67e22, #3498db, #2980b9, #e74c3c, #c0392b, #9b59b6, #9b59b6, #ecf0f1, #bdc3c7, #34495e, #2c3e50, #2c3e50, #7f8c8d".split(
+  ", "
+);
 const randomColor = id => colors[id % colors.length];
 
-export { getCopySettings, firstLetters, stringToNumber, randomColor };
+export { getLinkObject, firstLetters, stringToNumber, randomColor };

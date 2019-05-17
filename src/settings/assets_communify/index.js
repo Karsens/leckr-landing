@@ -1,5 +1,4 @@
-
-import demoScreen from "./app.gif";
+import image1 from "./app.gif";
 import logo from "./logo_small.png";
 
-export { demoScreen, logo };
+export { image1, logo };

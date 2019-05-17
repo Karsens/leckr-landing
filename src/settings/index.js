@@ -1,3 +1,5 @@
-import Settings from "./karsens";
+import SettingsObject from "./dunbar";
+import { Settings } from "./_types";
 
-export default Settings;
+const settings: Settings = SettingsObject;
+export default settings;

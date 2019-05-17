@@ -1,9 +1,16 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
   "rules": {
     "quotes": ["warn", "double"],
+    "no-console": "off",
+    "spaced-comment": "off",
     "comma-dangle": "off",
     "arrow-parens": "off",
+    "no-extend-native": "off",
+    "react/forbid-prop-types": "off",
+    "func-names": "off",
+    "react/prefer-stateless-function": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/anchor-has-content": "off"

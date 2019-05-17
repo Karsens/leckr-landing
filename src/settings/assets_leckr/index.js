@@ -1,5 +1,4 @@
-
-import demoScreen from "./iteration1.jpg";
+import image1 from "./iteration1.jpg";
 import logo from "./LECKRLogo.png";
 
-export { demoScreen, logo };
+export { image1, logo };

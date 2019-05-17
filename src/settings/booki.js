@@ -1,9 +1,8 @@
 import React from "react";
-import Icon from "components/Icon";
+import Icon from "ui/Icon";
 import * as assets from "./assets_booki/index";
 
 const Settings = {
-
   isNoPhone: true,
   // to make sure people and on yourwebsite.com/emailsuccess, please do this:
   // In MailChimp, audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
@@ -16,34 +15,38 @@ const Settings = {
   },
 
   homeSections: [
-    { type: "masthead" }, { type: "features" }, { type: "reviews" }, { type: "team" }, { type: "blog" }
+    { type: "masthead" },
+    { type: "features" },
+    { type: "reviews" },
+    { type: "team" },
+    { type: "blog" }
   ],
   // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
 
   title: {
-    fontFamily: "Arial Rounded MT Bold",
+    fontFamily: "Arial Rounded MT Bold"
   },
 
   copy: {
-
     opposite: {
       siteTitle: "Go basic. Go Booki",
       title: "Go Basic. Go Booki",
-      text: "In an age of distraction, we all fight for our attention and focus. Your smartphone isn't making it easy. Booki gives you back your calm, focus and attention."
+      text:
+        "In an age of distraction, we all fight for our attention and focus. Your smartphone isn't making it easy. Booki gives you back your calm, focus and attention."
     },
 
     default: {
       siteTitle: "Go Basic. Go Booki",
       title: "Go Basic. Go Booki",
-      text: "Smartphones are the new sigarettes, and multitasking has proven to be very unhealthy. Privacy is gone, and it's only getting worse... Booki is a structured pocketbook the size of your phone that has the same key functionalities as a smartphone, but analog."
-    },
+      text:
+        "Smartphones are the new sigarettes, and multitasking has proven to be very unhealthy. Privacy is gone, and it's only getting worse... Booki is a structured pocketbook the size of your phone that has the same key functionalities as a smartphone, but analog."
+    }
 
     // lonely: {
     //   siteTitle: "Booki",
     //   title: "iBook? No, Booki",
     //   text: "The attention economy has disrupted our time for ourselves"
     // }
-
   },
 
   stats: {
@@ -64,7 +67,6 @@ const Settings = {
     //   link: "https://www.facebook.com/CommunifyCoworking/"
     // }
   ],
-
 
   menu: [
     {
@@ -89,13 +91,11 @@ const Settings = {
     {
       title: "Privacy",
       link: "/privacy"
-    },
-
+    }
   ],
 
   // for inside privacy policy. Can be any tradename I guess?
   companyName: "Booki",
-
 
   //   appSchemeUrl: "communify://communify.cc/",
 

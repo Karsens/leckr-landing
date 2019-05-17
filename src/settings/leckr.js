@@ -1,9 +1,8 @@
 import React from "react";
-import Icon from "components/Icon";
+import Icon from "ui/Icon";
 import * as assets from "./assets_leckr/index";
 
 const Settings = {
-
   isNoPhone: true,
   // to make sure people and on yourwebsite.com/emailsuccess, please do this:
   // In MailChimp, audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
@@ -16,28 +15,31 @@ const Settings = {
   },
 
   homeSections: [
-    { type: "masthead" }, { type: "features" }, { type: "reviews" }, { type: "team" }, { type: "blog" }
+    { type: "masthead" },
+    { type: "features" },
+    { type: "reviews" },
+    { type: "team" },
+    { type: "blog" }
   ],
   // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
 
   title: {
-    fontFamily: "Arial Rounded MT Bold",
+    fontFamily: "Arial Rounded MT Bold"
   },
 
   copy: {
-
     default: {
       siteTitle: "LECKR",
       title: "Let's Eat Code Kite Repeat",
-      text: "Let's Eat Code Kite Repeat is a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible. \n\n [Why I started LECKR](https://medium.com/leckr-react-native-graphql-apollo-tutorials/lets-eat-code-kite-repeat-240d7be3b45)"
-    },
+      text:
+        "Let's Eat Code Kite Repeat is a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible. \n\n [Why I started LECKR](https://medium.com/leckr-react-native-graphql-apollo-tutorials/lets-eat-code-kite-repeat-240d7be3b45)"
+    }
 
     // lonely: {
     //   siteTitle: "Booki",
     //   title: "iBook? No, Booki",
     //   text: "The attention economy has disrupted our time for ourselves"
     // }
-
   },
 
   stats: {
@@ -58,7 +60,6 @@ const Settings = {
     //   link: "https://www.facebook.com/CommunifyCoworking/"
     // }
   ],
-
 
   menu: [
     {
@@ -83,13 +84,11 @@ const Settings = {
     {
       title: "Privacy",
       link: "/privacy"
-    },
-
+    }
   ],
 
   // for inside privacy policy. Can be any tradename I guess?
   companyName: "LECKR",
-
 
   //   appSchemeUrl: "communify://communify.cc/",
 

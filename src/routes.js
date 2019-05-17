@@ -1,42 +1,38 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import HomePage from "./pages/Home";
-import PrivacyPage from "./pages/Privacy";
-import EmailSuccessPage from "./pages/EmailSuccess";
-import UserProfilePage from "./pages/UserProfile";
-import UnsubscribePage from "./pages/Unsubscribe";
-import RedirectPage from "./pages/Redirect";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
-import Settings from "settings/index";
+import Page from "./page";
+import { getLinkObject } from "./util/index";
+import Settings from "./settings";
+
+const { pages, apiUrl } = Settings;
 
 const client = new ApolloClient({
-  uri: Settings.apiUrl
+  uri: apiUrl
 });
 
-
-const Routes = (props) => (
+const Routes = props => (
   <ApolloProvider client={client}>
-    <Router {...props} basename={process.env.PUBLIC_URL}>
+    <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>
       <div>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/privacy" component={PrivacyPage} />
-        <Route path="/emailsuccess" component={EmailSuccessPage} />
-        <Route path="/u" component={UserProfilePage} />
-        <Route path="/unsubscribe" component={UnsubscribePage} />
-        <Route path="/app" component={RedirectPage} />
+        {pages.map((page, index) => {
+          const { route } = page;
+          const first = index === 0;
+          const path = `/${route}`;
+
+          const PageWithSearchObject = props => {
+            const search = props.location && props.location.search && getLinkObject(props.location.search);
+
+            return <Page {...props} search={search} {...page} />;
+          };
+          return <Route exact={first} path={path} component={PageWithSearchObject} />;
+        })}
       </div>
-    </Router>
+    </BrowserRouter>
   </ApolloProvider>
 );
-// class Routes extends React.Component {
-//   render() {
-//     const { props } = this;
-//     return
-//   }
-// }
 
 export default Routes;
