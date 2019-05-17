@@ -5,6 +5,7 @@ LECKR Landing makes it possible to make landing pages very quickly to test a val
 
 With leckr-landing, all strategies and software for execution of them will be thought out, from pre-validation to PoC. The landing page will change in all stages.
 
+Using this library and the documentation around it, you should be able to build a landing page with all things around it within a few hours, and test the value proposition within a few days.
 
 ## Goal
 
