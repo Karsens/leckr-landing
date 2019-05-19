@@ -58,12 +58,11 @@ const home: Page = {
           ref: "default",
           markdown: `# What is Dunbar?
 
-According to anthropologist Robin Dunbar, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). 
-          
+According to anthropologist Robin Dunbar, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b).
+
 With Dunbar, we help you to organize, analyse and improve your personal and professional relationships.
 
-
-`
+    `
         }
       ]
     },
@@ -155,6 +154,10 @@ With Dunbar, we help you to organize, analyse and improve your personal and prof
           ]
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -259,6 +262,9 @@ Internet connects the unconnected, but disconnects the connected. Our app tries 
           ]
         }
       ]
+    },
+    {
+      type: "Download"
     }
   ]
 };
@@ -353,6 +359,64 @@ const roadmap: Page = {
           ]
         }
       ]
+    },
+    {
+      type: "Download"
+    }
+  ]
+};
+
+const contact: Page = {
+  title: "Contact",
+  route: "contact",
+  showInMenu: true,
+  showInFooter: true,
+  internalPage: true,
+  sections: [
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: `
+# Contact
+
+**Visit Us**
+
+    Krammerstraat 33 C
+    1078 KG
+    Amsterdam, Noord Holland
+    The Netherlands
+
+**Email Us**
+[info@dunbar.site](mailto:info@dunbar.site)
+
+
+          `
+        }
+      ]
+    }
+  ]
+};
+
+const signup: Page = {
+  title: "Sign Up",
+  route: "signup",
+  showInMenu: false,
+  showInFooter: false,
+  internalPage: true,
+  sections: [
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: `
+You can sign up by filling in your email below:
+          `
+        }
+      ]
+    },
+    {
+      type: "Download"
     }
   ]
 };
@@ -413,9 +477,11 @@ const pricing: Page = {
 
 const pages: Page[] = [
   home,
+  signup,
   about,
   pricing,
   roadmap,
+  contact,
   defaultPages.privacy,
   defaultPages.emailsuccess,
   defaultPages.paymentsuccess
@@ -445,6 +511,7 @@ const globalSettings: GlobalSettings = {
   apiUrl: null,
   driftId: "p87nxp8v5kyi",
   appName: "Dunbar",
+  siteTitle: "Dunbar - Put meaning into your relationships",
   copyrightYear: "2019",
   companyName: "Dunbar"
 };

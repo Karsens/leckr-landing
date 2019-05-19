@@ -19,9 +19,9 @@ const defaultProps = {
 /**
  * A page layout component including common bits to all pages.
  */
-const PageLayout = ({ children, internalPage }) => (
+const PageLayout = ({ children, pathname, internalPage }) => (
   <div className={classnames("app", { "internal-page": internalPage })}>
-    <Navigation />
+    <Navigation pathname={pathname} />
     <div style={{ minHeight: "80vh" }}>{children}</div>
     <Footer />
   </div>

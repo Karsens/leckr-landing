@@ -7,6 +7,7 @@
 // Global Styles
 import React from "react";
 import Drift from "react-driftjs";
+import { Helmet } from "react-helmet";
 
 import "typeface-catamaran"; // eslint-disable-line
 import "font-awesome/css/font-awesome.css";
@@ -30,6 +31,7 @@ import Markdown from "./sections/section.markdown"; // rename
 import Pricing from "./sections/section.pricing";
 import Blurps from "./sections/section.blurps"; // 3 blurps in a row
 import Timeline from "./sections/section.timeline"; 
+import Download from "./sections/section.download"; // rename
 
 
 import ImageTitle from "./sections/ImageTitle"; // rename
@@ -44,6 +46,7 @@ import Stats from "./sections/Stats"; // should be CommunifyStats
 const SectionComponents = {
   Markdown,
   Pricing,
+  Download,
   Timeline,
   ImageTitle,
   DoubleImageTitle,
@@ -69,13 +72,19 @@ const SectionComponents = {
 class PageComponent extends React.Component<Page> {
   render() {
     const {
+      pathname,
       sections,
       internalPage,
-      search: { ref }
-    } = this.props;
+      search,
+     } = this.props;
 
     return (
-      <PageLayout internalPage={internalPage}>
+      <PageLayout pathname={pathname} internalPage={internalPage}>
+        <Helmet>
+          <link rel="shortcut icon" href={Settings.assets.favicon} />
+          <title>{Settings.siteTitle}</title>
+        </Helmet>
+        
         {sections.map(({ type, optionsArray }: Section) => {
           const SectionComponent = SectionComponents[type];
 
@@ -85,7 +94,7 @@ class PageComponent extends React.Component<Page> {
           }
 
           const options: Options = optionsArray && (
-            optionsArray.find(opt => opt.ref === ref) || optionsArray[0]
+            optionsArray.find(opt => opt.ref === search.ref) || optionsArray[0]
           );
 
           return <SectionComponent {...options} />;

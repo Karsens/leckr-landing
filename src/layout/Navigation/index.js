@@ -7,7 +7,7 @@ import {
   Container, Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink
 } from "reactstrap";
 import Settings from "../../settings";
-
+import Icon from "../../dui/Icon";
 import "./style.css";
 
 export const sectionShape = PropTypes.shape({
@@ -30,8 +30,12 @@ class Navigation extends Component {
       sectionNodes: [], // Cached section nodes data
       currentSection: null, // Current section, used to highlight the current menu entry
       sticky: false, // Tells if the navbar should be marked as sticky and gain special styles
-      isOpen: false // For mobile support, tells if the navbar menu is open
+      isOpen: false, // For mobile support, tells if the navbar menu is open
+      width: 0,
+      height: 0
     };
+
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
     // Methods binding
     this.onScroll = this.onScroll.bind(this);
@@ -40,7 +44,14 @@ class Navigation extends Component {
   }
 
   componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+
     window.addEventListener("scroll", throttle(this.onScroll, 100));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
   onScroll() {
@@ -80,7 +91,6 @@ class Navigation extends Component {
 
   toggle() {
     this.setState({
-      ...this.state,
       isOpen: !this.state.isOpen
     });
   }
@@ -93,9 +103,15 @@ class Navigation extends Component {
     return menuItems;
   }
 
-  render() {
-    const { sticky, currentSection } = this.state;
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
 
+  render() {
+    const { pathname } = this.props;
+    const { width, sticky, currentSection } = this.state;
+
+    const path = pathname && pathname.substring(1, pathname.length);
     return (
       <Navbar
         light
@@ -107,7 +123,13 @@ class Navigation extends Component {
           <Link to="/" className="navbar-brand">
             {Settings.appName}
           </Link>
-          <NavbarToggler onClick={this.toggle} />
+
+          {width < 992 && (
+            <Link onClick={this.toggle}>
+              <Icon style={{ color: "white", fontSize: 26 }} family="fa" name="navicon" />
+            </Link>
+          )}
+
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="navbar-nav ml-auto">
               {this.getMenuItems().map(({ route, title }, index) => (
@@ -115,7 +137,7 @@ class Navigation extends Component {
                   <NavLink
                     href={`/${route}`}
                     className={classnames("nav-link", {
-                      active: currentSection === route
+                      active: currentSection === route || path === route
                     })}
                   >
                     {title}

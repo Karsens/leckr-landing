@@ -28,7 +28,9 @@ const Routes = props => {
             const PageWithSearchObject = props => {
               const search = props.location && props.location.search && getLinkObject(props.location.search);
 
-              return <Page {...props} search={search} {...page} />;
+              return (
+                <Page {...props} pathname={props.location.pathname} search={search} {...page} />
+              );
             };
             return <Route exact={first} path={path} component={PageWithSearchObject} />;
           })}

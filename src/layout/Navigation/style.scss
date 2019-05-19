@@ -2,6 +2,7 @@
 @import "../../_mixins";
 
 // Styling for the navbar
+
 .navigation {
   border-color: fade-out($gray-darker, 0.95);
   background-color: black;
@@ -16,12 +17,6 @@
     &:focus {
       color: darken($theme-primary, 10%);
     }
-  }
-
-  .navbar-toggler {
-    font-size: 12px;
-    padding: 8px 10px;
-    color: $gray-darker;
   }
 
   .navbar-nav {
@@ -42,7 +37,7 @@
 
       > .nav-link,
       > .nav-link:focus {
-        color: $gray-darker;
+        color: $gray-lighter;
 
         &:hover {
           color: $theme-primary;
