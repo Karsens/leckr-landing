@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "ui/Icon";
+import Icon from "../dui/Icon";
 import * as assets from "./assets_leckr/index";
 
 const Settings = {

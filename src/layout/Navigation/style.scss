@@ -4,7 +4,7 @@
 // Styling for the navbar
 .navigation {
   border-color: fade-out($gray-darker, 0.95);
-  background-color: white;
+  background-color: black;
   @include transition-all;
   @include heading-font;
 
@@ -52,7 +52,7 @@
   }
   @media (min-width: 992px) {
     border-color: transparent;
-    background-color: transparent;
+    background-color: black;
 
     .navbar-brand {
       color: fade(white, 70%);

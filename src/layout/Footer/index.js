@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "reactstrap";
 
-import normalize from "util/normalize-string";
+import normalize from "../../util/normalize-string";
 import "./style.css";
 
-import Settings from "settings";
+import Settings from "../../settings";
 
 const { pages } = Settings;
 
@@ -16,7 +16,12 @@ const Footer = () => (
   <footer>
     <Container>
       <p>
-        &copy; {Settings.copyrightYear} {Settings.appName}. All Rights Reserved.
+        &copy;
+        {" "}
+        {Settings.copyrightYear}
+        {" "}
+        {Settings.appName}
+. All Rights Reserved.
       </p>
       <ul className="list-inline">
         {links.map(({ title, route }) => (

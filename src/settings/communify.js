@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "ui/Icon";
+import Icon from "../dui/Icon";
 import * as assets from "./assets_communify/index";
 
 const Settings = {
@@ -69,10 +69,8 @@ const Settings = {
 
   appSchemeUrl: "communify://communify.cc/",
 
-  downloadAppstoreUrl:
-    "https://itunes.apple.com/gb/app/communify/id1366552547?mt=8",
-  downloadPlaystoreUrl:
-    "https://play.google.com/store/apps/details?id=com.progenworks.communify",
+  downloadAppstoreUrl: "https://itunes.apple.com/gb/app/communify/id1366552547?mt=8",
+  downloadPlaystoreUrl: "https://play.google.com/store/apps/details?id=com.progenworks.communify",
 
   assets
 };

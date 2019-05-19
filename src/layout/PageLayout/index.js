@@ -7,10 +7,7 @@ import Footer from "../Footer";
 import "./style.css";
 
 const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   internalPage: PropTypes.bool
 };
 
@@ -25,7 +22,7 @@ const defaultProps = {
 const PageLayout = ({ children, internalPage }) => (
   <div className={classnames("app", { "internal-page": internalPage })}>
     <Navigation />
-    {children}
+    <div style={{ minHeight: "80vh" }}>{children}</div>
     <Footer />
   </div>
 );

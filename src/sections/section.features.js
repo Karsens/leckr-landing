@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "reactstrap";
-import { View, Text } from "../ui/react-native";
+import { View, Text } from "../util/react-native";
 
-import normalize from "util/normalize-string";
-import FeatureCard, { propTypes as featurePropTypes } from "ui/FeatureCard";
-import DeviceMockup from "ui/DeviceMockup";
-import { FeaturesOptions, Feature } from "settings/_types";
+import normalize from "../util/normalize-string";
+import FeatureCard, { propTypes as featurePropTypes } from "../dui/FeatureCard";
+import DeviceMockup from "../dui/DeviceMockup";
+import { FeaturesOptions, Feature } from "../settings/_types";
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -22,13 +22,16 @@ const defaultProps = {
 /**
  * A component for a features section.
  */
-const Features = ({ title, subtitle, features, image1 }: FeaturesOptions) => {
-  if (!features)
+const Features = ({
+  title, subtitle, features, image1
+}: FeaturesOptions) => {
+  if (!features) {
     return (
       <View>
         <Text>No features given!</Text>
       </View>
     );
+  }
   // Group features in pairs to display each pair in a row
   const pairs = features.reduce((list, value, index, array) => {
     if (index % 2 === 0) {
@@ -40,18 +43,14 @@ const Features = ({ title, subtitle, features, image1 }: FeaturesOptions) => {
   return (
     <section className="features" id="features">
       <Container>
-        <div style={{ textAlign: "center", marginBottom: 100 }}>
+        <View style={{ textAlign: "center", marginBottom: 100 }}>
           <h2 style={{ marginTop: 0 }}>{title}</h2>
           <p style={{ marginBottom: 0 }}>{subtitle}</p>
           <hr />
-        </div>
+        </View>
         <Row>
           <Col lg="4" xs="12" className="my-auto">
-            <DeviceMockup
-              device="iPhone6Plus"
-              orientation="portrait"
-              color="white"
-            >
+            <DeviceMockup device="iPhone6Plus" orientation="portrait" color="white">
               <img src={image1} className="img-fluid" alt="" />
             </DeviceMockup>
           </Col>

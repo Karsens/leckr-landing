@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "ui/Icon";
+import Icon from "../dui/Icon";
 import * as assets from "./assets_karsens/index";
 
 const Settings = {
@@ -14,12 +14,7 @@ const Settings = {
     primaryDarker: "#00306a"
   },
 
-  homeSections: [
-    { type: "masthead" },
-    { type: "reviews" },
-    { type: "team" },
-    { type: "blog" }
-  ],
+  homeSections: [{ type: "masthead" }, { type: "reviews" }, { type: "team" }, { type: "blog" }],
   // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
 
   title: {

@@ -4,6 +4,8 @@
   "rules": {
     "quotes": ["warn", "double"],
     "no-console": "off",
+    "global-require": "off",
+    "class-methods-use-this": "off",
     "spaced-comment": "off",
     "comma-dangle": "off",
     "arrow-parens": "off",

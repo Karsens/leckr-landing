@@ -4,15 +4,9 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 import {
-  Container,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink
+  Container, Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink
 } from "reactstrap";
-import Settings from "settings/index";
+import Settings from "../../settings";
 
 import "./style.css";
 
@@ -52,16 +46,10 @@ class Navigation extends Component {
   onScroll() {
     // Update the current section and the sticky state prop
     let currentSection = null;
-    const position =
-      window.pageYOffset !== undefined
-        ? window.pageYOffset
-        : (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-    const isScrollBottom =
-      window.innerHeight + position >= document.body.scrollHeight;
+    const position = window.pageYOffset !== undefined
+      ? window.pageYOffset
+      : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    const isScrollBottom = window.innerHeight + position >= document.body.scrollHeight;
 
     this.cacheSectionNodes();
     this.state.sectionNodes.forEach(({ id, position: nodePosition }) => {

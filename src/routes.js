@@ -14,25 +14,28 @@ const client = new ApolloClient({
   uri: apiUrl
 });
 
-const Routes = props => (
-  <ApolloProvider client={client}>
-    <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>
-      <div>
-        {pages.map((page, index) => {
-          const { route } = page;
-          const first = index === 0;
-          const path = `/${route}`;
+const Routes = props => {
+  console.log("pages: ", pages.length);
+  return (
+    <ApolloProvider client={client}>
+      <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>
+        <div>
+          {pages.map((page, index) => {
+            const { route } = page;
+            const first = index === 0;
+            const path = `/${route}`;
 
-          const PageWithSearchObject = props => {
-            const search = props.location && props.location.search && getLinkObject(props.location.search);
+            const PageWithSearchObject = props => {
+              const search = props.location && props.location.search && getLinkObject(props.location.search);
 
-            return <Page {...props} search={search} {...page} />;
-          };
-          return <Route exact={first} path={path} component={PageWithSearchObject} />;
-        })}
-      </div>
-    </BrowserRouter>
-  </ApolloProvider>
-);
+              return <Page {...props} search={search} {...page} />;
+            };
+            return <Route exact={first} path={path} component={PageWithSearchObject} />;
+          })}
+        </div>
+      </BrowserRouter>
+    </ApolloProvider>
+  );
+};
 
 export default Routes;

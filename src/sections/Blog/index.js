@@ -6,9 +6,7 @@ import { graphql } from "react-apollo";
 
 import "./style.css";
 
-const propTypes = {
-  data: PropTypes.object.isRequired
-};
+const CARDSIZE = 300;
 
 /**
  * Responsibility: This blog thingy now gets an input of blogs,
@@ -41,79 +39,153 @@ const propTypes = {
  * to different of these kind of feeds (by email, and by push notifications,
  * and by whatever). But let's not go there yet.
  */
-const Blog = ({ data }) => {
-  const posts = data && data.web && data.web.mediumArticles;
 
-  return (
-    <header className="cta overlay">
-      {/* <a name="news"> gives warning.
-    #todo make this work again for every section by making a wrapper
-    around section that has this feature. */}
-      <Container>
-        <br />
-        <h1>Our blog</h1>
-        <div style={{ flexDirection: "row", display: "flex", flexWrap: "wrap" }}>
-          {posts
-            && posts.length > 0
-            && posts.map(c => (
-              <a key={`key-${c.id}`} href={c.link} target="_blank" rel="noopener noreferrer">
-                <div
-                  style={{
-                    margin: 10,
-                    textAlign: "center"
-                  }}
+type Article = {
+  id: string,
+  date?: Date,
+  title: string,
+  link: string,
+  figure: string // can be an URL, but can also be required image
+};
+
+class Blog extends React.Component {
+  state = {
+    hover: null,
+    mediumArticles: [],
+    ghostArticles: [],
+    isLoading: true
+  };
+
+  async componentDidMount() {
+    const {
+      title, mediumLink, ghostLink, articles
+    } = this.props;
+
+    await this.fetchMedium(mediumLink);
+
+    await this.fetchGhost(ghostLink);
+
+    this.setState({ isLoading: false });
+  }
+
+  async fetchMedium(url): Article[] {
+    if (!url) return null;
+
+    //returns list of medium articles
+
+    // const medium: Article[] = data && data.web && data.web.mediumArticles;
+
+    return null;
+  }
+
+  async fetchGhost(url): Article[] {
+    if (!url) return [];
+
+    //returns list of medium articles
+
+    return null;
+  }
+
+  render() {
+    const { title, articles } = this.props;
+
+    const { isLoading, mediumArticles, ghostArticles } = this.state;
+
+    const allArticles = []
+      .concat(articles, mediumArticles, ghostArticles)
+      .sort((a: Article, b: Article) => a.date < b.date);
+
+    const aStyle = id => ({
+      color: "black",
+      textDecoration: "none",
+      transform: this.state.hover === id ? "scale(1.03)" : undefined
+    });
+
+    return (
+      <header className="cta overlay">
+        <Container>
+          <br />
+          <h1>{title}</h1>
+          {isLoading && <p>Loading... </p>}
+
+          <div style={{ flexDirection: "row", display: "flex", flexWrap: "wrap" }}>
+            {allArticles
+              && allArticles.length > 0
+              && allArticles.map((c: Article) => (
+                <a
+                  onMouseEnter={() => this.setState({ hover: c.id })}
+                  onMouseLeave={() => this.setState({ hover: null })}
+                  style={aStyle(c.id)}
+                  hover
+                  key={`key-${c.id}`}
+                  href={c.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div
                     style={{
-                      width: 200,
-                      height: 200,
-                      borderRadius: 20,
-                      backgroundColor: "transparent"
+                      margin: 20,
+                      backgroundColor: "white",
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      maxWidth: "20vw",
+                      minWidth: CARDSIZE,
+                      borderRadius: 5
                     }}
                   >
-                    <img
+                    <div
                       style={{
-                        maxWidth: 200,
-                        maxHeight: 200
+                        flex: 1,
+                        display: "flex",
+                        borderRadius: 20,
+                        backgroundColor: "transparent"
                       }}
-                      height="auto"
-                      width="auto"
-                      alt={c.title}
-                      src={c.figure}
-                    />
+                    >
+                      <img
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          borderTopLeftRadius: 5,
+                          borderTopRightRadius: 5
+                        }}
+                        height="auto"
+                        width="auto"
+                        alt={c.title}
+                        src={c.figure}
+                      />
+                    </div>
+
+                    <p
+                      style={{
+                        marginTop: 10,
+                        marginLeft: 10,
+                        marginRight: 10,
+                        fontSize: 20
+                      }}
+                    >
+                      {c.title}
+                    </p>
+
+                    <p style={{ marginLeft: 10, marginRight: 10 }}>{c.description}</p>
                   </div>
-                  <p
-                    style={{
-                      marginTop: 10,
-                      textAlign: "center",
-                      width: 200,
-                      fontSize: 20,
-                      color: "white"
-                    }}
-                  >
-                    {c.title}
-                  </p>
-                </div>
-              </a>
-            ))}
-        </div>
-      </Container>
-    </header>
-  );
+                </a>
+              ))}
+          </div>
+        </Container>
+      </header>
+    );
+  }
+}
+const propTypes = {
+  title: PropTypes.string,
+  articles: PropTypes.object
 };
 
 Blog.propTypes = propTypes;
+Blog.defaultProps = {
+  title: "Our blog",
+  articles: []
+};
 
-const WEB_QUERY = gql`
-  query Web {
-    web {
-      mediumArticles {
-        title
-        link
-        figure
-      }
-    }
-  }
-`;
-
-export default graphql(WEB_QUERY)(Blog);
+export default Blog;
