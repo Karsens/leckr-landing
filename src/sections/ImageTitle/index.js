@@ -64,8 +64,8 @@ const Masthead = ({ siteTitle, title, text }) => {
                     alignItems: "center"
                   }}
                 >
-                  <h1 style={{ fontFamily: Settings.style.fontFamily.title }}>
-                    <b>{title}</b>
+                  <h1 style={{ fontWeight: "bold", fontFamily: Settings.style.fontFamily.title }}>
+                    {title}
                   </h1>
                 </div>
               </div>

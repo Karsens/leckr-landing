@@ -70,7 +70,7 @@ With Dunbar, we help you to organize, analyse and improve your personal and prof
     },
 
     {
-      type: "Blurps",
+      type: "BlurpsComingSoon", //Just Blurps, but not now yet
 
       optionsArray: [
         {
@@ -126,30 +126,32 @@ With Dunbar, we help you to organize, analyse and improve your personal and prof
       optionsArray: [
         {
           title: "Why Dunbar?",
-          subtitle: "Because current applications mostly bring..",
+
+          subtitle: "Because current applications mostly bring...",
+          image1: require("./assets_dunbar/screen2.png"),
           features: [
             {
-              title: "..Chaos",
+              title: "...Chaos",
               description:
                 "Your contacts are scattered across all kinds of (social media) channels",
               icon: <Icon family="simple" name="screen-smartphone" />
             },
             {
-              title: "..Addiction",
+              title: "...Addiction",
               description: "Current social media business models are optimized for screen-time.",
-              icon: <Icon family="simple" name="present" />
+              icon: <Icon family="simple" name="exclamation" />
             },
             {
-              title: "..Sparse relationships",
+              title: "...Sparse relationships",
               description:
                 "The internet has grown the amount of people we interact with, but made every connection a lower quality one because we spend less time on every connection.",
               icon: <Icon family="simple" name="exclamation" />
             },
             {
-              title: "..Disconnectedness",
+              title: "...Disconnectedness",
               description:
                 "Internet connects the unconnected, but disconnects the connected. Our app tries to restore this by stimulating real interactions first",
-              icon: <Icon family="fa" name="bicycle" />
+              icon: <Icon family="simple" name="screen-smartphone" />
             }
           ]
         }
@@ -169,14 +171,15 @@ const about: Page = {
       type: "Markdown",
       optionsArray: [
         {
-          markdown: `
-# About me: Life story
+          /*
+
+          # About me: Life story
 
 Young nerd: Mafia game
 
 Regret, Depressive
 
-Bachelors, Depression
+Bachelors AI
 
 2017 travel: Different
 
@@ -197,6 +200,8 @@ Cal Newport, Robin Dunbar, Tristan Harris
 Business coach expensive
 
 Goal for professional use
+*/
+          markdown: `
 
 # Vision, mission, manifest
 
@@ -229,29 +234,29 @@ Internet connects the unconnected, but disconnects the connected. Our app tries 
               link:
                 "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
               figure: require("./assets_dunbar/forbesArticle.jpeg")
-            },
-
-            {
-              id: 2,
-              date: "Aug 7, 2014, 12:51pm",
-              title: "Dunbar's Number: A Key To Networking",
-              description:
-                "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
-              link:
-                "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
-              figure: require("./assets_dunbar/forbesArticle.jpeg")
-            },
-
-            {
-              id: 3,
-              date: "Aug 7, 2014, 12:51pm",
-              title: "Dunbar's Number: A Key To Networking",
-              description:
-                "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
-              link:
-                "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
-              figure: require("./assets_dunbar/forbesArticle.jpeg")
             }
+
+            // {
+            //   id: 2,
+            //   date: "Aug 7, 2014, 12:51pm",
+            //   title: "Dunbar's Number: A Key To Networking",
+            //   description:
+            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
+            //   link:
+            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
+            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
+            // },
+
+            // {
+            //   id: 3,
+            //   date: "Aug 7, 2014, 12:51pm",
+            //   title: "Dunbar's Number: A Key To Networking",
+            //   description:
+            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
+            //   link:
+            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
+            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
+            // }
           ]
         }
       ]
