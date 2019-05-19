@@ -14,11 +14,12 @@ const home: Page = {
     {
       type: "ImageTitle",
       optionsArray: [
+        // Organize, Analyse, Improve
         {
           ref: "default",
           // entrepreneur audience
-          siteTitle: "Dunbar - Organize, Analyse, Improve",
-          title: "Organize, Analyse, Improve",
+          siteTitle: "Dunbar - Put meaning into your relationships",
+          title: "Put meaning into your relationships",
           text: ""
         },
 
@@ -60,8 +61,6 @@ const home: Page = {
 According to anthropologist Robin Dunbar, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). 
           
 With Dunbar, we help you to organize, analyse and improve your personal and professional relationships.
-
------------------
 
 
 `
@@ -372,20 +371,38 @@ const pricing: Page = {
           packages: [
             {
               name: "Free",
-              description: "5 contacts",
-              price: "Free"
+              price: "€0",
+              // description: "5 contacts",
+              link: "/signup",
+              buttonTitle: "Sign up",
+              features: ["Up to 5 contacts"],
+              notFeatures: ["Insights", "Coaching"]
             },
             {
               name: "Club",
-              description: "42 contacts",
-              price: "One time €42,-",
-              link: "https://useplink.com/payment/RGmpgKGxnAthbK8w9kzt" //"https://rcur.nl/pay/G4vXjMGgkb",
+              price: "€99",
+              priceDescription: "One time fee",
+              link: "https://useplink.com/payment/RGmpgKGxnAthbK8w9kzt", //"https://rcur.nl/pay/G4vXjMGgkb",
+              features: ["Up to 42 contacts", "Insights"],
+              notFeatures: ["Coaching"]
+
+              // description: "42 contacts"
             },
             {
               name: "VIP",
-              description: "150 contacts",
-              price: "€10,-/m",
-              link: "https://rcur.nl/pay/80L4EYYgpq"
+              price: "€10",
+              priceDescription: "Price per month",
+              link: "https://rcur.nl/pay/80L4EYYgpq",
+              //description: "150 contacts"
+              features: ["Up to 150 contacts", "Experimental Features"],
+              notFeatures: ["Coaching"]
+            },
+            {
+              name: "Coach",
+              price: "€99",
+              priceDescription: "Price per month",
+              link: "https://rcur.nl/pay/80L4EYYgpq",
+              features: ["Coaching"]
             }
           ]
         }

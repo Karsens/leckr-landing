@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
 const propTypes = {
-  family: PropTypes.oneOf(['fa', 'simple']).isRequired,
-  name: PropTypes.string.isRequired,
+  family: PropTypes.oneOf(["fa", "simple"]).isRequired,
+  name: PropTypes.string.isRequired
   // size: PropTypes.oneOf(['small', 'normal', 'big']),
 };
 
@@ -15,13 +14,14 @@ const propTypes = {
 const Icon = ({
   family,
   name,
+  style
   // size,
 }) => {
   const familyToClassName = {
-    fa: classnames('fa', `fa-${name}`),
-    simple: classnames(`icon-${name}`),
+    fa: classnames("fa", `fa-${name}`),
+    simple: classnames(`icon-${name}`)
   };
-  return <i className={familyToClassName[family]} />;
+  return <i style={style} className={familyToClassName[family]} />;
 };
 
 Icon.propTypes = propTypes;
