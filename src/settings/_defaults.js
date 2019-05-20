@@ -15,7 +15,17 @@ const emailsuccess: Page = {
   showInMenu: false,
   showInFotter: false,
   internalPage: true,
-  sections: [{ type: "EmailSuccess" }]
+  sections: [
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown:
+            "Thanks for your interest. Your email is underway, which contains information about how to get the app."
+        }
+      ]
+    }
+  ]
 };
 
 const paymentsuccess: Page = {

@@ -158,8 +158,44 @@ With Dunbar, we help you to organize, analyse and improve your personal and prof
         }
       ]
     },
+
     {
-      type: "Features",
+      type: "ImageTextFeaturesComingSoon",
+      optionsArray: [
+        {
+          features: [
+            {
+              image: require("./assets_dunbar/screen2.png"),
+              title: "A test tiel 1",
+              text: "test text. you know this feature, its so cool brue"
+            },
+            {
+              image: require("./assets_dunbar/screen2.png"),
+              title: "A test tiel 2",
+              text: "test text. you know this feature, its so cool brue"
+            },
+            {
+              image: require("./assets_dunbar/screen2.png"),
+              title: "A test tiel 3",
+              text: "test text. you know this feature, its so cool brue"
+            },
+            {
+              image: require("./assets_dunbar/screen2.png"),
+              title: "A test tiel 4",
+              text: "test text. you know this feature, its so cool brue"
+            },
+            {
+              image: require("./assets_dunbar/screen2.png"),
+              title: "A test tiel 5",
+              text: "test text. you know this feature, its so cool brue"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      type: "ImageIconsFeatures",
 
       optionsArray: [
         {
@@ -337,55 +373,64 @@ const roadmap: Page = {
               markdown: `
 - [x]  Pre-validate more
 - [x]  Conceptualization of features
-- [x]  Build MVP
+- [x]  Work on MVP
                   `
             },
 
             {
               title: "May 2019",
               markdown: `
-- [ ]  Improve website
-- [ ]  Add payments infrastructure
-- [ ]  Fix bugs
-- [ ]  Add critical features
-- [ ]  Release new version
-                  `
+- [x]  Work on MVP
+- [x]  Iterate on feedback
+- [ ]  Improve Website
+- [ ]  Create Payments Infrastructure
+`
             },
 
             {
               title: "June 2019",
               markdown: `
+- [ ]  Fix bugs
+- [ ]  Add critical features
+- [ ]  Provide better onboarding
+- [ ]  Release new version
 - [ ]  Invite ±25 testers
 - [ ]  Test with ±10 DAU
-- [ ]  Provide better onboarding
+- [ ]  Add MVP's for Insights and Challenge
+- [ ]  Fix problems
 - [ ]  Make it stable and simple
-- [ ]  Iterate over design
-- [ ]  Iterate over copy
-- [ ]  Iterate over website
-- [ ]  Iterate over app feedback
-- [ ]  Prepare app for big launch
-                  `
+`
             },
 
             {
               title: "July 2019",
               markdown: `
-- [ ]  Connect with business coaches, find business
-- [ ]  Add MVP's for Insights, Challenge, and Coaches
-- [ ]  Write the story and Press Kit to help press to write about me
-- [ ]  Connect with T.N.W.
-- [ ]  Plan launch
-    
-              `
+- [ ]  Ask for feedback
+- [ ]  Iterate over design
+- [ ]  Iterate over copy
+- [ ]  Iterate over app feedback
+- [ ]  Iterate over website
+- [ ]  Iterate over business model
+`
             },
 
             {
-              title: "Rest of 2019",
+              title: "August + September",
               markdown: `
-- [ ]  Launch
+- [ ]  Connect with (business) coaches
+- [ ]  Connect with influencers
+- [ ]  Connect with T.N.W.
+- [ ]  Plan launch
+- [ ]  Launch!
+`
+            },
+
+            {
+              title: "Q4",
+              markdown: `
 - [ ]  Fix problems that arise
-- [ ]  Invest 100% in max growth, not in features
-    `
+- [ ]  Invest 100% in stability and quality, not in features
+              `
             },
 
             {
@@ -395,7 +440,6 @@ const roadmap: Page = {
 - Optimize Insights
 - Optimize Network Aggregation and UX
 - Work together with coaches and therapists to create a premium semi-automated (self)coaching platform.
-
               `
             }
           ]
@@ -422,15 +466,21 @@ const contact: Page = {
           markdown: `
 # Contact
 
-**Visit Us**
+
+✉️ [info@dunbar.site](mailto:info@dunbar.site)
+
+📞 [020 - 21 01 820](tel:0202101820)
+
+**KVK** 64843769
+
+
+[🗺 Google Maps](https://www.google.com/maps/place/Krammerstraat+33C,+1078+KG+Amsterdam)
+
 
     Krammerstraat 33 C
     1078 KG
     Amsterdam, Noord Holland
     The Netherlands
-
-**Email Us**
-[info@dunbar.site](mailto:info@dunbar.site)
 
 
           `
@@ -452,15 +502,15 @@ const developers: Page = {
         {
           markdown: `
 .
-# Let's Eat Code Kite Repeat
+### Let's Eat Code Kite Repeat
 
 Does this get you excited? [Have a look here](https://leckr.io)
 
-# I'm building a Universal People API
+### I'm building a Universal People API
 
 Does this get you excited? [Get in touch](/contact)
 
-# I do React Native
+### I do React Native
 
 Does this get you excited? [Get in touch](/contact) or [Have a look here](https://leckr.io)
         `
@@ -607,6 +657,8 @@ The app didn't launch yet, but it's already possible to buy early access to extr
 * **Dunbar For Coworking** makes it possible for all coworkers to find eachother and connect! [Get in touch](/contact)
 
 * **Do you have ADHD?** Try our [namebuddies](https://www.getdunbar.com/)
+
+* [Donate (PayPal)](https://paypal.me/communify?locale.x=nl_NL)
 `
         }
       ]
@@ -628,12 +680,11 @@ const pages: Page[] = [
 ];
 
 const globalSettings: GlobalSettings = {
+  googleAnalyticsId: "UA-115183926-2",
   mailChimpSubscribeUrl:
     "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=74a7bddfd2",
 
   mailFormTitle: "Get early access",
-  emailSuccessText:
-    "Thanks for your interest. Your email is underway, which contains information about how to get the app.",
 
   colors: {
     primary: "#0054b8",

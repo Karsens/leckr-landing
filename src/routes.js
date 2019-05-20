@@ -22,7 +22,7 @@ const ProvideApollo = client
 const Routes = props => (
   <ProvideApollo client={client}>
     <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>
-      <div>
+      <View>
         {pages.map((page, index) => {
           const { route } = page;
           const first = index === 0;
@@ -43,7 +43,7 @@ const Routes = props => (
             />
           );
         })}
-      </div>
+      </View>
     </BrowserRouter>
   </ProvideApollo>
 );

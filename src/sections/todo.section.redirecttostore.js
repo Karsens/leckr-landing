@@ -1,9 +1,9 @@
 import React from "react";
 
-import Settings from "settings/index";
+import Settings from "../settings";
 
 const getMobileOperatingSystem = () => {
-  const navigator = window.navigator;
+  const { navigator } = window;
 
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -29,20 +29,21 @@ const Redirect = ({ location }) => {
 
   const os = getMobileOperatingSystem();
 
+  //first try to open app
   window.location.assign(schemeUrl);
 
+  //if nothing happens, the app isn't there. then, wait 500ms and open appropriate appstore url
   if (os === "iOS") {
     setTimeout(() => window.location.assign(Settings.downloadAppstoreUrl), 500);
   } else if (os === "Android") {
-    setTimeout(
-      () => window.location.assign(Settings.downloadPlaystoreUrl),
-      500
-    );
+    setTimeout(() => window.location.assign(Settings.downloadPlaystoreUrl), 500);
   } else {
     // to-do, should add QR Code here since you're not gonna be on your phone here.
     return (
       <div>
-        <a href={Settings.downloadPlaystoreUrl}>Download for iOS</a> |
+        <a href={Settings.downloadPlaystoreUrl}>Download for iOS</a>
+        {" "}
+|
         <a href={Settings.downloadPlaystoreUrl}>Download for Android</a>
       </div>
     );
