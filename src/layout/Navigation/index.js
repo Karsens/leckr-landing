@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 import {
-  Container, Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink
+  Container, Collapse, Navbar, Nav, NavItem, NavLink
 } from "reactstrap";
 import Settings from "../../settings";
 import Icon from "../../dui/Icon";
+import { TouchableOpacity } from "../../util/react-native";
 import "./style.css";
 
 export const sectionShape = PropTypes.shape({
@@ -125,9 +126,9 @@ class Navigation extends Component {
           </Link>
 
           {width < 992 && (
-            <Link onClick={this.toggle}>
+            <TouchableOpacity onClick={this.toggle}>
               <Icon style={{ color: "white", fontSize: 26 }} family="fa" name="navicon" />
-            </Link>
+            </TouchableOpacity>
           )}
 
           <Collapse isOpen={this.state.isOpen} navbar>

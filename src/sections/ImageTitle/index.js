@@ -14,17 +14,10 @@ import Download from "../../wui/download";
 
 import "./style.css";
 
-const propTypes = {
-  isNoPhone: PropTypes.bool.isRequired,
-  googlePlayDownloadLink: PropTypes.string.isRequired,
-  appStoreDownloadLink: PropTypes.string.isRequired,
-  demoScreen: PropTypes.string.isRequired
-};
-
 /**
  * The masthead for the home page
  */
-const Masthead = ({ siteTitle, title, text }) => {
+const ImageTitle = ({ siteTitle, title, text }) => {
   const img = (
     <img src={Settings.assets.image1} className="img-fluid" alt="" width="100%" height="100%" />
   );
@@ -87,6 +80,16 @@ const Masthead = ({ siteTitle, title, text }) => {
   );
 };
 
-Masthead.propTypes = propTypes;
+ImageTitle.propTypes = {
+  isNoPhone: PropTypes.bool,
+  googlePlayDownloadLink: PropTypes.string,
+  appStoreDownloadLink: PropTypes.string
+};
 
-export default Masthead;
+ImageTitle.defaultProps = {
+  isNoPhone: false,
+  googlePlayDownloadLink: null,
+  appStoreDownloadLink: null
+};
+
+export default ImageTitle;

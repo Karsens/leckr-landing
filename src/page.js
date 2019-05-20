@@ -35,11 +35,11 @@ import Download from "./sections/section.download"; // rename
 
 
 import ImageTitle from "./sections/ImageTitle"; // rename
-import DoubleImageTitle from "./sections/ImageTitle"; // 2 images with oneliner in the middle + buttons or email catcher
-import Reviews from "./sections/ImageTitle"; // 3 reviews in a row
-import About from "./sections/ImageTitle"; // long story with pictures here and there (use markdown)
-import ImageCover from "./sections/ImageTitle"; // 100% width image with optional title hovering over it
-import Video from "./sections/ImageTitle"; // 100% width video
+// import DoubleImageTitle from "./sections/ImageTitle"; // 2 images with oneliner in the middle + buttons or email catcher
+// import Reviews from "./sections/ImageTitle"; // 3 reviews in a row
+// import About from "./sections/ImageTitle"; // long story with pictures here and there (use markdown)
+// import ImageCover from "./sections/ImageTitle"; // 100% width image with optional title hovering over it
+// import Video from "./sections/ImageTitle"; // 100% width video
 
 import Stats from "./sections/Stats"; // should be CommunifyStats
 
@@ -49,15 +49,15 @@ const SectionComponents = {
   Download,
   Timeline,
   ImageTitle,
-  DoubleImageTitle,
+  // DoubleImageTitle,
   Features,
   Stats,
   Blog,
-  Reviews,
+  // Reviews,
   Blurps,
-  About,
-  ImageCover,
-  Video,
+  // About,
+  // ImageCover,
+  // Video,
   Privacy,
   EmailSuccess
 };
@@ -76,7 +76,7 @@ class PageComponent extends React.Component<Page> {
       sections,
       internalPage,
       search,
-     } = this.props;
+    } = this.props;
 
     return (
       <PageLayout pathname={pathname} internalPage={internalPage}>
@@ -85,19 +85,21 @@ class PageComponent extends React.Component<Page> {
           <title>{Settings.siteTitle}</title>
         </Helmet>
         
-        {sections.map(({ type, optionsArray }: Section) => {
+        {sections.map(({ type, optionsArray }: Section, index) => {
           const SectionComponent = SectionComponents[type];
+
+          const key = `section-${index}`;
 
           if (!SectionComponent) {
             console.log("Can't find section ", type);
-            return <div />;
+            return <div key={key} />;
           }
 
           const options: Options = optionsArray && (
-            optionsArray.find(opt => opt.ref === search.ref) || optionsArray[0]
+            optionsArray.find(opt => opt.reference === search.ref) || optionsArray[0]
           );
 
-          return <SectionComponent {...options} />;
+          return <SectionComponent key={key} {...options} />;
         })}
 
         <Drift appId={Settings.driftId} />

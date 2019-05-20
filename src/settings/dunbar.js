@@ -16,7 +16,7 @@ const home: Page = {
       optionsArray: [
         // Organize, Analyse, Improve
         {
-          ref: "default",
+          reference: "default",
           // entrepreneur audience
           siteTitle: "Dunbar - Put meaning into your relationships",
           title: "Put meaning into your relationships",
@@ -24,7 +24,7 @@ const home: Page = {
         },
 
         {
-          ref: "friends",
+          reference: "friends",
           // entrepreneur audience
           siteTitle: "Dunbar - CRM for your Friends",
           title: "CRM for your Friends",
@@ -33,7 +33,7 @@ const home: Page = {
         },
 
         {
-          ref: "broad",
+          reference: "broad",
           // broad audience
           siteTitle: "Dunbar - Put meaning into your relationships",
           title: "Put meaning into your relationships",
@@ -42,7 +42,7 @@ const home: Page = {
         },
 
         {
-          ref: "lonely",
+          reference: "lonely",
           siteTitle: "Dunbar - Reconnect. Engage. Bond.",
           title: "Reconnect. Engage. Bond.",
           text:
@@ -55,7 +55,7 @@ const home: Page = {
       type: "Markdown",
       optionsArray: [
         {
-          ref: "default",
+          reference: "default",
           markdown: `# What is Dunbar?
 
 According to anthropologist Robin Dunbar, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b).
@@ -63,6 +63,46 @@ According to anthropologist Robin Dunbar, the limit of active stable relationshi
 With Dunbar, we help you to organize, analyse and improve your personal and professional relationships.
 
     `
+        }
+      ]
+    },
+
+    {
+      type: "FeaturesBigComingSoon",
+      optionsArray: [
+        {
+          features: [
+            {
+              image: null,
+              title: "Step 1) Download and sync your contacts",
+              description: "Your data is save, it stays on your phone"
+            },
+            {
+              image: null,
+              title: "Step 2) Choose who is most important to you"
+            },
+
+            {
+              image: null,
+              title: "Never forget to keep in touch"
+            },
+            {
+              image: null,
+              title: "Organize and plan meetings"
+            },
+            {
+              image: null,
+              title: "Get relational insights"
+            },
+            {
+              image: null,
+              title: "Set goals and improve"
+            },
+            {
+              image: null,
+              title: "Hire a coach and get advice"
+            }
+          ]
         }
       ]
     },
@@ -563,6 +603,8 @@ The app didn't launch yet, but it's already possible to buy early access to extr
 * Even a **white-labeled** Contact App is possible, we're still young! [Get in touch](/contact)
 
 * **Dunbar For Coworking** makes it possible for all coworkers to find eachother and connect! [Get in touch](/contact)
+
+* **Do you have ADHD?** Try our [namebuddies](https://www.getdunbar.com/)
 `
         }
       ]
@@ -573,9 +615,9 @@ The app didn't launch yet, but it's already possible to buy early access to extr
 const pages: Page[] = [
   home,
   about,
-  pricing,
   roadmap,
   developers,
+  pricing,
   contact,
   signup,
   defaultPages.privacy,

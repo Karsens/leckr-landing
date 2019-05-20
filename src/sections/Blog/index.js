@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container } from "reactstrap";
-import { gql } from "apollo-boost";
-import { graphql } from "react-apollo";
+// import { gql } from "apollo-boost";
+// import { graphql } from "react-apollo";
 
 import "./style.css";
 
@@ -57,13 +57,13 @@ class Blog extends React.Component {
   };
 
   async componentDidMount() {
-    const {
-      title, mediumLink, ghostLink, articles
-    } = this.props;
+    // const {
+    //   title, mediumLink, ghostLink, articles
+    // } = this.props;
 
-    await this.fetchMedium(mediumLink);
+    // await this.fetchMedium(mediumLink);
 
-    await this.fetchGhost(ghostLink);
+    // await this.fetchGhost(ghostLink);
 
     this.setState({ isLoading: false });
   }

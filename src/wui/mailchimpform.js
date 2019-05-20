@@ -51,7 +51,7 @@ class MailChimpForm extends React.Component {
                   borderLeftColor: Settings.colors.primaryLighter
                 }}
                 value={this.state.value}
-                ref="searchStringInput"
+                // ref="searchStringInput"
                 onChange={({ value }) => this.setState({ value })}
                 type="email"
                 name="EMAIL"
@@ -66,6 +66,7 @@ class MailChimpForm extends React.Component {
                   name="b_211c8e286b504f8faf1b92bb2_74a7bddfd2"
                   tabIndex="-1"
                   value=""
+                  onChange={({ value }) => this.setState({ fakeValue: value })} //do this to prevent warning without having to use readonly
                 />
               </div>
               <div className="clear">

@@ -65,8 +65,7 @@ const Pricing = ({ packages }) => (
                     color,
                     position: "absolute",
                     marginTop: -20,
-                    width: PRICING_WIDTH,
-                    textAlign: "center"
+                    width: PRICING_WIDTH
                   }}
                 >
                   {item.nameDescription}

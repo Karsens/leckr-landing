@@ -12,11 +12,12 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   features: PropTypes.arrayOf(PropTypes.shape(featurePropTypes)).isRequired,
-  demoScreen: PropTypes.string.isRequired
+  image1: PropTypes.string
 };
 
 const defaultProps = {
-  subtitle: ""
+  subtitle: "",
+  image1: null
 };
 
 /**
