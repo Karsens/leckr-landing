@@ -1,35 +1,6 @@
 # TODO
 
-## Cleanup
-
-- [x] Fix all sections bugs so it gets it all properly from sections
-- [x] Remove all pages, put the necessary in sections (& keep needed styles)
-- [x] Split components into ui and sections
-- [ ] Fix ESLint
-- [ ] Get rid of all warnings
-- [ ] Show something for every section, see which ones fail, clean them up
-
-## Proper headers
-
-- [ ] Try React helmet for dynamic favicon + title https://github.com/nfl/react-helmet
-
-## Sections
-
-- [x] Make it possible to add multiple of the same section (with different values)
-- [x] Add Features section (Copy OVFiets)
-- [ ] Add Story Section
-- [ ] Add Timeline/Roadmap Section
-- [ ] Improve Blog Section (no backend, ghost support, plain object support)
-- [ ] Add Team Section
-- [ ] Add Blurp Section
-
-## Components
-
-### Download Component
-
-- [ ] Should have the mailchimp form or download button(s) or QR code, dependent on global settings
-
-### Sharing Component
+## Sharing Component
 
 Button which can be added to multiple different sections
 
