@@ -15,7 +15,6 @@ const client = new ApolloClient({
 });
 
 const Routes = props => {
-  console.log("pages: ", pages.length);
   return (
     <ApolloProvider client={client}>
       <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>

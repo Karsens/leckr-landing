@@ -11,8 +11,9 @@ import Button from "../dui/button";
 
 import Icon from "../dui/Icon";
 
-const colors = ["blue", "green", "purple", "red"];
+const colors = ["green", "blue", "purple", "red"];
 
+const PRICING_WIDTH = 200;
 const renderFeature = (feature: string, available: boolean) => (
   <View style={{ display: "flex", alignItems: "center" }}>
     <Icon
@@ -27,7 +28,7 @@ const Pricing = ({ packages }) => (
   <Container>
     <View style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
       {packages.map((item, index) => {
-        const color = colors[index];
+        const color = item.color || colors[index];
 
         const previous = packages[index - 1];
         return (
@@ -36,7 +37,7 @@ const Pricing = ({ packages }) => (
               margin: 10,
               padding: 10,
               flex: 1,
-              minWidth: 200
+              minWidth: PRICING_WIDTH
             }}
           >
             <View
@@ -58,6 +59,19 @@ const Pricing = ({ packages }) => (
               >
                 {item.name}
               </H1>
+              {item.nameDescription && (
+                <Text
+                  style={{
+                    color,
+                    position: "absolute",
+                    marginTop: -20,
+                    width: PRICING_WIDTH,
+                    textAlign: "center"
+                  }}
+                >
+                  {item.nameDescription}
+                </Text>
+              )}
 
               <View style={{ flex: 1, flexDirection: "column" }}>
                 <Text
@@ -110,8 +124,6 @@ includes
               </Text>
 
               <View style={{ height: 1, backgroundColor: color, width: "100%" }} />
-
-              <Text style={{ flex: 1, color }}>{item.description}</Text>
 
               {item.features && item.features.map(feature => renderFeature(feature, true))}
               {item.notFeatures && item.notFeatures.map(feature => renderFeature(feature, false))}

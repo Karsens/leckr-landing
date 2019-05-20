@@ -54,7 +54,7 @@ const Masthead = ({ siteTitle, title, text }) => {
 
                 <div
                   style={{
-                    height: 100,
+                    height: 120,
                     display: "flex",
                     // #toRemember: display flex is needed to do flexbox things, otherwise it does nothing.
                     alignItems: "center"

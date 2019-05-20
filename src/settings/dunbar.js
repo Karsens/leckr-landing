@@ -398,6 +398,35 @@ const contact: Page = {
   ]
 };
 
+const developers: Page = {
+  title: "Developers",
+  route: "developers",
+  showInMenu: true,
+  showInFooter: true,
+  sections: [
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: `
+.
+# Let's Eat Code Kite Repeat
+
+Does this get you excited? [Have a look here](https://leckr.io)
+
+# I'm building a Universal People API
+
+Does this get you excited? [Get in touch](/contact)
+
+# I do React Native
+
+Does this get you excited? [Get in touch](/contact) or [Have a look here](https://leckr.io)
+        `
+        }
+      ]
+    }
+  ]
+};
 const signup: Page = {
   title: "Sign Up",
   route: "signup",
@@ -429,6 +458,18 @@ const pricing: Page = {
   internalPage: true,
   sections: [
     {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: `
+**NB:** This is going to be the pricing!
+
+The app didn't launch yet, but it's already possible to buy early access to extra features. The launch is planned August 2019.
+`
+        }
+      ]
+    },
+    {
       type: "Pricing",
       optionsArray: [
         {
@@ -439,36 +480,90 @@ const pricing: Page = {
               // description: "5 contacts",
               link: "/signup",
               buttonTitle: "Sign up",
-              features: ["Up to 5 contacts"],
-              notFeatures: ["Insights", "Coaching"]
+              features: [
+                "Inner circle",
+                "Up to 3 Clubs",
+                "Plan Meetings",
+                "Call",
+                "SMS",
+                "Email",
+                "WhatsApp"
+              ],
+              notFeatures: ["Second circle", "Outer circle", "Insights", "Coaching"]
             },
             {
               name: "Club",
               price: "€99",
+              color: "#0054b8",
               priceDescription: "One time fee",
               link: "https://useplink.com/payment/RGmpgKGxnAthbK8w9kzt", //"https://rcur.nl/pay/G4vXjMGgkb",
-              features: ["Up to 42 contacts", "Insights"],
-              notFeatures: ["Coaching"]
+              features: [
+                "Second circle",
+                "Up to 10 Clubs",
+                "Sync across devices (Android + iOS)",
+                "Basic Insights"
+              ],
+              notFeatures: ["Outer circle", "Coaching"]
 
               // description: "42 contacts"
             },
             {
-              name: "VIP",
-              price: "€10",
-              priceDescription: "Price per month",
-              link: "https://rcur.nl/pay/80L4EYYgpq",
-              //description: "150 contacts"
-              features: ["Up to 150 contacts", "Experimental Features"],
-              notFeatures: ["Coaching"]
-            },
-            {
-              name: "Coach",
+              name: "Pro",
               price: "€99",
               priceDescription: "Price per month",
               link: "https://rcur.nl/pay/80L4EYYgpq",
-              features: ["Coaching"]
+              //description: "150 contacts"
+              features: [
+                "Outer circle",
+                "Unlimited Clubs",
+                "Extensive insights",
+                "Print your contacts in multiple formats (Made for Booki)",
+                "Organize events quickly",
+                "1:1 Monthly Advice",
+                "Optional: Early BETA Access to new, cool features"
+              ]
+            },
+            {
+              name: "VIP",
+              nameDescription: "(Coming Soon)",
+              price: "€499",
+              priceDescription: "Price per month",
+              link: "https://rcur.nl/pay/80L4EYYgpq",
+              features: [
+                "A team of professionals",
+                "Artificial Intelligence",
+                "Data Science",
+                "1:1 Daily Advice"
+              ]
             }
           ]
+        }
+      ]
+    },
+
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: `
+**Thinking about Pro or VIP? This might make it more interesting...** 
+
+* You can invite your 3 best friends for 50% cheaper. If you did this, yours will also become 50% cheaper, forever. A year later, you can invite up to 12 friends for this. If you did this, this will make yours free. 
+
+* 30 Days Not Good Money Back.
+
+* Still not convinced? [Get in touch](/contact) and ask me anything
+
+**Other possibilities**
+
+* **Dunbar for Business** We also sell Business Packages for Club, Pro and VIP at 50% Off! [Get in touch](/contact)
+
+* Do you want all your **event or conference** participants inside the Dunbar app? We've got you covered! [Get in touch](/contact)
+
+* Even a **white-labeled** Contact App is possible, we're still young! [Get in touch](/contact)
+
+* **Dunbar For Coworking** makes it possible for all coworkers to find eachother and connect! [Get in touch](/contact)
+`
         }
       ]
     }
@@ -477,11 +572,12 @@ const pricing: Page = {
 
 const pages: Page[] = [
   home,
-  signup,
   about,
   pricing,
   roadmap,
+  developers,
   contact,
+  signup,
   defaultPages.privacy,
   defaultPages.emailsuccess,
   defaultPages.paymentsuccess
