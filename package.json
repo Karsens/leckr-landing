@@ -33,6 +33,7 @@
     "reactstrap": "^8.0.0",
     "simple-line-icons": "^2.4.1",
     "typeface-catamaran": "0.0.72",
+    "whatwg-fetch": "^3.0.0",
     "xml-js": "^1.6.11"
   },
   "scripts": {

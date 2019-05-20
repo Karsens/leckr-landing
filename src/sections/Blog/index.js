@@ -8,6 +8,8 @@ import ReactMarkdown from "react-markdown";
 import { View } from "../../util/react-native";
 import "./style.css";
 
+import "whatwg-fetch"; // apparently, fetch isn't defined in safari on iOS otherwise!
+
 const CARDSIZE = 300;
 
 const cutOnWord = (text: string, characters: number, suffix: string) => {
@@ -65,7 +67,7 @@ class Blog extends React.Component {
     isLoading: true
   };
 
-  async componentDidMount() {
+  componentDidMount = () => {
     // const {
     //   title, mediumLink, ghostLink, articles
     // } = this.props;
@@ -74,12 +76,12 @@ class Blog extends React.Component {
 
     // await this.fetchMedium(mediumLink);
 
-    await this.fetchGhost(ghostLink);
+    this.fetchGhost(ghostLink);
 
     this.setState({ isLoading: false });
-  }
+  };
 
-  async fetchMedium(url): Article[] {
+  fetchMedium(url): Article[] {
     if (!url) return null;
 
     //returns list of medium articles
@@ -89,13 +91,12 @@ class Blog extends React.Component {
     return null;
   }
 
-  async fetchGhost(uri): Article[] {
-    if (!uri) return [];
+  fetchGhost(uri) {
+    if (!uri) return;
 
     fetch(uri)
       .then(response => response.json())
       .then(({ posts }) => {
-        console.log("P", posts);
         this.setState({
           ghostArticles: posts.map(({
             id, created_at, title, excerpt, url, feature_image
@@ -109,15 +110,6 @@ class Blog extends React.Component {
           }))
         });
       });
-
-    // {
-    //   console.log("resp", response);
-
-    //   //var result1 = convert.xml2json(response, {compact: true, spaces: 4});
-    // });
-    //returns list of medium articles
-
-    return null;
   }
 
   render() {
@@ -135,6 +127,9 @@ class Blog extends React.Component {
       transform: this.state.hover === id ? "scale(1.03)" : undefined
     });
 
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const flexGoodForIOS = isIOS ? "1 0 auto" : 1;
+
     return (
       <header className="cta overlay">
         <Container>
@@ -150,7 +145,6 @@ class Blog extends React.Component {
                   onMouseEnter={() => this.setState({ hover: c.id })}
                   onMouseLeave={() => this.setState({ hover: null })}
                   style={aStyle(c.id)}
-                  hover
                   key={`key-${c.id}`}
                   href={c.link}
                   target="_blank"
@@ -158,58 +152,63 @@ class Blog extends React.Component {
                 >
                   <div
                     style={{
-                      margin: 20,
-                      backgroundColor: "white",
-                      flex: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      maxWidth: "20vw",
-                      height: 500,
-                      minWidth: CARDSIZE,
-                      borderRadius: 5
+                      flex: flexGoodForIOS,
+                      maxWidth: isIOS ? undefined : "20vw",
+                      minWidth: CARDSIZE
                     }}
                   >
                     <div
                       style={{
-                        flex: 1,
+                        margin: 20,
                         display: "flex",
-                        borderRadius: 20,
-                        backgroundColor: "transparent"
+                        flexDirection: "column",
+                        backgroundColor: "white",
+                        height: isIOS ? undefined : 500,
+                        borderRadius: 5
                       }}
                     >
-                      <img
+                      <div
                         style={{
-                          width: "100%",
-                          height: "100%",
-                          borderTopLeftRadius: 5,
-                          borderTopRightRadius: 5
+                          flex: flexGoodForIOS,
+                          display: "flex",
+                          borderRadius: 20,
+                          backgroundColor: "transparent"
                         }}
-                        height="auto"
-                        width="auto"
-                        alt={c.title}
-                        src={c.figure}
-                      />
-                    </div>
-
-                    <p
-                      style={{
-                        marginTop: 10,
-                        marginLeft: 10,
-                        marginRight: 10,
-                        fontSize: 20
-                      }}
-                    >
-                      {c.title}
-                    </p>
-
-                    {c.description && (
-                      <View style={{ marginLeft: 10, marginRight: 10 }}>
-                        <ReactMarkdown
-                          source={cutOnWord(c.description, 100, "...")}
-                          linkTarget="_blank"
+                      >
+                        <img
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            borderTopLeftRadius: 5,
+                            borderTopRightRadius: 5
+                          }}
+                          height="auto"
+                          width="auto"
+                          alt={c.title}
+                          src={c.figure}
                         />
-                      </View>
-                    )}
+                      </div>
+
+                      <p
+                        style={{
+                          marginTop: 10,
+                          marginLeft: 10,
+                          marginRight: 10,
+                          fontSize: 20
+                        }}
+                      >
+                        {c.title}
+                      </p>
+
+                      {c.description && (
+                        <View style={{ marginLeft: 10, marginRight: 10 }}>
+                          <ReactMarkdown
+                            source={cutOnWord(c.description, 100, "...")}
+                            linkTarget="_blank"
+                          />
+                        </View>
+                      )}
+                    </div>
                   </div>
                 </a>
               ))}
@@ -221,7 +220,7 @@ class Blog extends React.Component {
 }
 const propTypes = {
   title: PropTypes.string,
-  articles: PropTypes.object
+  articles: PropTypes.array
 };
 
 Blog.propTypes = propTypes;

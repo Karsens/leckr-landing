@@ -35,7 +35,6 @@ import ImageTextFeatures from "./sections/section.features.imagetext";
 
 
 import ImageTitle from "./sections/ImageTitle";
-
 import Stats from "./sections/Stats"; // should be CommunifyStats
 
 const SectionComponents = {
@@ -57,6 +56,18 @@ const SectionComponents = {
   // Video,
 };
 
+/**
+ * 
+ *   <script async src={https://www.googletagmanager.com/gtag/js?id=${Settings.googleAnalyticsId}} />
+          {`<script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${Settings.googleAnalyticsId}');
+          </script>`}
+ */
+
 class PageComponent extends React.Component<Page> {
   render() {
     const {
@@ -71,16 +82,6 @@ class PageComponent extends React.Component<Page> {
         <Helmet>
           <link rel="shortcut icon" href={Settings.assets.favicon} />
           <title>{Settings.siteTitle}</title>
-
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${Settings.googleAnalyticsId}`} />
-          {`<script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${Settings.googleAnalyticsId}');
-          </script>`}
-
         </Helmet>
         
         {sections.map(({ type, optionsArray }: Section, index) => {
