@@ -1,13 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container } from "reactstrap";
+import ReactMarkdown from "react-markdown";
 // import { gql } from "apollo-boost";
 // import { graphql } from "react-apollo";
 
+import { View } from "../../util/react-native";
 import "./style.css";
 
 const CARDSIZE = 300;
 
+const cutOnWord = (text: string, characters: number, suffix: string) => {
+  const words = text && text.substring(0, characters).split(" ");
+  const wordsWithoutLast = words.slice(0, -1);
+  const returnText = wordsWithoutLast.join(" ");
+  return returnText + suffix;
+};
 /**
  * Responsibility: This blog thingy now gets an input of blogs,
  * but blogs are always gotten from the internet. So why don't I just put an API here?
@@ -44,6 +52,7 @@ type Article = {
   id: string,
   date?: Date,
   title: string,
+  description: string,
   link: string,
   figure: string // can be an URL, but can also be required image
 };
@@ -61,9 +70,11 @@ class Blog extends React.Component {
     //   title, mediumLink, ghostLink, articles
     // } = this.props;
 
+    const { ghostLink } = this.props;
+
     // await this.fetchMedium(mediumLink);
 
-    // await this.fetchGhost(ghostLink);
+    await this.fetchGhost(ghostLink);
 
     this.setState({ isLoading: false });
   }
@@ -78,9 +89,32 @@ class Blog extends React.Component {
     return null;
   }
 
-  async fetchGhost(url): Article[] {
-    if (!url) return [];
+  async fetchGhost(uri): Article[] {
+    if (!uri) return [];
 
+    fetch(uri)
+      .then(response => response.json())
+      .then(({ posts }) => {
+        console.log("P", posts);
+        this.setState({
+          ghostArticles: posts.map(({
+            id, created_at, title, excerpt, url, feature_image
+          }) => ({
+            id,
+            date: created_at,
+            title,
+            description: excerpt,
+            link: url,
+            figure: feature_image
+          }))
+        });
+      });
+
+    // {
+    //   console.log("resp", response);
+
+    //   //var result1 = convert.xml2json(response, {compact: true, spaces: 4});
+    // });
     //returns list of medium articles
 
     return null;
@@ -130,6 +164,7 @@ class Blog extends React.Component {
                       display: "flex",
                       flexDirection: "column",
                       maxWidth: "20vw",
+                      height: 500,
                       minWidth: CARDSIZE,
                       borderRadius: 5
                     }}
@@ -167,7 +202,14 @@ class Blog extends React.Component {
                       {c.title}
                     </p>
 
-                    <p style={{ marginLeft: 10, marginRight: 10 }}>{c.description}</p>
+                    {c.description && (
+                      <View style={{ marginLeft: 10, marginRight: 10 }}>
+                        <ReactMarkdown
+                          source={cutOnWord(c.description, 100, "...")}
+                          linkTarget="_blank"
+                        />
+                      </View>
+                    )}
                   </div>
                 </a>
               ))}

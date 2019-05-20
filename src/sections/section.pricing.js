@@ -136,13 +136,18 @@ includes
 
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     const flexGoodForIOS = isIOS ? "1 0 auto" : 1;
+    /**
+     * This is a problem with flex-wrap on older safari versions (ios <10.3)
+     *
+     * Beware of this! Also test for older safari browsers and older android browsers.
+     * With flexbox especially, issues may arise...
+     */
 
     return (
       <Container>
         <View
           style={{
             display: "flex",
-            margin: "0 -1px",
             flexDirection: "row",
             flexWrap: "wrap"
           }}
@@ -152,7 +157,7 @@ includes
               style={{
                 margin: 10,
                 padding: 10,
-                flex: flexGoodForIOS, //, //#toRemember: This is an issue with flex-wrap on older safari versions (ios <10.3)
+                flex: flexGoodForIOS,
                 minWidth: PRICING_WIDTH
               }}
             >

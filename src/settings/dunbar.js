@@ -265,6 +265,8 @@ Internet connects the unconnected, but disconnects the connected. Our app tries 
       optionsArray: [
         {
           title: "Further reading",
+          ghostLink:
+            "https://blog.karsens.com/ghost/api/v2/content/posts/?key=f986ca2d588b087644a1790df8&limit=all&filter=tags:dunbar",
           articles: [
             {
               id: 1,
