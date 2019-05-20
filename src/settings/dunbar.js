@@ -382,7 +382,7 @@ const roadmap: Page = {
               markdown: `
 - [x]  Work on MVP
 - [x]  Iterate on feedback
-- [ ]  Improve Website
+- [x]  Improve Website
 - [ ]  Create Payments Infrastructure
 `
             },
