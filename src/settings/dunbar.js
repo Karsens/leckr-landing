@@ -190,15 +190,8 @@ const home: Page = {
               title: "Wijnand Karsens",
               subtitle: "Creator of Dunbar",
               text:
-                "Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me."
+                "\"Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me.\""
             }
-
-            // {
-            //   image: require("./assets_dunbar/catherine.png"),
-            //   title: "Catherine Price",
-            //   subtitle: "writer of \"How to break up with your Phone\"",
-            //   text: "It's a really intersting idea"
-            // }
           ]
         }
       ]
@@ -577,17 +570,11 @@ const developers: Page = {
       markdown: `
 # Are you a developer?
 
-### Let's Eat Code Kite Repeat
+* **EAT CODE KITE REPEAT** Does this get you excited? [Have a look here](https://leckr.io)
 
-Does this get you excited? [Have a look here](https://leckr.io)
+* **People API** I'm building a Universal People API. Does this get you excited? [Get in touch](/contact)
 
-### I'm building a Universal People API
-
-Does this get you excited? [Get in touch](/contact)
-
-### I do React Native
-
-Does this get you excited? [Get in touch](/contact) or [Have a look here](https://leckr.io)
+* **I do React Native** What about you? [Get in touch](/contact) or [Have a look here](https://leckr.io)
         `
     }
   ]
@@ -837,8 +824,8 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar",
-  siteTitle: "Dunbar - Put meaning into your relationships",
+  appName: "Dunbar Beta 0.1",
+  siteTitle: "Dunbar - CRM for your Friends",
   copyrightYear: "2019",
   companyName: "Dunbar"
 };

@@ -10,12 +10,12 @@
   @include heading-font;
 
   .navbar-brand {
-    color: fade($default-text, 70%);
+    color: $nav-text-default;
     @include heading-font;
 
     &:hover,
     &:focus {
-      color: darken($theme-primary, 10%);
+      color: $nav-text-hover;
     }
   }
 

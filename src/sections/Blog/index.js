@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 // import { gql } from "apollo-boost";
 // import { graphql } from "react-apollo";
 
-import { View } from "../../util/react-native";
+import { View, Text } from "../../util/react-native";
 import "./style.css";
 
 import "whatwg-fetch"; // apparently, fetch isn't defined in safari on iOS otherwise!
@@ -191,16 +191,17 @@ class Blog extends React.Component {
                         </div>
                       )}
 
-                      <p
+                      <Text
                         style={{
                           marginTop: 10,
                           marginLeft: 10,
                           marginRight: 10,
-                          fontSize: 20
+                          fontSize: 18,
+                          fontWeight: "bold"
                         }}
                       >
                         {c.title}
-                      </p>
+                      </Text>
 
                       {c.description && (
                         <View style={{ marginLeft: 10, marginRight: 10 }}>
@@ -210,6 +211,8 @@ class Blog extends React.Component {
                           />
                         </View>
                       )}
+
+                      <View style={{ flex: 1 }} />
                     </div>
                   </div>
                 </a>

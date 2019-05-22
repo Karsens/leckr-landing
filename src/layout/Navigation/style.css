@@ -8,12 +8,12 @@
   font-weight: 200;
   letter-spacing: 1px; }
   .navigation .navbar-brand {
-    color: fade(#fff, 70%);
+    color: white;
     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px; }
     .navigation .navbar-brand:hover, .navigation .navbar-brand:focus {
-      color: #003d85; }
+      color: #ccc; }
   .navigation .navbar-nav > .nav-item > .nav-link {
     font-size: 11px;
     font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
