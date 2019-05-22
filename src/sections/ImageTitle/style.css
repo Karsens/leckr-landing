@@ -12,9 +12,9 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 100px;
-  color: #fff;
-  background-color: #000;
-  background: "", #000; }
+  color: #000;
+  background-color: #fff;
+  background: "", #fff; }
   .masthead .badges .badge-item {
     margin-left: 10px; }
     @media (min-width: 768px) {

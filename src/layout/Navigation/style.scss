@@ -26,7 +26,7 @@
         @include alt-font;
 
         &.active {
-          color: $secondary-text !important;
+          color: $nav-text-active !important;
           background-color: transparent;
 
           &:hover {
@@ -37,10 +37,10 @@
 
       > .nav-link,
       > .nav-link:focus {
-        color: $gray-darker;
+        color: $nav-text-default;
 
         &:hover {
-          color: $theme-primary;
+          color: $nav-text-hover;
         }
       }
     }
@@ -58,14 +58,14 @@
       }
     }
 
-    .navbar-nav > .nav-item > .nav-link,
-    .navbar-nav > .nav-item > .nav-link:focus {
-      color: fade-out($default-text, 0.3);
+    // .navbar-nav > .nav-item > .nav-link,
+    // .navbar-nav > .nav-item > .nav-link:focus {
+    //   color: fade-out($default-text, 0.3);
 
-      &:hover {
-        color: $default-text;
-      }
-    }
+    //   &:hover {
+    //     color: $default-text;
+    //   }
+    // }
 
     &.navbar-shrink {
       border-color: fade-out($gray-darker, 0.9);
@@ -80,14 +80,14 @@
         }
       }
 
-      .navbar-nav > .nav-item > .nav-link,
-      .navbar-nav > .nav-item > .nav-link:focus {
-        color: $gray-darker;
+      // .navbar-nav > .nav-item > .nav-link,
+      // .navbar-nav > .nav-item > .nav-link:focus {
+      //   color: $gray-darker;
 
-        &:hover {
-          color: $theme-primary;
-        }
-      }
+      //   &:hover {
+      //     color: $theme-primary;
+      //   }
+      // }
     }
   }
 }

@@ -55,166 +55,16 @@ const home: Page = {
 
     {
       type: "Markdown",
-      markdown:
-        "LECKR sells many components, libraries, boilerplates, and even codebases for the following technologies: React Native (Web), React, Node JS, GraphQL, REST. You can also [hire LECKR](/hire) to help you implement things, or get custom libraries"
-    },
-    {
-      type: "Pricing",
-      optionsArray: [
-        {
-          isIncremental: false,
-          titleFontSize: 18,
-          buttonTitle: "More info",
+      markdown: `
+LECKR offers you three things:
 
-          packages: [
-            {
-              name: "LECKR-Landing",
-              price: "€100",
-              priceDescription: "One-time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/leckr-landing",
-              features: ["Landing page like this within a day"]
-            },
-            {
-              name: "Expo-data-forms",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-data-forms",
-              features: [
-                "By seperating content from the data flow and component itself, this library creates forms that can process data and save it to a local or backend storage (REST, Redux Persist, Realm, Apollo GraphQL, or anything)."
-              ]
-            },
+1. **Code:** LECKR is a free open-source project that comprises components, libraries, boilerplates, and even codebases for the following technologies: React Native (Web), React, Node JS, GraphQL, REST. 
 
-            {
-              name: "Expo-elements",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-elements",
-              features: ["Elegant basic UI and API access"]
-            },
+2. **Hire:** You can also hire LECKR to help you implement things, or get custom libraries
 
-            {
-              name: "Expo-inputs",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-inputs",
-              features: ["Elegant basic UI for form inputs"]
-            },
-
-            {
-              name: "Expo-local-auth-wrapper",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-local-auth-wrapper",
-              features: ["Local Auth Wrapper"]
-            },
-
-            {
-              name: "Expo-push-notifications",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-push-notifications",
-              features: ["Push notifications implementation for expo"]
-            },
-
-            {
-              name: "LECKR-Universal",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/leckr-universal",
-              features: ["All kinds of universal utility functions"]
-            },
-
-            {
-              name: "Super-Actionsheet",
-              price: "€0",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/react-native-super-actionsheet",
-              features: ["Small Wrapper Around Acitonsheet"]
-            },
-
-            {
-              name: "Community App",
-              nameDescription: "White labeled",
-              price: "t.b.d.",
-              priceDescription: "t.b.d.",
-              link: "https://communify.cc",
-              features: ["Any app for your community"]
-            },
-
-            {
-              name: "Navigation App",
-              nameDescription: "White labeled",
-              price: "t.b.d.",
-              priceDescription: "t.b.d.",
-              link: "https://ovfiets.net",
-              features: ["Any navigation app"]
-            },
-
-            {
-              name: "GraphQL Sequelize Define",
-              nameDescription: "",
-              price: "€100",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/graphql-sequelize-define/",
-              features: [
-                "**The instant backend** This library creates a model for your apps data that will create a scheme definition, queries, and database from one declaration file. This saves thousand lines of code and dozens of mistakes made, because there is just one single source of truth."
-              ]
-            },
-
-            {
-              name: "LECKR SaaSaaS",
-              nameDescription: "",
-              price: "€100",
-              priceDescription: "Price per month",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/",
-              features: ["Payment + Virality BaaS for any SaaS"]
-            },
-
-            {
-              name: "Super-Safe-Area",
-              price: "€0",
-              priceDescription: "One time fee",
-              link: "https://github.com/EAT-CODE-KITE-REPEAT/react-native-super-safe-area",
-              features: ["Small Wrapper Around SafeAreaView"]
-            }
-          ]
-        }
-      ]
+3. **Workflow & Lifestyle:** LECKR writes and advises companies about workflow and lifestyle. See our blog`
     },
 
-    {
-      type: "Blog",
-
-      optionsArray: [
-        {
-          title: "Further reading",
-          ghostLink:
-            "https://blog.karsens.com/ghost/api/v2/content/posts/?key=f986ca2d588b087644a1790df8&limit=all&include=tags&filter=tags:leckr,tags:geeky-stuff",
-          articles: [
-            // {
-            //   id: 2,
-            //   date: "Aug 7, 2014, 12:51pm",
-            //   title: "Dunbar's Number: A Key To Networking",
-            //   description:
-            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
-            //   link:
-            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
-            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
-            // },
-            // {
-            //   id: 3,
-            //   date: "Aug 7, 2014, 12:51pm",
-            //   title: "Dunbar's Number: A Key To Networking",
-            //   description:
-            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
-            //   link:
-            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
-            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
-            // }
-          ]
-        }
-      ]
-    },
     {
       type: "Download"
     },
@@ -383,8 +233,6 @@ Currently, LECKR is just me, Wijnand. I'm available for short projects or consul
 
 When we initiate a collaboration, I'm **fully commited to your project and its success for the time I work for it**. Together with my agile working habits and strong opinion of keeping implementation simple and elegant, development of the app will be at least **[2-5x faster](https://blog.karsens.com/i-just-made-an-app-in-26-hours/)**.
 
-I am located in Amsterdam, but in the colder months, I'm probably somewhere else. However, remote work is a possibility.
-
 Need more info? 
 
 * [CV (pdf)](https://www.dropbox.com/s/2ev9hmujq9t9hds/CV%20Wijnand%20Karsens%202019.pdf?dl=0) 
@@ -537,6 +385,139 @@ You can sign up by filling in your email below:
   ]
 };
 
+const code: Page = {
+  title: "Code",
+  route: "code",
+  showInMenu: true,
+  showInFooter: true,
+  internalPage: true,
+  sections: [
+    {
+      type: "Pricing",
+      optionsArray: [
+        {
+          isIncremental: false,
+          titleFontSize: 18,
+          buttonTitle: "More info",
+
+          packages: [
+            {
+              name: "LECKR-Landing",
+              price: "€100",
+              priceDescription: "One-time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/leckr-landing",
+              features: ["Landing page like this within a day"]
+            },
+            {
+              name: "Expo-data-forms",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-data-forms",
+              features: [
+                "By seperating content from the data flow and component itself, this library creates forms that can process data and save it to a local or backend storage (REST, Redux Persist, Realm, Apollo GraphQL, or anything)."
+              ]
+            },
+
+            {
+              name: "Expo-elements",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-elements",
+              features: ["Elegant basic UI and API access"]
+            },
+
+            {
+              name: "Expo-inputs",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-inputs",
+              features: ["Elegant basic UI for form inputs"]
+            },
+
+            {
+              name: "Expo-local-auth-wrapper",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-local-auth-wrapper",
+              features: ["Local Auth Wrapper"]
+            },
+
+            {
+              name: "Expo-push-notifications",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/expo-push-notifications",
+              features: ["Push notifications implementation for expo"]
+            },
+
+            {
+              name: "LECKR-Universal",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/leckr-universal",
+              features: ["All kinds of universal utility functions"]
+            },
+
+            {
+              name: "Super-Actionsheet",
+              price: "€0",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/react-native-super-actionsheet",
+              features: ["Small Wrapper Around Acitonsheet"]
+            },
+
+            {
+              name: "Community App",
+              nameDescription: "White labeled",
+              price: "t.b.d.",
+              priceDescription: "t.b.d.",
+              link: "https://communify.cc",
+              features: ["Any app for your community"]
+            },
+
+            {
+              name: "Navigation App",
+              nameDescription: "White labeled",
+              price: "t.b.d.",
+              priceDescription: "t.b.d.",
+              link: "https://ovfiets.net",
+              features: ["Any navigation app"]
+            },
+
+            {
+              name: "GraphQL Sequelize Define",
+              nameDescription: "",
+              price: "€100",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/graphql-sequelize-define/",
+              features: [
+                "**The instant backend** This library creates a model for your apps data that will create a scheme definition, queries, and database from one declaration file. This saves thousand lines of code and dozens of mistakes made, because there is just one single source of truth."
+              ]
+            },
+
+            {
+              name: "LECKR SaaSaaS",
+              nameDescription: "",
+              price: "€100",
+              priceDescription: "Price per month",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/",
+              features: ["Payment + Virality BaaS for any SaaS"]
+            },
+
+            {
+              name: "Super-Safe-Area",
+              price: "€0",
+              priceDescription: "One time fee",
+              link: "https://github.com/EAT-CODE-KITE-REPEAT/react-native-super-safe-area",
+              features: ["Small Wrapper Around SafeAreaView"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
 const open: Page = {
   title: "Open",
   route: "open",
@@ -616,14 +597,58 @@ Other personal KPI's I wish to track are exersize, CO2 footprint, and waste foot
   ]
 };
 
+const blog: Page = {
+  title: "Blog",
+  route: "blog",
+  showInMenu: true,
+  showInFooter: true,
+  internalPage: true,
+  sections: [
+    {
+      type: "Blog",
+
+      optionsArray: [
+        {
+          title: "Further reading",
+          ghostLink:
+            "https://blog.karsens.com/ghost/api/v2/content/posts/?key=f986ca2d588b087644a1790df8&limit=all&include=tags&filter=tags:leckr,tags:geeky-stuff",
+          articles: [
+            // {
+            //   id: 2,
+            //   date: "Aug 7, 2014, 12:51pm",
+            //   title: "Dunbar's Number: A Key To Networking",
+            //   description:
+            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
+            //   link:
+            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
+            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
+            // },
+            // {
+            //   id: 3,
+            //   date: "Aug 7, 2014, 12:51pm",
+            //   title: "Dunbar's Number: A Key To Networking",
+            //   description:
+            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
+            //   link:
+            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
+            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
+            // }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
 const pages: Page[] = [
   home,
-  roadmap,
-  trips,
+  code,
   hire,
+  blog,
+  trips,
+  roadmap,
   contact,
   open,
-
   signup,
   defaultPages.privacy,
   defaultPages.emailsuccess,
