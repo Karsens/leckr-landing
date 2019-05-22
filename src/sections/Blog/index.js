@@ -12,7 +12,10 @@ import "whatwg-fetch"; // apparently, fetch isn't defined in safari on iOS other
 
 const CARDSIZE = 300;
 
-const cutOnWord = (text: string, characters: number, suffix: string) => {
+const cutOnWord = (text: string, characters: number, suffix: string): string => {
+  if (!text) return "";
+  if (text.length <= 100) return text;
+
   const words = text && text.substring(0, characters).split(" ");
   const wordsWithoutLast = words.slice(0, -1);
   const returnText = wordsWithoutLast.join(" ");
@@ -131,7 +134,7 @@ class Blog extends React.Component {
     const flexGoodForIOS = isIOS ? "1 0 auto" : 1;
 
     return (
-      <header className="cta overlay">
+      <header className="overlay" style={{ backgroundColor: "#f4f8fb" }}>
         <Container>
           <br />
           <h1>{title}</h1>
@@ -163,6 +166,7 @@ class Blog extends React.Component {
                         display: "flex",
                         flexDirection: "column",
                         backgroundColor: "white",
+                        boxShadow: "2px 3px 1px #EEE",
                         height: isIOS ? undefined : 500,
                         borderRadius: 5
                       }}

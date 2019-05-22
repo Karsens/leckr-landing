@@ -15,7 +15,7 @@
       .cta .cta-content h2 {
         font-size: 80px; } }
   .cta .overlay {
-    background: "", #000;
+    background: "", yellow;
     background: "", -webkit-linear-gradient(to left, #000, #000);
     background: "", linear-gradient(to left, #000, #000);
     position: absolute;
