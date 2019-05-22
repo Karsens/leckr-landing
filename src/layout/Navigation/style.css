@@ -1,6 +1,6 @@
 .navigation {
   border-color: rgba(34, 34, 34, 0.05);
-  background-color: #fff;
+  background-color: black;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -8,40 +8,50 @@
   font-weight: 200;
   letter-spacing: 1px; }
   .navigation .navbar-brand {
-    color: fade(#000, 70%);
+    color: fade(#fff, 70%);
     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px; }
     .navigation .navbar-brand:hover, .navigation .navbar-brand:focus {
-      color: #e6e6e6; }
+      color: #003d85; }
   .navigation .navbar-nav > .nav-item > .nav-link {
     font-size: 11px;
     font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
     letter-spacing: 2px;
     text-transform: uppercase; }
     .navigation .navbar-nav > .nav-item > .nav-link.active {
-      color: green !important;
+      color: #0054b8 !important;
       background-color: transparent; }
       .navigation .navbar-nav > .nav-item > .nav-link.active:hover {
         background-color: transparent; }
   .navigation .navbar-nav > .nav-item > .nav-link,
   .navigation .navbar-nav > .nav-item > .nav-link:focus {
-    color: black; }
+    color: white; }
     .navigation .navbar-nav > .nav-item > .nav-link:hover,
     .navigation .navbar-nav > .nav-item > .nav-link:focus:hover {
       color: #ccc; }
   @media (min-width: 992px) {
     .navigation {
+      transition-duration: 1s;
+      height: 100px;
       border-color: transparent;
-      background-color: #fff; }
+      background-color: black; }
       .navigation .navbar-brand {
-        color: fade(#000, 70%); }
+        color: white; }
         .navigation .navbar-brand:hover, .navigation .navbar-brand:focus {
-          color: #000; }
+          color: #fff; }
       .navigation.navbar-shrink {
-        border-color: rgba(34, 34, 34, 0.1);
+        transition-duration: 1s;
+        height: 60px;
+        border: 1px solid black;
         background-color: white; }
         .navigation.navbar-shrink .navbar-brand {
-          color: #222222; }
+          color: black; }
           .navigation.navbar-shrink .navbar-brand:hover, .navigation.navbar-shrink .navbar-brand:focus {
-            color: #fff; } }
+            color: #0054b8; }
+        .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link,
+        .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link:focus {
+          color: black; }
+          .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link:hover,
+          .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link:focus:hover {
+            color: #ccc; } }

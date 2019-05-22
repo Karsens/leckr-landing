@@ -24,7 +24,7 @@ const defaultProps = {
  * A component for a features section.
  */
 const Features = ({
-  title, subtitle, features, image1
+  title, subtitle, features, image1, noPhone
 }: FeaturesOptions) => {
   if (!features) {
     return (
@@ -41,19 +41,25 @@ const Features = ({
     return list;
   }, []);
 
+  const img = <img src={image1} className="img-fluid" alt="" />;
+
   return (
     <section className="features" id="features">
       <Container>
-        <View style={{ textAlign: "center", marginBottom: 100 }}>
+        <View style={{ textAlign: "center" }}>
           <h2 style={{ marginTop: 0 }}>{title}</h2>
           <p style={{ marginBottom: 0 }}>{subtitle}</p>
           <hr />
         </View>
         <Row>
           <Col lg="4" xs="12" className="my-auto">
-            <DeviceMockup device="iPhone6Plus" orientation="portrait" color="white">
-              <img src={image1} className="img-fluid" alt="" />
-            </DeviceMockup>
+            {noPhone ? (
+              img
+            ) : (
+              <DeviceMockup device="iPhone6Plus" orientation="portrait" color="white">
+                {img}
+              </DeviceMockup>
+            )}
           </Col>
           <Col lg="8" xs="12" className="my-auto">
             <Container fluid>

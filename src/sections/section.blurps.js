@@ -13,9 +13,10 @@ const Blurps = ({ blurps }) => (
           style={{
             margin: 10,
             padding: 10,
+            borderRadius: 20,
             border: "1px solid black",
             minWidth: 200,
-            flex: 1
+            flex: "1 0 auto"
           }}
         >
           <div

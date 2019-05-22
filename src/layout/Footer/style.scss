@@ -4,8 +4,8 @@
 footer {
   padding: 25px 0;
   text-align: center;
-  color: fade-out($default-text, 0.7);
-  background-color: $gray-lighter;
+  color: $footer-text;
+  background-color: $footer-background;
 
   p {
     font-size: 12px;
@@ -18,7 +18,7 @@ footer {
     li {
       a {
         font-size: 12px;
-        color: fade-out($default-text, 0.7);
+        color: $footer-text;
         &:hover,
         &:focus,
         &:active,

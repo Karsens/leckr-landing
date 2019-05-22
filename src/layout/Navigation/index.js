@@ -142,7 +142,7 @@ class Navigation extends Component {
                   <NavLink
                     href={`/${route}`}
                     className={classnames("nav-link", {
-                      active: currentSection === route || path === route
+                      active: path === route //|| currentSection === route //for sectionsss
                     })}
                   >
                     {title}

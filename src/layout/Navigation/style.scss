@@ -5,7 +5,7 @@
 
 .navigation {
   border-color: fade-out($gray-darker, 0.95);
-  background-color: $theme-primary;
+  background-color: $nav-background;
   @include transition-all;
   @include heading-font;
 
@@ -46,11 +46,14 @@
     }
   }
   @media (min-width: 992px) {
+    transition-duration: 1s;
+
+    height: 100px;
     border-color: transparent;
-    background-color: $theme-primary;
+    background-color: $nav-background;
 
     .navbar-brand {
-      color: fade($default-text, 70%);
+      color: $nav-text-default;
 
       &:hover,
       &:focus {
@@ -68,11 +71,15 @@
     // }
 
     &.navbar-shrink {
-      border-color: fade-out($gray-darker, 0.9);
-      background-color: white;
+      transition-duration: 1s;
+
+      height: 60px;
+      border: 1px solid black;
+      //border-color: fade-out($gray-darker, 0.9);
+      background-color: $nav-background-shrink;
 
       .navbar-brand {
-        color: $gray-darker;
+        color: $nav-text-shrink;
 
         &:hover,
         &:focus {
@@ -80,14 +87,14 @@
         }
       }
 
-      // .navbar-nav > .nav-item > .nav-link,
-      // .navbar-nav > .nav-item > .nav-link:focus {
-      //   color: $gray-darker;
+      .navbar-nav > .nav-item > .nav-link,
+      .navbar-nav > .nav-item > .nav-link:focus {
+        color: $nav-text-shrink;
 
-      //   &:hover {
-      //     color: $theme-primary;
-      //   }
-      // }
+        &:hover {
+          color: $nav-text-hover;
+        }
+      }
     }
   }
 }

@@ -7,7 +7,7 @@ import Settings from "../settings/index";
  * A Privacy page
  */
 const PrivacyPage = () => (
-  <Container>
+  <Container style={{ margin: 20 }}>
     {Settings.companyName}
     {" "}
 built their apps as a freemium app. This SERVICE is provided by
