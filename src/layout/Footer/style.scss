@@ -1,11 +1,11 @@
-@import '../../settings/_variables';
+@import "../../settings/_variables";
 
 // Styling for the footer
 footer {
   padding: 25px 0;
   text-align: center;
-  color: fade-out(white, .7);
-  background-color: $gray-darker;
+  color: fade-out($default-text, 0.7);
+  background-color: $gray-lighter;
 
   p {
     font-size: 12px;
@@ -18,7 +18,7 @@ footer {
     li {
       a {
         font-size: 12px;
-        color: fade-out(white, .7);
+        color: fade-out($default-text, 0.7);
         &:hover,
         &:focus,
         &:active,

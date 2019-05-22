@@ -167,27 +167,29 @@ class Blog extends React.Component {
                         borderRadius: 5
                       }}
                     >
-                      <div
-                        style={{
-                          flex: flexGoodForIOS,
-                          display: "flex",
-                          borderRadius: 20,
-                          backgroundColor: "transparent"
-                        }}
-                      >
-                        <img
+                      {c.figure && (
+                        <div
                           style={{
-                            width: "100%",
-                            height: "100%",
-                            borderTopLeftRadius: 5,
-                            borderTopRightRadius: 5
+                            flex: flexGoodForIOS,
+                            display: "flex",
+                            borderRadius: 20,
+                            backgroundColor: "transparent"
                           }}
-                          height="auto"
-                          width="auto"
-                          alt={c.title}
-                          src={c.figure}
-                        />
-                      </div>
+                        >
+                          <img
+                            style={{
+                              width: "100%",
+                              maxHeight: 200,
+                              borderTopLeftRadius: 5,
+                              borderTopRightRadius: 5
+                            }}
+                            // height="auto"
+                            // width="auto"
+                            alt={c.title}
+                            src={c.figure}
+                          />
+                        </div>
+                      )}
 
                       <p
                         style={{

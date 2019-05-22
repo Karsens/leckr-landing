@@ -1,89 +1,134 @@
-import React from "react";
-import Icon from "../dui/Icon";
-import * as assets from "./assets_karsens/index";
+import { Page, GlobalSettings, Settings } from "./_types";
+import defaultPages from "./_defaults";
 
-const Settings = {
+const home: Page = {
+  title: "Home",
+  route: "",
+  internalPage: true,
+  showInMenu: true,
+  showInFooter: false,
+  sections: [
+    {
+      type: "ImageCover",
+      title: "",
+      description: "",
+      image: require("./assets_karsens/lake.jpg")
+    },
+    {
+      type: "ImageTitle",
+      siteTitle: "Wijnand Karsens",
+      title: "Wijnand Karsens",
+      image1: require("./assets_karsens/me.jpg"),
+      text: `
+Hey! I'm Wijnand. Nice to meet you. Have a look on my awesome website. I created it all by myself! Cool, huh?`
+    },
+
+    {
+      type: "ImageTextFeatures",
+      marqueeTitle: "My projects 🎉🎉",
+      features: [
+        {
+          image: require("./assets_karsens/dunbar.png"),
+          title: "Dunbar",
+          text:
+            "Dunbar is the main project I'm working on now. It's a contact app that helps you organize, analyse and improve your personal relationships, and put more meaning into them. [See for yourself](https://dunbar.site)"
+        },
+        {
+          image: require("./assets_karsens/leckr.jpg"),
+          title: "LECKR",
+          text:
+            "Tranforming the status quo programmer lifestyle into the ultimate one. Also, LECKR sells lots of code, and you can hire us. [Have a look](https://leckr.io/)"
+        },
+        {
+          image: require("./assets_karsens/booki.png"),
+          title: "Booki",
+          text:
+            "It's a side project, but I get a lot of positive feedback. [Have a look](https://gobooki.co/)"
+        },
+
+        {
+          image: require("./assets_karsens/blog.png"),
+          title: "Blog",
+          text:
+            "Sometimes I write about things I find interesting [Go to my blog](https://blog.karsens.com/)"
+        }
+      ]
+    },
+
+    {
+      type: "Markdown",
+      markdown: `
+# My mission 
+My mission is to create a long-lasting symbiosis between humanity, technology, biology, zoology, and our planet.
+
+To do this, I plan to create technology and other means to enhance freedom and wisdom of humanity. Using this wisdom and freedom, I'm sure we can find a way, but it's not going to be easy.
+`
+    },
+
+    {
+      type: "Markdown",
+
+      markdown: `
+# Contact
+
+
+✉️ [hi@karsens.com](mailto:hi@karsens.com)
+
+📞 [020 - 21 01 820](tel:+31202101820)
+
+**KVK** 64843769
+
+
+[🗺 Google Maps](https://www.google.com/maps/place/Krammerstraat+33C,+1078+KG+Amsterdam)
+
+
+    Krammerstraat 33 C
+    1078 KG
+    Amsterdam, Noord Holland
+    The Netherlands
+
+
+          `
+    }
+  ]
+};
+
+const pages: Page[] = [home, defaultPages.emailsuccess];
+
+const globalSettings: GlobalSettings = {
   isNoPhone: true,
-  // to make sure people and on yourwebsite.com/emailsuccess, please do this:
-  // In MailChimp, audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
-  mailChimpSubscribeUrl: "", // "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=74a7bddfd2", // nb: with post-json instead of post, you'll get JSON in return instead.
-  emailSuccessText: "Thanks for your interest. Your email is underway.",
+  googleAnalyticsId: "UA-115183926-3",
+
   colors: {
+    defaultText: "#fff",
     primary: "#0054b8",
     primaryLighter: "#0064dc",
     primaryDarker: "#00306a"
   },
 
-  homeSections: [{ type: "masthead" }, { type: "reviews" }, { type: "team" }, { type: "blog" }],
-  // sections. Possibilities: video, masthead, stats, blog, "story", "features", "reviews", "team"
-
-  title: {
-    fontFamily: "Arial Rounded MT Bold"
-  },
-
-  copy: {
-    default: {
-      siteTitle: "Karsens",
-      title: "Wijnand Karsens",
-      text:
-        "Hi, I'm Wijnand.\nThis is what I do:\n\n- CRM for your Friends - [Dunbar](https://dunbar.site)\n\n - Go Basic. Go [Booki](https://gobooki.co)\n\n - Over 95% code sharing between 5 platforms (iOS, Android, Web, Mac, and Windows) with our universal boilerplates and components - [LECKR](https://leckr.io)\n\n - Writing in my [blog](https://blog.karsens.com)\n\n"
+  style: {
+    fontFamily: {
+      title: "Comic Sans MS",
+      text: "Comic Sans MS"
     }
   },
 
-  stats: {
-    loadingText: "Loading stats...",
-    text: "Join {0} l in {1} o"
-  },
-
-  apiUrl: "",
-
-  driftId: "p87nxp8v5kyi",
-
-  socialNetworks: [
-    // {
-    //   id: "facebook",
-    //   text: "Like us",
-    //   icon: <Icon family="fa" name="facebook" />,
-    //   color: "#717fea",
-    //   link: "https://www.facebook.com/CommunifyCoworking/"
-    // }
-  ],
-
-  menu: [
-    {
-      title: "Download",
-      id: "masthead"
-    },
-    {
-      title: "Explore",
-      id: "directory"
-    },
-    {
-      title: "Blog",
-      id: "news"
-    }
-  ],
-
-  appName: "LECKR",
-
+  apiUrl: null,
+  // driftId: "p87nxp8v5kyi",
+  appName: "Karsens",
+  siteTitle: "Wijnand Karsens",
   copyrightYear: "2019",
-
-  footerLinks: [
-    {
-      title: "Privacy",
-      link: "/privacy"
-    }
-  ],
-
-  // for inside privacy policy. Can be any tradename I guess?
-  companyName: "LECKR",
-
-  //   appSchemeUrl: "communify://communify.cc/",
-
-  //   downloadAppstoreUrl: "https://itunes.apple.com/gb/app/communify/id1366552547?mt=8",
-  //   downloadPlaystoreUrl: "https://play.google.com/store/apps/details?id=com.progenworks.communify",
-
-  assets
+  companyName: "LECKR"
 };
 
-export default Settings;
+const assets = {
+  favicon: require("./assets_karsens/favicon.ico"),
+  logo: require("./assets_karsens/logo.jpg")
+};
+const settings: Settings = {
+  pages,
+  assets,
+  ...globalSettings
+};
+
+export default settings;

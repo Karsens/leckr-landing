@@ -17,10 +17,10 @@ import "./style.css";
 /**
  * The masthead for the home page
  */
-const ImageTitle = ({ siteTitle, title, text }) => {
-  const img = (
-    <img src={Settings.assets.image1} className="img-fluid" alt="" width="100%" height="100%" />
-  );
+const ImageTitle = ({
+  siteTitle, title, text, image1
+}) => {
+  const img = <img src={image1} className="img-fluid" alt="" width="100%" height="100%" />;
   return (
     <header className="masthead">
       {/* eslint-disable-next-line */}

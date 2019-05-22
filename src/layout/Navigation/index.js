@@ -127,7 +127,11 @@ class Navigation extends Component {
 
           {width < 992 && (
             <TouchableOpacity onClick={this.toggle}>
-              <Icon style={{ color: "white", fontSize: 26 }} family="fa" name="navicon" />
+              <Icon
+                style={{ color: Settings.colors.defaultText, fontSize: 26 }}
+                family="fa"
+                name="navicon"
+              />
             </TouchableOpacity>
           )}
 

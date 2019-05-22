@@ -1,4 +1,4 @@
-@import '../../settings/_variables';
+@import "../../settings/_variables";
 
 // Styling for the download section
 .contact {
@@ -47,10 +47,10 @@
   position: relative;
 
   width: 100%;
-  padding-top: 150px;
+  padding-top: 20px;
   padding-bottom: 100px;
 
-  color: white;
+  color: $default-text;
   background-color: $theme-secondary;
   background: $bg-pattern, $theme-secondary;
   // background: $bg-pattern,
@@ -59,7 +59,6 @@
   //   linear-gradient(to left, $theme-secondary, $theme-tertiary);
 
   .header-content {
-
     max-width: 500px;
     margin-bottom: 100px;
 

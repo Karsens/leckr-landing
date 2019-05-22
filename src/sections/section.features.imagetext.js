@@ -5,10 +5,15 @@ import { View } from "../util/react-native";
 
 class ImageTextFeatures extends React.Component {
   render() {
-    const { features } = this.props;
+    const { features, marqueeTitle } = this.props;
 
     return (
       <View>
+        {marqueeTitle && (
+          <marquee>
+            <h2>{marqueeTitle}</h2>
+          </marquee>
+        )}
         {features.map((feature, index) => (
           <ImageTextSection {...feature} opposite={index % 2 === 0} />
         ))}

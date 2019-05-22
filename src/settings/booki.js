@@ -1,3 +1,6 @@
+//analyticsUA-115183926-5
+//mailchimp     "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=b584e74f3e",
+
 import React from "react";
 import Icon from "../dui/Icon";
 import * as assets from "./assets_booki/index";
@@ -56,7 +59,7 @@ const Settings = {
 
   apiUrl: "",
 
-  driftId: "p87nxp8v5kyi",
+  // driftId: "p87nxp8v5kyi",
 
   socialNetworks: [
     // {
@@ -96,7 +99,7 @@ const Settings = {
 
   // for inside privacy policy. Can be any tradename I guess?
   companyName: "Booki",
-
+  //
   //   appSchemeUrl: "communify://communify.cc/",
 
   //   downloadAppstoreUrl: "https://itunes.apple.com/gb/app/communify/id1366552547?mt=8",

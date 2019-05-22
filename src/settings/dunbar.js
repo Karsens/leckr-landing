@@ -10,6 +10,7 @@ const home: Page = {
   route: "",
   showInMenu: true,
   showInFooter: false,
+  internalPage: true,
   sections: [
     {
       type: "ImageTitle",
@@ -17,6 +18,7 @@ const home: Page = {
         // Organize, Analyse, Improve
         {
           reference: "default",
+          image1: require("./assets_dunbar/screen1.png"),
           // entrepreneur audience
           siteTitle: "Dunbar - Put meaning into your relationships",
           title: "Put meaning into your relationships",
@@ -108,51 +110,24 @@ With Dunbar, we help you to organize, analyse and improve your personal and prof
     },
 
     {
-      type: "BlurpsComingSoon", //Just Blurps, but not now yet
+      type: "Blurps", //Just Blurps, but not now yet
 
       optionsArray: [
         {
           blurps: [
             {
-              image: require("./assets_dunbar/catherine.png"),
-              title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
+              image: require("./assets_dunbar/wijnand.jpg"),
+              title: "Wijnand Karsens",
+              subtitle: "Creator of Dunbar",
+              text:
+                "Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me."
             },
 
             {
               image: require("./assets_dunbar/catherine.png"),
               title: "Catherine Price",
               subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
-            },
-
-            {
-              image: require("./assets_dunbar/catherine.png"),
-              title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
-            },
-
-            {
-              image: require("./assets_dunbar/catherine.png"),
-              title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
-            },
-
-            {
-              image: require("./assets_dunbar/catherine.png"),
-              title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
-            },
-
-            {
-              image: require("./assets_dunbar/catherine.png"),
-              title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
-              text: "Love it! I really don't like my phone so people will help it"
+              text: "It's a really intersting idea"
             }
           ]
         }
@@ -554,9 +529,7 @@ const pricing: Page = {
       optionsArray: [
         {
           markdown: `
-**NB:** This is going to be the pricing!
-
-The app didn't launch yet, but it's already possible to buy early access to extra features. The launch is planned August 2019.
+**NB:** This is going to be the pricing! The app didn't launch yet, but it's already possible to buy early access to extra features. The launch is planned August 2019.
 `
         }
       ]
@@ -569,7 +542,6 @@ The app didn't launch yet, but it's already possible to buy early access to extr
             {
               name: "Free",
               price: "€0",
-              // description: "5 contacts",
               link: "/signup",
               buttonTitle: "Sign up",
               features: [
@@ -585,7 +557,7 @@ The app didn't launch yet, but it's already possible to buy early access to extr
             },
             {
               name: "Club",
-              price: "€99",
+              price: "€42",
               color: "#0054b8",
               priceDescription: "One time fee",
               link: "https://useplink.com/payment/RGmpgKGxnAthbK8w9kzt", //"https://rcur.nl/pay/G4vXjMGgkb",
@@ -595,13 +567,13 @@ The app didn't launch yet, but it's already possible to buy early access to extr
                 "Sync across devices (Android + iOS)",
                 "Basic Insights"
               ],
-              notFeatures: ["Outer circle", "Coaching"]
+              notFeatures: ["Outer circle"]
 
               // description: "42 contacts"
             },
             {
               name: "Pro",
-              price: "€99",
+              price: "€20,00",
               priceDescription: "Price per month",
               link: "https://rcur.nl/pay/80L4EYYgpq",
               //description: "150 contacts"
@@ -610,24 +582,22 @@ The app didn't launch yet, but it's already possible to buy early access to extr
                 "Unlimited Clubs",
                 "Extensive insights",
                 "Print your contacts in multiple formats (Made for Booki)",
-                "Organize events quickly",
-                "1:1 Monthly Advice",
                 "Optional: Early BETA Access to new, cool features"
               ]
-            },
-            {
-              name: "VIP",
-              nameDescription: "(Coming Soon)",
-              price: "€499",
-              priceDescription: "Price per month",
-              link: "https://rcur.nl/pay/80L4EYYgpq",
-              features: [
-                "A team of professionals",
-                "Artificial Intelligence",
-                "Data Science",
-                "1:1 Daily Advice"
-              ]
             }
+            // {
+            //   name: "VIP",
+            //   nameDescription: "(Coming Soon)",
+            //   price: "€499",
+            //   priceDescription: "Price per month",
+            //   link: "https://rcur.nl/pay/80L4EYYgpq",
+            //   features: [
+            //     "A team of professionals",
+            //     "Artificial Intelligence",
+            //     "Data Science",
+            //     "1:1 Daily Advice"
+            //   ]
+            // }
           ]
         }
       ]
@@ -666,6 +636,134 @@ The app didn't launch yet, but it's already possible to buy early access to extr
   ]
 };
 
+const beta: Page = {
+  title: "Beta",
+  route: "beta",
+  showInMenu: false,
+  showInFooter: true,
+  internalPage: true,
+  sections: [
+    {
+      type: "Markdown",
+      markdown: `
+
+      # Download the BETA
+      I would be very happy to receive your feedback! Please [click here](https://wijnandkarsens.typeform.com/to/A3W7Cu) to fill in the feedback form.
+      
+      * [iOS](https://testflight.apple.com/join/wrmZAEYK) (Click and install TestFlight, then click again)
+      * [Android](https://play.google.com/apps/testing/com.progenworks.dunbar1)
+      
+      [Privacy Policy](https://karsens.com/privacy-policy-dunbar/)
+      
+      
+      ### Dunbar's Ultimate Goal
+      Our mission is to create higher quality and more meaningful interactions between people to make them more succesful.
+      
+      Our mission is to reverse downgrading of communication, social systems and relationships and make us brilliant, wise, self-reliant, and succesful.
+      
+      Choose your friends wisely and bring them closer together to become more succesful
+      
+      Bring back social networks to they way they should be. (Make offline social networks great again). 
+      
+      Internet connects the unconnected, but disconnects the connected. Our app tries to approach [The Village Effect](https://www.amazon.de/Village-Effect-Face-Face-Healthier/dp/0307359549) in cities.
+      
+      ### One liners (for ads)
+      
+      **Audience 1: Entrepreneurs:**
+      Dunbar - Personal CRM for Entrepreneurs
+      Dunbar - CRM for your friends
+      Dunbar - Your Business Coach Sidekick
+      Dunbar - Become more successful with relationships science & analytics 
+      Dunbar - Engage your professional network
+      Dunbar - Fix Human Relations Downgrading
+      
+      
+      **Audience 2: Broader audience:**
+      Dunbar - What's the Quality of your Relationships? Raise the bar
+      Dunbar - Take charge of your relationships
+      Dunbar - Stay in control of your relationships
+      Dunbar - Share more with the people that matter most to you
+      Dunbar - Analyze -> Organize -> Grow
+      Dunbar - Relational Insights to Results 
+      Dunbar - You are the average of the five people you spend the most time with.
+      Dunbar - Never forget to reach out again
+      Dunbar - Put meaning into your relationships
+      Dunbar - Create your tribe
+      Dunbar - Organize meaningful relationships
+      Dunbar - Brilliant Relationships
+      
+      **Audience 3: Lonely people**
+      Dunbar - Break the cycle of loneliness
+      Dunbar - Define your social circle
+      Dunbar - Take steps to connect with other people
+      Dunbar - You are not alone
+      Dunbar - Fight Loneliness. Now.
+      Dunbar - Reconnect. Engage. Bond.
+      
+      ### Longer story (±40 words)
+      When people aren't convinced by two screenshots and a headline, a longer story will appear on the landing page when scrolling down. 
+      
+      * Social Networks minimize real life interaction to maximize screentime, and sparisify and degrade your relations. Dunbar helps you to keep the more meaningful ones, and make them better.
+      
+      * Dunbars Limit (150) is the limit of maintainable stable relationships. Most people have more, but very sparsified relationships. Spending less time on each relationship makes them less valuable. Dunbar helps you get less but more worthwhile connections. 
+      
+      * Dunbar lets you assign your network into 3 categories: The inner circle, friends, and the outer circle. Also, you can analyze your relational activity so you can see where to improve.
+      
+      * According to Dunbar, the limit of active stable relationships is 150. Managing and limiting your active relationships to 150 people is an enormous task. With Dunbar, we help you to organize, analyze and improve your personal and professional relationships.
+      
+      * I care about my friends, but FB, other Social Media, and contact apps make it hard to really maintain my relationships. I want to decide who I care about, and not let the algorithms decide who I get information about (e.g. on the FB Timeline). I want to do more meaningful activities with my friends, rather than using flat communication platforms like WhatsApp, Facebook and SnapChat. I want fewer, but stronger friendships.
+      
+      * Internet connects the unconnected, but disconnects the connected. Our app tries to approach [The Village Effect](https://www.amazon.de/Village-Effect-Face-Face-Healthier/dp/0307359549) in cities.
+      
+      
+      # How does Dunbar work?
+      * Choose your inner circle (±12), friends (±42) and outer circle (±150)
+      * Get one simple overview
+      * Easily talk (call / whatsapp ) everyone from this overview
+      * Easily invite multiple friends for an activity
+      
+      ![goodimage-1](/content/images/2019/04/goodimage-1.jpg)
+      
+      ![socialcircles](/content/images/2019/04/socialcircles.jpg)
+      
+      
+      # Some reading material on why I created this app:
+      * [Offline Social Networks - Bridging the gap](https://www.slideshare.net/padday/bridging-the-gap-between-our-online-and-offline-social-network/15-Online_OfineThe_problem_is_that)
+      * [How facebook has flattened communication (Medium)](https://medium.com/s/story/how-facebook-has-flattened-human-communication-c1525a15e9aa)
+      * [Please Put Down The Flat-Media (Medium)](https://medium.com/@jstreich13/please-put-down-the-flat-media-e08085263afb)
+      * [What do social media breaks accomplish?](https://link.medium.com/5P6OkSc3pV)
+      * [CardHop iOS App (TechCrunch)](https://techcrunch.com/2019/03/27/contacts-app-cardhop-comes-to-ios/)
+      * ['Dunbar relationships' on Google](https://www.google.com/search?ei=DFKwXJafC4LCwALp1IqIAg&q=dunbar+relationships&oq=dunbar+relationships&gs_l=psy-ab.3..0j0i22i30l2.11566.13827..13956...0.0..0.64.1001.20......0....1..gws-wiz.......35i39j0i203j0i10i203.K_1FuKcXEAE)
+      * [6 Ways Social Media Affects Our Health](https://www.forbes.com/sites/alicegwalton/2017/06/30/a-run-down-of-social-medias-effects-on-our-mental-health/)
+      * [Smartphone Stress](https://www.bbc.com/news/business-28686235)
+      * [This is what your smartphone is doing to your brain - it isn't good](https://www.businessinsider.nl/what-your-smartphone-is-doing-to-your-brain-and-it-isnt-good-2018-3/?international=true&r=US)
+      * http://goodmedicine.org.uk/node/1209
+      * https://www.sketchplanations.com/post/178356259078/dunbars-number-150-the-evolutionary
+      * https://www.slideshare.net/EXCCELessex/robin-dunbar-has-the-internet-changed-our-social-world
+      * https://fatpappy4ls.blog/2018/01/01/thinking-of-adding-things-in-2018-add-depth-to-existing-or-new-relationships/
+      * https://www.slideshare.net/frankfal/the-art-science-of-b?next_slideshow=1
+      
+      
+      
+      # More explanations
+      **No Machine Learning, but Personal Choice.** Content of your network/contacts at Dunbar isn't driven by a screentime-optimized machine learning model like on Facebook and other Social Media. On Dunbar, it also isn't driven by the amount of content your network post about themselves. On Dunbar, you are in control of your relationships, and you decide who you want to keep in touch with. How often? Why? How? You can create your own, personal, private overview, and this will greatly benefit your relationships in the long term.
+      
+      Social networks are making us unhappy, stressed, and increase anxiety.
+      
+      Social networks sparisify and degrade your relations. Dunbar helps you to keep the more meaningful ones.
+      
+      Social networks increase text communication, which decreases time and incentive for real interaction
+      
+      How much % of communication is language? Let's say 20%. This means using too much flat communication (text messaging, email, low quality information timelines) makes us less productive communicators.How much % of your time communicating with people is this over email, text, social media (flat communication)? A lot. How much % of your conversations are over text? A lot. To become more productive, we should lower our amount of flat communication usage.
+      
+      `
+    },
+    {
+      type: "Download"
+    }
+  ]
+};
+
 const pages: Page[] = [
   home,
   about,
@@ -674,6 +772,7 @@ const pages: Page[] = [
   pricing,
   contact,
   signup,
+  beta,
   defaultPages.privacy,
   defaultPages.emailsuccess,
   defaultPages.paymentsuccess
@@ -687,6 +786,7 @@ const globalSettings: GlobalSettings = {
   mailFormTitle: "Get early access",
 
   colors: {
+    defaultText: "#fff",
     primary: "#0054b8",
     primaryLighter: "#0064dc",
     primaryDarker: "#00306a"
@@ -700,7 +800,7 @@ const globalSettings: GlobalSettings = {
   },
 
   apiUrl: null,
-  driftId: "p87nxp8v5kyi",
+  // driftId: "p87nxp8v5kyi",
   appName: "Dunbar",
   siteTitle: "Dunbar - Put meaning into your relationships",
   copyrightYear: "2019",

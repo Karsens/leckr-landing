@@ -5,12 +5,12 @@
 
 .navigation {
   border-color: fade-out($gray-darker, 0.95);
-  background-color: black;
+  background-color: $theme-primary;
   @include transition-all;
   @include heading-font;
 
   .navbar-brand {
-    color: $theme-primary;
+    color: fade($default-text, 70%);
     @include heading-font;
 
     &:hover,
@@ -26,7 +26,7 @@
         @include alt-font;
 
         &.active {
-          color: $theme-primary !important;
+          color: $secondary-text !important;
           background-color: transparent;
 
           &:hover {
@@ -37,7 +37,7 @@
 
       > .nav-link,
       > .nav-link:focus {
-        color: $gray-lighter;
+        color: $gray-darker;
 
         &:hover {
           color: $theme-primary;
@@ -47,23 +47,23 @@
   }
   @media (min-width: 992px) {
     border-color: transparent;
-    background-color: black;
+    background-color: $theme-primary;
 
     .navbar-brand {
-      color: fade(white, 70%);
+      color: fade($default-text, 70%);
 
       &:hover,
       &:focus {
-        color: white;
+        color: $default-text;
       }
     }
 
     .navbar-nav > .nav-item > .nav-link,
     .navbar-nav > .nav-item > .nav-link:focus {
-      color: fade-out(white, 0.3);
+      color: fade-out($default-text, 0.3);
 
       &:hover {
-        color: white;
+        color: $default-text;
       }
     }
 

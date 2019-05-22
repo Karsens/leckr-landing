@@ -29,6 +29,7 @@ import Markdown from "./sections/section.markdown";
 import Pricing from "./sections/section.pricing";
 import Blurps from "./sections/section.blurps"; // 3 blurps in a row
 import Timeline from "./sections/section.timeline";
+import ImageCover from "./sections/section.imagecover";
 import Download from "./sections/section.download";
 import ImageIconsFeatures from "./sections/section.features.imageicons";
 import ImageTextFeatures from "./sections/section.features.imagetext";
@@ -38,6 +39,7 @@ import ImageTitle from "./sections/ImageTitle";
 import Stats from "./sections/Stats"; // should be CommunifyStats
 
 const SectionComponents = {
+  ImageCover,
   Markdown,
   Pricing,
   Download,
@@ -86,7 +88,7 @@ class PageComponent extends React.Component<Page> {
           </script>`}
         </Helmet>
         
-        {sections.map(({ type, optionsArray }: Section, index) => {
+        {sections.map(({ type, optionsArray, ...rest }: Section, index) => {
           const SectionComponent = SectionComponents[type];
 
           const key = `section-${index}`;
@@ -96,14 +98,14 @@ class PageComponent extends React.Component<Page> {
             return <div key={key} />;
           }
 
-          const options: Options = optionsArray && (
+          const options: Options = optionsArray ? (
             optionsArray.find(opt => opt.reference === search.ref) || optionsArray[0]
-          );
+          ) : rest;
 
           return <SectionComponent key={key} {...options} />;
         })}
 
-        <Drift appId={Settings.driftId} />
+        {Settings.driftId && <Drift appId={Settings.driftId} />}
       </PageLayout>
     );
   }

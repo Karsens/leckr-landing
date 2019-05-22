@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container } from "reactstrap";
 import ReactMarkdown from "react-markdown";
-import { View, H1 } from "../util/react-native";
+import { View, H3 } from "../util/react-native";
 
 /**
  * In the end, this component should be able to render video's too. On mollie.com, jpg's change into video once the video is loaded. This should be doable.
@@ -15,10 +14,16 @@ import { View, H1 } from "../util/react-native";
 class ImageTextSection extends React.Component {
   renderText(title, text) {
     return (
-      <View style={{ flex: 1, marginTop: 50 }}>
-        <H1>{title}</H1>
-        <View style={{ marginTop: 10 }}>
-          <ReactMarkdown source={text} linkTarget="_blank" />
+      <View
+        style={{
+          flex: 1
+        }}
+      >
+        <View style={{ marginTop: 30, paddingLeft: 30, paddingRight: 30 }}>
+          <H3>{title}</H3>
+          <View style={{ marginTop: 10 }}>
+            <ReactMarkdown source={text} linkTarget="_blank" />
+          </View>
         </View>
       </View>
     );
@@ -28,10 +33,12 @@ class ImageTextSection extends React.Component {
     return (
       <View
         style={{
-          flex: 1
+          flex: 1,
+          display: "flex",
+          alignItems: "center"
         }}
       >
-        <img src={image} alt={title} width="50%" height="100%" />
+        <img src={image} alt={title} width="100%" height="auto" />
       </View>
     );
   }
@@ -49,13 +56,18 @@ class ImageTextSection extends React.Component {
     const right = opposite ? imageRender : textRender;
 
     return (
-      <Container>
-        <View style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-          {left}
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          backgroundColor: opposite ? "#EEE" : undefined
+        }}
+      >
+        {left}
 
-          {right}
-        </View>
-      </Container>
+        {right}
+      </View>
     );
   }
 }

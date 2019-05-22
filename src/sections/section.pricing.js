@@ -13,7 +13,7 @@ import Icon from "../dui/Icon";
 
 const colors = ["green", "blue", "purple", "red"];
 
-const PRICING_WIDTH = 200;
+const PRICING_WIDTH = 250;
 
 class Pricing extends React.Component {
   renderFeature = (feature: string, available: boolean) => (
@@ -28,7 +28,8 @@ class Pricing extends React.Component {
   );
 
   renderHeader(item, index) {
-    const color = item.color || colors[index];
+    const { titleFontSize, buttonTitle } = this.props;
+    const color = item.color || colors[index % colors.length];
 
     return (
       <View
@@ -44,6 +45,7 @@ class Pricing extends React.Component {
           style={{
             flex: "1 0 auto",
             fontWeight: "bold",
+            fontSize: titleFontSize,
             color,
             textAlign: "center"
           }}
@@ -91,7 +93,7 @@ class Pricing extends React.Component {
           <Button
             color={color}
             style={{ flex: 1 }}
-            title={item.buttonTitle || `Get ${item.name}`}
+            title={item.buttonTitle || buttonTitle || `Get ${item.name}`}
             onPress={() => (window.location = item.link)}
           />
         )}
@@ -100,8 +102,8 @@ class Pricing extends React.Component {
   }
 
   renderFeatures(item, index) {
-    const { packages } = this.props;
-    const color = item.color || colors[index];
+    const { packages, isIncremental, titleFontSize } = this.props;
+    const color = item.color || colors[index % colors.length];
 
     const previous = packages[index - 1];
 
@@ -113,15 +115,17 @@ class Pricing extends React.Component {
           flex: 1
         }}
       >
-        <H3 style={{ color }}>
+        <H3 style={{ color, fontSize: titleFontSize }}>
           {item.name}
           {" "}
 includes
         </H3>
 
-        <Text style={{ color }}>
-          {previous ? `Everything in ${previous.name}, and:` : "All of these features:"}
-        </Text>
+        {isIncremental === false ? null : (
+          <Text style={{ color }}>
+            {previous ? `Everything in ${previous.name}, and:` : "All of these features:"}
+          </Text>
+        )}
 
         <View style={{ height: 1, backgroundColor: color, width: "100%" }} />
 
