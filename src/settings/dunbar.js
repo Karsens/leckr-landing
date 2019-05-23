@@ -3,8 +3,6 @@ Voor broad audience is het te inprersonal.
 Je wil juist mensen zien. maar voor entrepreneurial audience is het wel ok
 */
 
-import React from "react";
-import Icon from "../dui/Icon";
 import * as assets from "./assets_dunbar/index";
 
 import { Page, GlobalSettings, Settings } from "./_types";
@@ -268,7 +266,7 @@ When I was eleven years old, I learned how to make websites. When I was 12 I cre
 
 Twelve years after I learned how to make websites, after finishing my bachelors in Artificial Intelligence, I traveled the world for 6 months. Days went without screens.. It made me less of a nerd, way more social, and also incredibly happy. What did I really want? After traveling, I decided I wanted to make an app that bring people together. Away from their screens. Because this had made ME so much happier too.
 
-For about six months, I burned through all my money while working full time on my first attempt: [Communify](https://communify.cc). In hindsight, many things went wrong. It was over developed, complex and had no good business model. What was even worse, is that it took away some of the business of the clients I was hoping to sell it to: the Coworking Space. The Coworkers loved the idea, but the coworking space hated it. Too bad. I had failed. I got depressed again. 
+For about six months, I burned through all my money while working full time on my first attempt: [Communify](https://communify.cc). In hindsight, many things went wrong. It was over developed, complex and had no good business model. What was even worse, is that it took away some of the business of the clients I was hoping to sell it to: the Coworking Space. The Coworkers loved the idea, but the coworking space hated it. Too bad. I had failed. As a result, I had an existential crisis that lasted a month. 
 
 About 10 months after failing and one regular office job later, I decided to move to Amsterdam, learn more about startups, and try again. I love the vibe in the startup scene. I learned a lot really quickly. Even had two startup jobs at the same time. Read almost a dozen of books about startups. Also, I've read [Deep Work](http://www.calnewport.com/books/deep-work/), [Digital Minimalism](http://www.calnewport.com/books/digital-minimalism/) and became very much inspired by [Humane Tech](https://humanetech.com/). Also, I read a lot about relationships ([Robin Dunbar](https://www.amazon.com/Many-Friends-Does-Person-Need/dp/0674057163), [Catherine Price](https://phonebreakup.com/), [Susan Pinker](https://www.susanpinker.com/the-village-effect/)). These books have all inspired me so much, I came up with the next attempt...
 
