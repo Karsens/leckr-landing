@@ -238,6 +238,18 @@ const home: Page = {
   ]
 };
 
+const missionMarkdown = {
+  type: "Markdown",
+  linkTarget: "",
+
+  markdown: `
+
+# Mission
+
+The mission of Dunbar is to create higher quality and more meaningful interactions between people to make them more brilliant, wise, self-reliant, and succesful. To reverse [human downgrading](https://www.wired.com/story/tristan-harris-tech-is-downgrading-humans-time-to-fight-back/) of communication, social systems and relationships.
+`
+};
+
 const story: Page = {
   title: "Story",
   route: "story",
@@ -250,35 +262,25 @@ const story: Page = {
       linkTarget: "",
       markdown: `
 
-# My Earlier Life Story
+# My Story
 
-Young nerd: Mafia game
+When I was eleven years old, I learned how to make websites. When I was 12 I created a mafia game (More specifically, a text-based massive multiplayer online role playing game. There are still some examples out there, like [Omerta](https://barafranca.com/). It was a very popular type of game at the time). Creating this game, and playing other games myself, took most of my free time. I was hooked. Addicted. Hard to separate from my computer. It was an amazing experience to create and maintain a mafia game for about 500 active users for over 10 years, but it was also very stressfull at times, and the ethic side doubtful. One the one hand, I had created a wonderful playground for young kids to compete, learn and socialize online. At first, this made me very happy. But then I discovered the dark side. Some kids were burning their parents money and others were playing over 8 hours a day on average. This made me very unhappy, and I was even depressed for a while. I quit a few years later.
 
-Regret, Depressive
+Twelve years after I learned how to make websites, after finishing my bachelors in Artificial Intelligence, I traveled the world for 6 months. Days went without screens.. It made me less of a nerd, way more social, and also incredibly happy. What did I really want? After traveling, I decided I wanted to make an app that bring people together. Away from their screens. Because this had made ME so much happier too.
 
-Bachelors AI
+For about six months, I burned through all my money while working full time on my first attempt: [Communify](https://communify.cc). In hindsight, many things went wrong. It was over developed, complex and had no good business model. What was even worse, is that it took away some of the business of the clients I was hoping to sell it to: the Coworking Space. The Coworkers loved the idea, but the coworking space hated it. Too bad. I had failed. I got depressed again. 
 
-2017 travel: Different
+About 10 months after failing and one regular office job later, I decided to move to Amsterdam, learn more about startups, and try again. I love the vibe in the startup scene. I learned a lot really quickly. Even had two startup jobs at the same time. Read almost a dozen of books about startups. Also, I've read [Deep Work](http://www.calnewport.com/books/deep-work/), [Digital Minimalism](http://www.calnewport.com/books/digital-minimalism/) and became very much inspired by [Humane Tech](https://humanetech.com/). Also, I read a lot about relationships ([Robin Dunbar](https://www.amazon.com/Many-Friends-Does-Person-Need/dp/0674057163), [Catherine Price](https://phonebreakup.com/), [Susan Pinker](https://www.susanpinker.com/the-village-effect/)). These books have all inspired me so much, I came up with the next attempt...
 
-Communify: Pitfalls
+This time I came up with Dunbar. A completely different approach for the same goal: bringing people together. When entering a new environment, it can be a challenge to make friends, and certainly the right ones, and meaningful ones. Also, I noticed that I had made hundreds of 'friends' in my life, but had very few active ones. Most of my friendships were very low-level. 
 
-Now Dunbar: A better approach
+Professionally, it was hard to remember all professional connections I made in a short time. It all become a lot, really quickly. Email. Slack Channels. Whatsapp. LinkedIn. My professional contacts are everywhere, except where I really want them: On events, so we can actually talk IRL. Consequently, I made dozens of new connections in a couple of months but it didn't have a big impact because they were all very low-level connections. The ones I wanted to keep in touch with, got burried under hunreds of other connections on LinkedIn, or below hundreds of e-mails. Why is this so hard!?
 
-# My Amsterdam Professional Story
-
-Move to Amsterdam
-
-Challenge to make good friends
-
-Professionally, forgetting things
-
-Cal Newport, Robin Dunbar, Tristan Harris
-
-Business coach expensive
-
-Goal for professional use
+In March of this year I started working on Dunbar. It's my best attempt on solving all these problems. 
 `
-    }
+    },
+
+    missionMarkdown
   ]
 };
 
@@ -289,18 +291,12 @@ const about: Page = {
   showInFooter: false,
   internalPage: true,
   sections: [
+    missionMarkdown,
+
     {
       type: "Markdown",
       linkTarget: "",
-
-      markdown: `
-
-# Mission
-
-Our mission is to create higher quality and more meaningful interactions between people to make them more succesful. To reverse downgrading of communication, social systems and relationships and make us brilliant, wise, self-reliant, and succesful. Choose your friends wisely and bring them closer together to become more succesful. Internet connects the unconnected, but disconnects the connected. Our app tries to approach The Village Effect in cities.
-
-[Click here for a more personal backstory](/story)
-`
+      markdown: "[Click here for a more personal backstory](/story)"
     },
 
     {
@@ -312,16 +308,16 @@ Our mission is to create higher quality and more meaningful interactions between
           ghostLink:
             "https://blog.karsens.com/ghost/api/v2/content/posts/?key=f986ca2d588b087644a1790df8&limit=all&filter=tags:dunbar",
           articles: [
-            {
-              id: 1,
-              date: "Aug 7, 2014, 12:51pm",
-              title: "Dunbar's Number: A Key To Networking",
-              description:
-                "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
-              link:
-                "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
-              figure: require("./assets_dunbar/forbesArticle.jpeg")
-            },
+            // {
+            //   id: 1,
+            //   date: "Aug 7, 2014, 12:51pm",
+            //   title: "Dunbar's Number: A Key To Networking",
+            //   description:
+            //     "Dunbar's number is “a suggested cognitive limit to the number of people with whom one can maintain stable social relationships,”",
+            //   link:
+            //     "https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b",
+            //   figure: require("./assets_dunbar/forbesArticle.jpeg")
+            // },
 
             // {
             //   id: 2,
@@ -734,17 +730,6 @@ const beta: Page = {
 [Android Download](https://play.google.com/apps/testing/com.progenworks.dunbar1)
 
 
-### Dunbar's Ultimate Goal
-Our mission is to create higher quality and more meaningful interactions between people to make them more succesful.
-
-Our mission is to reverse downgrading of communication, social systems and relationships and make us brilliant, wise, self-reliant, and succesful.
-
-Choose your friends wisely and bring them closer together to become more succesful
-
-Bring back social networks to they way they should be. (Make offline social networks great again). 
-
-Internet connects the unconnected, but disconnects the connected. Our app tries to approach [The Village Effect](https://www.amazon.de/Village-Effect-Face-Face-Healthier/dp/0307359549) in cities.
-
 ### One liners (for ads)
 
 **Audience 1: Entrepreneurs:**
@@ -824,7 +809,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar 0.2",
+  appName: "Dunbar 0.3",
   siteTitle: "Dunbar - CRM for your Friends",
   copyrightYear: "2019",
   companyName: "Dunbar"

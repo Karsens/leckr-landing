@@ -113,6 +113,8 @@ class Navigation extends Component {
     const { width, sticky, currentSection } = this.state;
 
     const path = pathname && pathname.substring(1, pathname.length);
+    const menuItems = this.getMenuItems();
+    const enough = menuItems && menuItems.length > 1;
     return (
       <Navbar
         light
@@ -137,18 +139,19 @@ class Navigation extends Component {
 
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="navbar-nav ml-auto">
-              {this.getMenuItems().map(({ route, title }, index) => (
-                <NavItem key={index}>
-                  <NavLink
-                    href={`/${route}`}
-                    className={classnames("nav-link", {
-                      active: path === route //|| currentSection === route //for sectionsss
-                    })}
-                  >
-                    {title}
-                  </NavLink>
-                </NavItem>
-              ))}
+              {enough
+                && menuItems.map(({ route, title }, index) => (
+                  <NavItem key={index}>
+                    <NavLink
+                      href={`/${route}`}
+                      className={classnames("nav-link", {
+                        active: path === route //|| currentSection === route //for sectionsss
+                      })}
+                    >
+                      {title}
+                    </NavLink>
+                  </NavItem>
+                ))}
             </Nav>
           </Collapse>
         </Container>

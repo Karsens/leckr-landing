@@ -1,5 +1,7 @@
 /**
  * #later
+ * roadmap
+ * - add some history
  *
  * trips
  * - get blurps of Tarifa guys
@@ -10,9 +12,6 @@
  * - make product overview section
  * - make product details section
  *
- * cleanup
- * - proper typing of all sections
- * - work on mobile smoothness
  *
  * instagram section
  *  */
@@ -640,6 +639,24 @@ const blog: Page = {
   ]
 };
 
+const emailsuccess: Page = {
+  title: "Success",
+  route: "emailsuccess",
+  showInMenu: false,
+  showInFotter: false,
+  internalPage: true,
+  sections: [
+    {
+      type: "Markdown",
+      optionsArray: [
+        {
+          markdown: "Thanks for your interest. An email with more info is underway."
+        }
+      ]
+    }
+  ]
+};
+
 const pages: Page[] = [
   home,
   code,
@@ -651,7 +668,7 @@ const pages: Page[] = [
   open,
   signup,
   defaultPages.privacy,
-  defaultPages.emailsuccess,
+  emailsuccess,
   defaultPages.paymentsuccess
 ];
 

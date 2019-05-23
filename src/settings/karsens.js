@@ -4,21 +4,14 @@ import defaultPages from "./_defaults";
 const home: Page = {
   title: "Home",
   route: "",
-  internalPage: true,
   showInMenu: true,
   showInFooter: false,
   sections: [
     {
-      type: "ImageCover",
-      title: "",
-      description: "",
-      image: require("./assets_karsens/lake.jpg")
-    },
-    {
       type: "ImageTitle",
       siteTitle: "Wijnand Karsens",
       title: "Wijnand Karsens",
-      image1: require("./assets_karsens/me.jpg"),
+      image1: require("./assets_karsens/cool.jpg"),
       text: `
 Hey! I'm Wijnand. Nice to meet you. Have a look on my awesome website. I created it all by myself! Cool, huh?`
     },
@@ -28,7 +21,7 @@ Hey! I'm Wijnand. Nice to meet you. Have a look on my awesome website. I created
       marqueeTitle: "My projects 🎉🎉",
       features: [
         {
-          image: require("./assets_karsens/dunbar.png"),
+          image: require("./assets_karsens/friends.png"),
           title: "Dunbar",
           text:
             "Dunbar is the main project I'm working on now. It's a contact app that helps you organize, analyse and improve your personal relationships, and put more meaning into them. [See for yourself](https://dunbar.site)"
@@ -44,13 +37,6 @@ Hey! I'm Wijnand. Nice to meet you. Have a look on my awesome website. I created
           title: "Booki",
           text:
             "It's a side project, but I get a lot of positive feedback. [Have a look](https://gobooki.co/)"
-        },
-
-        {
-          image: require("./assets_karsens/blog.png"),
-          title: "Blog",
-          text:
-            "Sometimes I write about things I find interesting [Go to my blog](https://blog.karsens.com/)"
         }
       ]
     },
@@ -89,6 +75,12 @@ To do this, I plan to create technology and other means to enhance freedom and w
 
 
           `
+    },
+    {
+      type: "ImageCover",
+      title: "",
+      description: "",
+      image: require("./assets_karsens/lake.jpg")
     }
   ]
 };
