@@ -12,6 +12,7 @@
  * - make product overview section
  * - make product details section
  *
+ * maybe: coverImage below
  *
  * instagram section
  *  */
