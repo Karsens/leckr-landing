@@ -18,7 +18,7 @@ import "./style.css";
  * The masthead for the home page
  */
 const ImageTitle = ({
-  siteTitle, title, text, image1
+  siteTitle, title, text, image1, includeDownload
 }) => {
   const img = <img src={image1} className="img-fluid" alt="" width="100%" height="100%" />;
   return (
@@ -47,7 +47,6 @@ const ImageTitle = ({
 
                 <div
                   style={{
-                    height: 120,
                     display: "flex",
                     // #toRemember: display flex is needed to do flexbox things, otherwise it does nothing.
                     alignItems: "center"
@@ -62,7 +61,7 @@ const ImageTitle = ({
               <div style={{ marginTop: 10 }}>
                 <ReactMarkdown source={text} linkTarget="_blank" />
               </div>
-              <Download />
+              {!(includeDownload === false) && <Download />}
             </div>
           </Col>
           <Col lg="5" xs="12" className="my-auto">

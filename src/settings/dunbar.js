@@ -807,7 +807,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar 0.3",
+  appName: "Dunbar 0.4",
   siteTitle: "Dunbar - CRM for your Friends",
   copyrightYear: "2019",
   companyName: "Dunbar"

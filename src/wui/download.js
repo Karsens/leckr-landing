@@ -19,7 +19,7 @@ class Download extends React.Component {
   render() {
     return (
       <View>
-        {Settings.mailChimpSubscribeUrl && <MailChimpForm url={Settings.mailChimpSubscribeUrl} />}
+        {Settings.mailChimpSubscribeUrl && <MailChimpForm />}
 
         <div className="badges">
           <div className="badge-item">

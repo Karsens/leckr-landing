@@ -109,7 +109,7 @@ class Blog extends React.Component {
             title,
             description: excerpt,
             link: url,
-            figure: feature_image.replace("http:", "https:")
+            figure: feature_image && feature_image.replace("http:", "https:")
           }))
         });
       });

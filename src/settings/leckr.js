@@ -12,9 +12,11 @@
  * - make product overview section
  * - make product details section
  *
- * maybe: coverImage below
+ * mailchimp:
+ * - add categories to form
+ * - set up default mails with content
  *
- * instagram section
+ * later: instagram section
  *  */
 
 import { Page, GlobalSettings, Settings } from "./_types";
@@ -25,15 +27,11 @@ const home: Page = {
   route: "",
   showInMenu: true,
   showInFooter: false,
+  internalPage: true,
   sections: [
     {
-      type: "ImageCover",
-      title: "",
-      description: "",
-      image: require("./assets_leckr/kite.jpg")
-    },
-    {
       type: "ImageTitle",
+      includeDownload: false,
       siteTitle: "LECKR - Let's Eat Code Kite Repeat",
       title: "Let's Eat Code Kite Repeat",
       image1: require("./assets_leckr/tarifa.jpg"),
@@ -69,6 +67,12 @@ LECKR offers you three things:
       type: "Download"
     },
     {
+      type: "ImageCover",
+      title: "",
+      description: "",
+      image: require("./assets_leckr/kite.jpg")
+    },
+    {
       type: "BlurpsComingSoon", //Just Blurps, but not now yet
 
       optionsArray: [
@@ -79,21 +83,6 @@ LECKR offers you three things:
               title: "Catherine Price",
               subtitle: "writer of \"How to break up with your Phone\"",
               text: "Love it! I really don't like my phone so people will help it"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      type: "ImageTextFeaturesComingSoon",
-      optionsArray: [
-        {
-          features: [
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 1",
-              text: "test text. you know this feature, its so cool brue"
             }
           ]
         }
@@ -115,27 +104,46 @@ const roadmap: Page = {
         {
           timeline: [
             {
-              title: "Q3 2019",
-              markdown: `
-- Make website
-- Organize and put codebase for sale
+              title: "2005 - 2016",
+              markdown: `✅ Started the company. 
 
-              `
+✅ Did freelance work and a text-based mafia game like [Omerta](https://barafranca.com) for 11 years.`
             },
 
             {
-              title: "Q4 2019",
+              title: "2016 - 2018",
+              markdown: `✅ Traveled to Nepal, South East Asia, Tarifa and Bali ([More info](/trips)) while coding and (kite)surfing or hiking
+                
+✅ Improved lifestyle and workflow
+
+✅ Learned how to make apps`
+            },
+            {
+              title: "2019",
               markdown: `
-- Improve Codebase
-- Define Blueprint of Kite Utopia
-- Grow awareness
-- Become profitable with Dunbar and/or Booki
-              `
+✅ Make website
+
+✅ Setup mail form with interests
+
+✅ Articulate what we do better
+
+✅ Start [Dunbar](https://dunbar.site) and [Booki](https://gobooki.co)
+
+❌ Improve Codebase
+
+❌ Define Blueprint of Kite Utopia
+
+❌ Go to Nepal
+
+❌ Go to Bali
+
+❌ Get profitable with Dunbar
+`
             },
 
             {
               title: "Future (2020+)",
-              markdown: "Secret (ask me)"
+              markdown: "Secret ([ask me](/contact))"
             }
 
             // - [ ]  Dunbar+Dyme 42h/week coding
@@ -251,6 +259,10 @@ Need more info?
           `
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -289,6 +301,10 @@ const contact: Page = {
           `
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -359,6 +375,10 @@ const trips: Page = {
           text: "Surfing, Coding a lot, villa parties, adventure."
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -514,6 +534,10 @@ const code: Page = {
           ]
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -636,6 +660,10 @@ const blog: Page = {
           ]
         }
       ]
+    },
+
+    {
+      type: "Download"
     }
   ]
 };
@@ -673,11 +701,36 @@ const pages: Page[] = [
   defaultPages.paymentsuccess
 ];
 
+type MCCategory = {
+  group: number,
+  value: number,
+  label: string
+};
+const mailChimpCategories: MCCategory[] = [
+  {
+    group: 6957,
+    value: 1,
+    label: "Open Source Libraries"
+  },
+
+  {
+    group: 6957,
+    value: 2,
+    label: "Hiring LECKR"
+  },
+
+  {
+    group: 6957,
+    value: 4,
+    label: "LECKR Lifestyle & Workflow"
+  }
+];
 const globalSettings: GlobalSettings = {
   isNoPhone: true,
   googleAnalyticsId: "UA-115183926-4",
   mailChimpSubscribeUrl:
     "https://travellifemovement.us16.list-manage.com/subscribe/post?u=211c8e286b504f8faf1b92bb2&amp;id=f577ff8d3c",
+  mailChimpCategories,
 
   mailFormTitle: "Get more info",
 

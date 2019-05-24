@@ -9,6 +9,9 @@ class MailChimpForm extends React.Component {
   };
 
   render() {
+    const categories = Settings.mailChimpCategories;
+    const subscribeUrl = Settings.mailChimpSubscribeUrl;
+
     return (
       <div>
         <link
@@ -32,7 +35,7 @@ class MailChimpForm extends React.Component {
             className="validate"
             // target="_blank"
             noValidate
-            action={Settings.mailChimpSubscribeUrl}
+            action={subscribeUrl}
           >
             <div id="mc_embed_signup_scroll">
               <input
@@ -43,6 +46,7 @@ class MailChimpForm extends React.Component {
                   paddingLeft: 10,
                   paddingRight: 10,
                   marginTop: 10,
+                  marginBottom: 10,
                   width: "100%",
                   //backgroundColor: Settings.colors.primary,
                   borderTopColor: Settings.colors.primaryLighter,
@@ -59,6 +63,30 @@ class MailChimpForm extends React.Component {
                 placeholder="Your email"
                 required
               />
+
+              {categories && (
+                <div>
+                  <strong style={{ fontSize: 20 }}>What do you want to know more about? </strong>
+                  <ul style={{ listStyle: "none", margin: 10 }}>
+                    {categories.map(({ group, value, label }, index) => (
+                      <li key={`group-${group}-${value}`}>
+                        <input
+                          type="checkbox"
+                          value={value}
+                          name={`group[${group}][${value}]`}
+                          id={`mce-group[${group}]-${group}-${index}`}
+                        />
+                        <label
+                          style={{ marginLeft: 10 }}
+                          htmlFor={`mce-group[${group}]-${group}-${index}`}
+                        >
+                          {label}
+                        </label>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <div style={{ position: "absolute", left: -5000 }} aria-hidden="true">
                 <input
