@@ -188,7 +188,7 @@ const home: Page = {
               title: "Wijnand Karsens",
               subtitle: "Creator of Dunbar",
               text:
-                "\"Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me.\""
+                '"Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me."'
             }
           ]
         }
@@ -807,7 +807,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar 0.4",
+  appName: "Dunbar 0.6",
   siteTitle: "Dunbar - CRM for your Friends",
   copyrightYear: "2019",
   companyName: "Dunbar"
