@@ -1,7 +1,5 @@
 /**
  * #later
- * roadmap
- * - add some history
  *
  * trips
  * - get blurps of Tarifa guys
@@ -13,10 +11,9 @@
  * - make product details section
  *
  * mailchimp:
- * - add categories to form
  * - set up default mails with content
  *
- * later: instagram section
+ * #later: instagram section
  *  */
 
 import { Page, GlobalSettings, Settings } from "./_types";
@@ -54,13 +51,17 @@ const home: Page = {
     {
       type: "Markdown",
       markdown: `
-LECKR offers you three things:
+LECKR offers you four things:
 
 1. **Code:** LECKR is a free open-source project that comprises components, libraries, boilerplates, and even codebases for the following technologies: React Native (Web), React, Node JS, GraphQL, REST. 
 
 2. **Hire:** You can also hire LECKR to help you implement things, or get custom libraries
 
-3. **Workflow & Lifestyle:** LECKR writes and advises companies about workflow and lifestyle. See our blog`
+3. **Workflow & Lifestyle:** LECKR writes and advises companies about workflow and lifestyle. See our blog
+
+4. **Trips:** LECKR goes to paradises around the world together to do (kite)surfing, hiking, and other extreme sports, while working hard.
+
+`
     },
 
     {
@@ -723,6 +724,18 @@ const mailChimpCategories: MCCategory[] = [
     group: 6957,
     value: 4,
     label: "LECKR Lifestyle & Workflow"
+  },
+
+  {
+    group: 6957,
+    value: 8,
+    label: "Working for LECKR"
+  },
+
+  {
+    group: 6957,
+    value: 16,
+    label: "Joining LECKR Trips"
   }
 ];
 const globalSettings: GlobalSettings = {
