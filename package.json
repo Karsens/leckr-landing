@@ -46,6 +46,7 @@
     "build": "npm run build-css && react-scripts build",
     "hack": "cp build/index.html build/200.html",
     "eject": "react-scripts eject",
+    "yarn": "git add . && git commit -m \"Small Improvements\" && git push && yarn dunbardeploy",
     "fastpush": "git add . && git commit -m \"Small Improvements\" && git push",
     "communifydeployhack": "yarn build && yarn hack && surge build communify.cc",
     "dunbardeploy": "yarn build && yarn hack && surge build dunbar.site && surge build dunbar.vip && surge build dunbar.club",

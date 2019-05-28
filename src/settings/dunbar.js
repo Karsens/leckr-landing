@@ -272,11 +272,11 @@ const about: Page = {
   sections: [
     missionMarkdown,
 
-    {
-      type: "Markdown",
-      linkTarget: "",
-      markdown: "[Click here for a more personal backstory](/story)"
-    },
+    // {
+    //   type: "Markdown",
+    //   linkTarget: "",
+    //   markdown: "[Click here for a more personal backstory](/story)"
+    // },
 
     {
       type: "ImageIconsFeatures",
