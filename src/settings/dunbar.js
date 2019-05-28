@@ -40,8 +40,10 @@ const home: Page = {
             pt: "Organize seus relacionamentos para mais qualidade e tranquilidade"
           }, //(sociale) netwerken, berichten applicaties, bellen en meetings)
           text: {
-            pt:"O Dunbar se integra com todos os seus aplicativos de comunicação e aumenta sua consciência sobre como, com quem e com o que você se comunica.",
-            es: "Dunbar se integra con todas sus aplicaciones de comunicación y crea conciencia sobre cómo, con quién y sobre lo que comunica."
+            pt:
+              "O Dunbar se integra com todos os seus aplicativos de comunicação e aumenta sua consciência sobre como, com quem e com o que você se comunica.",
+            es:
+              "Dunbar se integra con todas sus aplicaciones de comunicación y crea conciencia sobre cómo, con quién y sobre lo que comunica.",
             en:
               "Dunbar integrates with all your communication-apps and raises your consciousness about how, with who, and about what you communicate.",
             nl:
