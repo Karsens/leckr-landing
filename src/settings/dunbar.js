@@ -1,4 +1,14 @@
 /*
+Taal:
+- Tot augustus is er nog een beta. Voor die beta is 80% Nederlands. Ook zal ik meer hebben aan Nederlanders die wat ouder zijn, dat kunnen namelijk goed inversteerders worden. Voor deze mensen, die wat minder goed engels kunnen, is een nederlanse site belangrijk. Voor iedereen weegt het wel mee. Sowieso is het inbouwen van meerdere talen wel slim.
+
+Implementatie taal belangrijk:
+- In de section zelf moeten het gewoon allemaal props zijn waarbij de juiste taal al gezet is, en de juiste reference (voor audience personalisation).
+- In de settings file (deze) moet het heel simpel te zien zijn. talen moeten het dichtst bij de tekst staan. De overliggende structuur is verder daarbuiten. 
+- Alle string options in 
+
+
+
 Voor broad audience is het te inprersonal.
 Je wil juist mensen zien. maar voor entrepreneurial audience is het wel ok
 */
@@ -18,9 +28,28 @@ const home: Page = {
     {
       type: "ImageTitle",
       optionsArray: [
-        //Organize. Analyse. Improve. --> Probably in a later stage, when analyse and improve are actually implemented.
         {
           reference: "default",
+          // entrepreneur audience
+          image1: require("./assets_dunbar/screen1.png"),
+          siteTitle: "Dunbar",
+          title: {
+            es: "Organiza tus relaciones para más calidad y tranquilidad.",
+            nl: "Organiseer je relaties voor meer kwaliteit en rust",
+            en: "Organize your relationships for quality & calm",
+            pt: "Organize seus relacionamentos para mais qualidade e tranquilidade"
+          }, //(sociale) netwerken, berichten applicaties, bellen en meetings)
+          text: {
+            en:
+              "Dunbar integrates with all your communication-apps and raises your consciousness about how, with who, and about what you communicate.",
+            nl:
+              "Dunbar voegt al je communicatie-apps samen en verhoogt je bewustzijn over hoe, met wie, en over wat je communiceert."
+          }
+        },
+
+        //Organize. Analyse. Improve. --> Probably in a later stage, when analyse and improve are actually implemented.
+        {
+          reference: "schogt",
           // entrepreneur audience
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar - CRM for your Friends",
@@ -53,100 +82,9 @@ const home: Page = {
 
     {
       type: "ImageIconsFeatures",
-
       optionsArray: [
         {
-          title: "The problem",
-
-          subtitle: "",
-          noPhone: true,
-          image1: require("./assets_dunbar/mobileaddiction.png"),
-          features: [
-            {
-              title: "Chaos",
-              description: "Your contacts are scattered across all kinds of (social media) channels"
-              // icon: <Icon family="simple" name="screen-smartphone" />
-            },
-            {
-              title: "Privacy is gone",
-              description:
-                "Your data is sold and used to maximize profitability of you and your friends"
-              // icon: <Icon family="simple" name="exclamation" />
-            },
-            // {
-            //   title: "Addiction",
-            //   description:
-            //     "Current social media business models are optimized for screen-time, which leads to addiction.",
-            //   icon: <Icon family="simple" name="exclamation" />
-            // },
-            {
-              title: "Sparse relationships",
-              description:
-                "The internet has grown the amount of people we interact with, but made every connection a lower quality one because we spend less time on every connection."
-              // icon: <Icon family="simple" name="exclamation" />
-            },
-            {
-              title: "Disconnectedness",
-              description:
-                "Internet connects the unconnected, but disconnects the connected. Average communication quality has become lower since the internet and text messaging/email has become the norm."
-              // icon: <Icon family="simple" name="screen-smartphone" />
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      type: "ImageIconsFeatures",
-
-      optionsArray: [
-        {
-          title: "The solution",
-
-          subtitle: "",
-          noPhone: true,
-          image1: require("./assets_dunbar/happypeople.jpg"),
-          features: [
-            {
-              title: "A Clear Overview",
-              description: "Access all your friends and connections from one app."
-              // icon: <Icon family="simple" name="screen-smartphone" />
-            },
-            {
-              title: "Privacy",
-              description:
-                "Your data is completely yours. We don't sell it. It doesn't even leave your phone!"
-              // icon: <Icon family="simple" name="exclamation" />
-            },
-            // {
-            //   title: "Stop human downgrading",
-            //   description:
-            //     "Dunbar has a freemium business model - our goal is to make you a better person.",
-            //   icon: <Icon family="simple" name="exclamation" />
-            // },
-            {
-              title: "Choose for Meaning",
-              description:
-                "According to anthropologist Robin Dunbar, the limit of active stable relationships is 150. If you have more, this app helps you to get less connections, but more meaningful ones."
-              // icon: <Icon family="simple" name="screen-smartphone" />
-            },
-
-            {
-              title: "Real Connections",
-              description:
-                "This app tends to get you off your phone and interact more in real life with the people that matter most to you. In this app, meeting up has priority over text-messages."
-              // icon: <Icon family="simple" name="screen-smartphone" />
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      type: "ImageIconsFeatures",
-      optionsArray: [
-        {
-          title: "How Dunbar works",
+          title: { en: "How Dunbar works", nl: "Hoe werkt het?" },
 
           subtitle: "",
           noPhone: false,
@@ -154,23 +92,58 @@ const home: Page = {
 
           features: [
             {
-              title: "Sync your contacts",
-              description:
-                "Dunbar syncs with your iCloud or Google Contacts. Your data is save, it stays on your phone(s), we don't see it. "
-            },
-            {
-              title: "Choose who is most important to you",
-              description: "You can choose your inner circle: your most important relations."
+              title: { en: "Sync your contacts", nl: "Sync je contacten" },
+              description: {
+                en:
+                  "Dunbar syncs with your iCloud or Google Contacts. Your data is save, it doesn't leave your phone.",
+                nl:
+                  "Dunbar synchroniseert met iCloud (iOS) en Google Contacts (Android). Je data blijft veilig op je telefoon."
+              }
             },
 
             {
-              title: "Never forget to keep in touch",
-              description:
-                "You can easily keep notes. If you didn't connect for a while, Dunbar reminds you."
+              title: {
+                nl: "Kies eerst de persoon, dan pas de methode",
+                en: "Choose the person first, then the method"
+              },
+              description: {
+                en:
+                  "Dunbar integrates with WhatsApp, email, SMS, Calling and can even help you set up meetings.",
+                nl:
+                  "Dunbar ingegreert met WhatsApp, email, SMS, bellen, en kan je zelfs helpen om meetings te organiseren."
+              }
             },
+
             {
-              title: "Organize and plan meetings",
-              description: "Smoothly select and invite people to meet up."
+              title: {
+                en: "Choose who is most important to you",
+                nl: "Kies de belangrijke mensen in je leven"
+              },
+              description: {
+                nl:
+                  "Overspoeling van informatie zorgt er soms voor dat belangrijke relaties onder op de stapel komen te liggen. Bij Dunbar krijgen je echte vrienden een speciaal plekje op je telefoon.",
+                en:
+                  "Information-overflow can result in forgetting about your important relationships. With Dunbar, these people will get a special place on your phone."
+              }
+            },
+
+            // {
+            //   title: { en: "Bye bye, FOMO", nl: "Zelfverzekerd, niets vergeten" },
+            //   description: {
+            //     nl:
+            //       "Door een simpele herinnering weet je zeker dat je nooit belangrijke mensen vergeet.",
+            //     en: "Simple reminders make you confident of never forgetting anyone important."
+            //   }
+            // },
+
+            {
+              title: { en: "Make categories", nl: "Maak categorien" },
+              description: {
+                nl:
+                  "Vind je structuur en work-life balance belangrijk? Groepeer dan, en breng scheiding aan tussen je leven en je werk.",
+                en:
+                  "Do you like structure and a good work-life balance? Dunbar lets you group and divide your life with your work."
+              }
             }
           ]
         }
@@ -186,9 +159,13 @@ const home: Page = {
             {
               image: require("./assets_dunbar/wijnand.jpg"),
               title: "Wijnand Karsens",
-              subtitle: "Creator of Dunbar",
-              text:
-                '"Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me."'
+              subtitle: { en: "Creator of Dunbar", nl: "Maker van Dunbar" },
+              text: {
+                en:
+                  '"Through all the noise of nowadays, Dunbar helps me not to forget about the people important to me."',
+                nl:
+                  '"Door alle drukte van vandaag de dag vergeet ik soms wat en wie echt belangrijk is. Dunbar herinnert me. "'
+              }
             }
           ]
         }
@@ -295,6 +272,97 @@ const about: Page = {
       type: "Markdown",
       linkTarget: "",
       markdown: "[Click here for a more personal backstory](/story)"
+    },
+
+    {
+      type: "ImageIconsFeatures",
+
+      optionsArray: [
+        {
+          title: "The problem",
+
+          subtitle: "",
+          noPhone: true,
+          image1: require("./assets_dunbar/mobileaddiction.png"),
+          features: [
+            {
+              title: "Chaos",
+              description: "Your contacts are scattered across all kinds of (social media) channels"
+              // icon: <Icon family="simple" name="screen-smartphone" />
+            },
+            {
+              title: "Privacy is gone",
+              description:
+                "Your data is sold and used to maximize profitability of you and your friends"
+              // icon: <Icon family="simple" name="exclamation" />
+            },
+            // {
+            //   title: "Addiction",
+            //   description:
+            //     "Current social media business models are optimized for screen-time, which leads to addiction.",
+            //   icon: <Icon family="simple" name="exclamation" />
+            // },
+            {
+              title: "Sparse relationships",
+              description:
+                "The internet has grown the amount of people we interact with, but made every connection a lower quality one because we spend less time on every connection."
+              // icon: <Icon family="simple" name="exclamation" />
+            },
+            {
+              title: "Disconnectedness",
+              description:
+                "Internet connects the unconnected, but disconnects the connected. Average communication quality has become lower since the internet and text messaging/email has become the norm."
+              // icon: <Icon family="simple" name="screen-smartphone" />
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      type: "ImageIconsFeatures",
+
+      optionsArray: [
+        {
+          title: "The solution",
+
+          subtitle: "",
+          noPhone: true,
+          image1: require("./assets_dunbar/happypeople.jpg"),
+          features: [
+            {
+              title: "A Clear Overview",
+              description: "Access all your friends and connections from one app."
+              // icon: <Icon family="simple" name="screen-smartphone" />
+            },
+            {
+              title: "Privacy",
+              description:
+                "Your data is completely yours. We don't sell it. It doesn't even leave your phone!"
+              // icon: <Icon family="simple" name="exclamation" />
+            },
+            // {
+            //   title: "Stop human downgrading",
+            //   description:
+            //     "Dunbar has a freemium business model - our goal is to make you a better person.",
+            //   icon: <Icon family="simple" name="exclamation" />
+            // },
+            {
+              title: "Choose for Meaning",
+              description:
+                "According to anthropologist Robin Dunbar, the limit of active stable relationships is 150. If you have more, this app helps you to get less connections, but more meaningful ones."
+              // icon: <Icon family="simple" name="screen-smartphone" />
+            },
+
+            {
+              title: "Real Connections",
+              description:
+                "This app tends to get you off your phone and interact more in real life with the people that matter most to you. In this app, meeting up has priority over text-messages."
+              // icon: <Icon family="simple" name="screen-smartphone" />
+            }
+          ]
+        }
+      ]
     },
 
     {
@@ -807,7 +875,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar 0.6",
+  appName: "Dunbar 0.7",
   siteTitle: "Dunbar - CRM for your Friends",
   copyrightYear: "2019",
   companyName: "Dunbar"

@@ -23,9 +23,16 @@ export type GlobalSettings = {
   style: Style
 };
 
+/**
+ * hard to define all options, as it depends per section.
+ *
+ * But for localization:
+ * - every string can be a string or a language-object, which is an object like this: `{nl: string, en: string, de: string, es: string, pt: string}`.
+ *
+ */
 export type Options = { ref?: string } & any;
 
-export type Section = { type: string, optionsArray: Options[] };
+export type Section = { type: string, optionsArray: Options[] } & Options;
 
 export type Page = {
   title: string,
