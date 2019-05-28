@@ -125,7 +125,7 @@ const home: Page = {
               },
               description: {
                 nl:
-                  "Overspoeling van informatie zorgt er soms voor dat belangrijke relaties onder op de stapel komen te liggen. Bij Dunbar krijgen je echte vrienden een speciaal plekje op je telefoon.",
+                  "Overspoeling van informatie zorgt er soms voor dat belangrijke relaties onder het stof komen. Bij Dunbar krijgen je echte vrienden een speciaal plekje op je telefoon.",
                 en:
                   "Information-overflow can result in forgetting about your important relationships. With Dunbar, these people will get a special place on your phone."
               }
