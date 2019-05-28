@@ -99,9 +99,9 @@ const home: Page = {
               title: { en: "Sync your contacts", nl: "Sync je contacten" },
               description: {
                 en:
-                  "Dunbar syncs with your iCloud or Google Contacts. Your data is save, it doesn't leave your phone.",
+                  "Dunbar syncs with your iCloud or Google Contacts. We care about your privacy, so your data doesn't leave your phone.",
                 nl:
-                  "Dunbar synchroniseert met iCloud (iOS) en Google Contacts (Android). Je data blijft veilig op je telefoon."
+                  "Dunbar synchroniseert met iCloud (iOS) en Google Contacts (Android). Wij geven om je privacy, dus je data blijft veilig op je telefoon."
               }
             },
 
