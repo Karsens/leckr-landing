@@ -71,20 +71,31 @@ const home: Page = {
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar",
           title: {
-            es: "Organiza tus relaciones para más calidad y tranquilidad.",
-            nl: "Organiseer je relaties voor meer kwaliteit en rust",
-            en: "Organize your relationships for quality & calm",
-            pt: "Organize seus relacionamentos para mais qualidade e tranquilidade"
+            nl: "Organiseer je netwerk voor meer kwaliteit en rust",
+            en: "Organize your relationships for quality & calm"
           }, //(sociale) netwerken, berichten applicaties, bellen en meetings)
           text: {
-            pt:
-              "O Dunbar se integra com todos os seus aplicativos de comunicação e aumenta sua consciência sobre como, com quem e com o que você se comunica.",
-            es:
-              "Dunbar se integra con todas sus aplicaciones de comunicación y crea conciencia sobre cómo, con quién y sobre lo que comunica.",
             en:
-              "Dunbar integrates with all your communication-apps and raises your consciousness about how, with who, and about what you communicate.",
+              "Dunbar integrates with all your communication-apps and raises your awareness about how, with who, and about what you communicate.",
             nl:
               "Dunbar voegt al je communicatie-apps samen en verhoogt je bewustzijn over hoe, met wie, en over wat je communiceert."
+          }
+        },
+
+        {
+          reference: "praatik",
+          // entrepreneur audience
+          image1: require("./assets_dunbar/screen1.png"),
+          siteTitle: "Dunbar",
+          title: {
+            en: "Establish connections you can build on",
+            nl: "Hoogwaardig contact. Elke dag." //Beter een goede buur dan een verre vriend. Een dag niet gelachen is een dag niet geleefd.
+          },
+          text: {
+            en:
+              "Cut the crap. A clear overview and qualitative analytics let you decide who matters most.",
+            nl:
+              "De aandachtseconomie is een gevaar voor onze privé en zakelijke relaties. Met Dunbar neem je het heft weer in handen."
           }
         },
 

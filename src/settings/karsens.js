@@ -38,6 +38,12 @@ Hey! I'm Wijnand. Nice to meet you. Have a look on my awesome website. I created
           title: "Booki",
           text:
             "It's a side project, but I get a lot of positive feedback. [Have a look](https://gobooki.co/)"
+        },
+
+        {
+          image: require("./assets_karsens/digitalnomad.jpg"),
+          title: "Blog",
+          text: "[Read my blog](https://blog.karsens.com/)"
         }
       ]
     },

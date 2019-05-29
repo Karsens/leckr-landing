@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "reactstrap";
-import { Redirect } from "react-router-dom";
 import { getObjectLink } from "../util/index";
 
 /**
