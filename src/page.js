@@ -26,6 +26,7 @@ import { Page, Section, Options } from "./settings/_types";
 import Blog from "./sections/Blog"; // make general purpose
 import Privacy from "./sections/section.privacy"; // long page with privacy statement
 import Markdown from "./sections/section.markdown";
+import Redirect from "./sections/section.redirect";
 import Pricing from "./sections/section.pricing";
 import Blurps from "./sections/section.blurps"; // 3 blurps in a row
 import Timeline from "./sections/section.timeline";
@@ -39,6 +40,7 @@ import Stats from "./sections/Stats"; // should be CommunifyStats
 
 const SectionComponents = {
   ImageCover,
+  Redirect,
   Markdown,
   Pricing,
   Download,
@@ -181,7 +183,14 @@ class PageComponent extends React.Component<Page> {
             (oLDDDD)
            */
 
-          return <SectionComponent key={key} {...translatedOptions} />;
+          return (
+            <SectionComponent
+              key={key}
+              {...translatedOptions}
+              pathname={pathname}
+              search={search}
+            />
+          );
         })}
 
         {Settings.driftId && <Drift appId={Settings.driftId} />}

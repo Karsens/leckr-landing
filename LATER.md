@@ -20,9 +20,6 @@ https://medium.com/front-end-weekly/how-to-optimize-image-loading-on-your-websit
 
 This technique can be used to do this.
 
-## Landing page online with A/B (2h)
-
-- [x] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia
 
 ### FB Pixel for ads
 

@@ -1,12 +1,12 @@
 # Done
 
-## Improved Surge (Or Netlify)
+## Improved Surge
 
-- [x] Fix 404
+- [x] Fix 404 using 200.html hack
 
 ## Dunbar, LECKR, Booki
 
-- [x] Fill in basics for leckr, booki (& dyme?) too
+- [x] Fill in basics for leckr, booki too
 - [x] Deploy and set up DNS correctly. That's a start!
 
 ### Assets
@@ -71,3 +71,7 @@ To set it all up, I did the following things:
 
 
 audience -> Manage audience -> signup forms -> form builder -> forms and response emails: confirmation thank you page -> send subs to another URL -> https://dunbar.site/emailsuccess -> save
+
+## Landing page online with A/B (2h)
+
+- [x] How to change landing page for different origins? For example, if you have ?ref=fb|tnw|phia

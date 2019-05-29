@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
@@ -34,7 +34,7 @@ class Routes extends React.Component {
     return (
       <ProvideApollo client={client}>
         <BrowserRouter {...props} basename={process.env.PUBLIC_URL}>
-          <View>
+          <Switch>
             {pages.map((page, index) => {
               const { route } = page;
               const first = index === 0;
@@ -48,16 +48,18 @@ class Routes extends React.Component {
                 );
               };
 
+              const pathOrNot = page.is404 ? undefined : { path };
+
               return (
                 <Route
                   key={`route-${page.route}`}
                   exact={first}
-                  path={path}
+                  {...pathOrNot}
                   component={PageWithSearchObject}
                 />
               );
             })}
-          </View>
+          </Switch>
         </BrowserRouter>
       </ProvideApollo>
     );

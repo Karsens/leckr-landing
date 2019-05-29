@@ -1,19 +1,51 @@
-/**
- * #later
+/**]
+ * WHEN WORKING FOR DYME, in the evening, FUN MEANS LECKR + KARSENS + REACH
  *
- * trips
- * - get blurps of Tarifa guys
- * - make bigger tripDetails section
  *
- * products
- * - define product type
- * - make product overview section
- * - make product details section
+ * Make time for this - it's a good long-term investment, and could even lead to high paid work in the short term (€85/h+)
+ * This could very well even be a bigger money maker than Dunbar in the short term. The best approach would be to approach companies that want to make a React Native app and want to get started. My boilerplate can get them a kickstart that would normally cost €100k. Just get in touch with as many interested companies as possible. I need not existing apps, but people that want to transfer from web to native. This is a great target audience. How to find these companies? Organic is probably great. I need to generate content on the blog.
  *
- * mailchimp:
- * - set up default mails with content
+ * Why (company goal): Create the best UX
  *
- * #later: instagram section
+ * Who (target audience):
+ * - Profitable websites run by companies that are thinking about it (#1 target audience)
+ * - People that already use react native succesfully and need handy libraries
+ * - Profitable companies that don't do so well on the react native part and need a hand to get their codebase under control
+ *
+ * How
+ * - organic search leading to blogs that I cross posted on my site, on medium, and all kinds of other channels
+ * - and cold mail / calling
+ *
+ * What: my open source code, my consulting, my boilerplates for a kickstart for €25k
+ *
+ * How to sell it?
+ * - make clear why it's a great choice
+ * - make clear how much it would normally cost to get started
+ * - make clear how much of a favor i'm doing them (how much cheaper it is)
+ * - for exact pricing, get in touch
+ *
+ *
+ *
+ * Products
+ * - make all GitHub pages look professional
+ * - post blog about all libraries
+ * - make a video for every library
+ * - make product type definition
+ * - make product overview section (picture + one sentence pitch)
+ * - make product details section landing page with pricing open source + premium model https://www.mysql.com/products/
+ * - add integration with mollie and ask rediculous amounts (monthly or one-time-fee)
+ *
+ *
+ * Trips
+ * - sign in to fb again with iPhone8+. I go on that phone just once a week anyway, so I can handle it. Trust myself. I'm stronger than FB again.
+ * - show website to them
+ * - ask them their experience of tarifa. put it in blurps if they're ok with it
+ *
+ * Mailchimp:
+ * - set up default mails with content for every interested thing. Send them one extra email 4x a year or so with new blogs (if possible)
+ * - find and approach as many react / react native companies as possible.
+ *
+ * Goal: show other companies and Dyme, get more usage, become a center for good code.
  *  */
 
 import { Page, GlobalSettings, Settings } from "./_types";
@@ -82,7 +114,7 @@ LECKR offers you four things:
             {
               image: require("./assets_dunbar/catherine.png"),
               title: "Catherine Price",
-              subtitle: "writer of \"How to break up with your Phone\"",
+              subtitle: 'writer of "How to break up with your Phone"',
               text: "Love it! I really don't like my phone so people will help it"
             }
           ]

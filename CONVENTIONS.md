@@ -7,7 +7,6 @@
 ## How to deploy a different site?
 
 - change title in index.html
-- change favicon.ico
 - settings/index.js imports project js.
 - settings/\_variables.scss imports project scss.
 - of course, add all you want in the project settings js file

@@ -4,6 +4,7 @@ import defaultPages from "./_defaults";
 const home: Page = {
   title: "Home",
   route: "",
+  internalPage: true,
   showInMenu: true,
   showInFooter: false,
   sections: [
@@ -78,14 +79,30 @@ To do this, I plan to create technology and other means to enhance freedom and w
     },
     {
       type: "ImageCover",
-      title: "",
-      description: "",
       image: require("./assets_karsens/lake.jpg")
     }
   ]
 };
 
-const pages: Page[] = [home, defaultPages.emailsuccess];
+const errorPage: Page = {
+  title: "Page Not Found",
+  is404: true,
+  showInMenu: false,
+  showInFooter: false,
+  sections: [
+    {
+      type: "ImageCover",
+      image: require("./assets_karsens/lake.jpg")
+    },
+
+    {
+      type: "Redirect",
+      redirectToUrlWith: (path, query) => `https://blog.karsens.com${path}${query}`
+    }
+  ]
+};
+
+const pages: Page[] = [home, defaultPages.emailsuccess, errorPage];
 
 const globalSettings: GlobalSettings = {
   isNoPhone: true,
