@@ -11,9 +11,9 @@
   position: relative;
   width: 100%;
   padding-top: 20px;
-  color: #000;
-  background-color: #fff;
-  background: "", #fff; }
+  color: #fff;
+  background-color: #000;
+  background: "", #000; }
   .masthead .badges .badge-item {
     margin-left: 10px; }
     @media (min-width: 768px) {

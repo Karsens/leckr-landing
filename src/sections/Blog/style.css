@@ -16,8 +16,8 @@
         font-size: 80px; } }
   .cta .overlay {
     background: "", yellow;
-    background: "", -webkit-linear-gradient(to left, #fff, #fff);
-    background: "", linear-gradient(to left, #fff, #fff);
+    background: "", -webkit-linear-gradient(to left, #000, #000);
+    background: "", linear-gradient(to left, #000, #000);
     position: absolute;
     top: 0;
     left: 0;

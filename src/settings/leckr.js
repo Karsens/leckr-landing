@@ -1,11 +1,16 @@
 /**
+ * #TODO NOW
+ * - approach blurpers with this website and a beer --> add blurps
+ * - finish github integration libraries (see paper)
+ * - approach network with this website and a beer
+ * - get SEO right, ask David for advice
  *
- * Goal: a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible."
+ * Mailchimp:
+ * - set up default mails with content for every interested thing. Send them one extra email 4x a year or so with new blogs (if possible)
+ * - find and approach as many react / react native companies as possible.
  *
- * Make time for this - it's a good long-term investment, and could even lead to high paid work in the short term (€85/h+)
- * This could very well even be a bigger money maker than Dunbar in the short term. The best approach would be to approach companies that want to make a React Native app and want to get started. My boilerplate can get them a kickstart that would normally cost €100k. Just get in touch with as many interested companies as possible. I need not existing apps, but people that want to transfer from web to native. This is a great target audience. How to find these companies? Organic is probably great. I need to generate content on the blog.
  *
- * Why (company goal): Create the best UX
+ * Why (company goal): High-quality apps in no-time
  *
  * Who (target audience):
  * - Profitable websites run by companies that are thinking about it (#1 target audience)
@@ -16,12 +21,12 @@
  * - organic search leading to blogs that I cross posted on my site, on medium, and all kinds of other channels
  * - and cold mail / calling
  *
- * What: my open source code, my consulting, my boilerplates for a kickstart for €25k
  *
  * How to sell it?
+ *
  * - make clear why it's a great choice
  * - make clear how much it would normally cost to get started
- * - make clear how much of a favor i'm doing them (how much cheaper it is)
+ * - make clear how much of a favor I'm doing them (how much cheaper it is)
  * - for exact pricing, get in touch
  *
  *
@@ -35,17 +40,6 @@
  * - make product details section landing page with pricing open source + premium model https://www.mysql.com/products/
  * - add integration with mollie and ask rediculous amounts (monthly or one-time-fee)
  *
- *
- * Trips
- * - sign in to fb again with iPhone8+. I go on that phone just once a week anyway, so I can handle it. Trust myself. I'm stronger than FB again.
- * - show website to them
- * - ask them their experience of tarifa. put it in blurps if they're ok with it
- *
- * Mailchimp:
- * - set up default mails with content for every interested thing. Send them one extra email 4x a year or so with new blogs (if possible)
- * - find and approach as many react / react native companies as possible.
- *
- * Goal: show other companies and Dyme, get more usage, become a center for good code.
  *  */
 
 import { Page, GlobalSettings, Settings } from "./_types";
@@ -103,7 +97,7 @@ const home: Page = {
       markdown: `
 I get it... 
 
-Your company is thinking about **making an app**, but it's hard and expensive. You're looking for **a better way**. You need the **benefits** without the drawbacks. 
+Your company is thinking about **making an app**, but it's **hard** and **expensive**. You're looking for **a better way**. You need the **benefits** without the drawbacks. 
 
 You're in the right place.
 
