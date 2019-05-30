@@ -1,6 +1,6 @@
-/**]
- * WHEN WORKING FOR DYME, in the evening, FUN MEANS LECKR + KARSENS + REACH
+/**
  *
+ * Goal: a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible."
  *
  * Make time for this - it's a good long-term investment, and could even lead to high paid work in the short term (€85/h+)
  * This could very well even be a bigger money maker than Dunbar in the short term. The best approach would be to approach companies that want to make a React Native app and want to get started. My boilerplate can get them a kickstart that would normally cost €100k. Just get in touch with as many interested companies as possible. I need not existing apps, but people that want to transfer from web to native. This is a great target audience. How to find these companies? Organic is probably great. I need to generate content on the blog.
@@ -61,56 +61,32 @@ const home: Page = {
     {
       type: "ImageTitle",
       includeDownload: false,
-      siteTitle: "LECKR - Let's Eat Code Kite Repeat",
-      title: "Let's Eat Code Kite Repeat",
-      image1: require("./assets_leckr/tarifa.jpg"),
+      siteTitle: "LECKR - High quality apps in no-time",
+      title: "High quality apps in no-time",
+      image1: require("./assets_leckr/cool.jpg"),
       text:
-        "Let's Eat Code Kite Repeat is a global community for **digital nomads, entrepreneurs and software developers** that share a passion for **extreme sports and adventure**. We strive for **deep work in flow state** and living a **stoked lifestyle** by designing the perfect environment to make this possible."
+        "With LECKR boilerplates and libraries, Expo, and React Native (Web), you can build, deploy, and quickly iterate native iOS, native Android and Web apps from the same JavaScript codebase."
     },
 
-    // {
-    //   type: "Markdown",
-    //   optionsArray: [
-    //     {
-    //       reference: "default",
-    //       markdown: `# What is LECKR?
-
-    // `
-    //     }
-    //   ]
-    // },
-
-    {
-      type: "Markdown",
-      markdown: `
-LECKR offers you four things:
-
-1. **Code:** LECKR is a free open-source project that comprises components, libraries, boilerplates, and even codebases for the following technologies: React Native (Web), React, Node JS, GraphQL, REST. 
-
-2. **Hire:** You can also hire LECKR to help you implement things, or get custom libraries
-
-3. **Workflow & Lifestyle:** LECKR writes and advises companies about workflow and lifestyle. See our blog
-
-4. **Trips:** LECKR goes to paradises around the world together to do (kite)surfing, hiking, and other extreme sports, while working hard.
-
-`
-    },
-
-    {
-      type: "Download"
-    },
-    {
-      type: "ImageCover",
-      title: "",
-      description: "",
-      image: require("./assets_leckr/kite.jpg")
-    },
     {
       type: "BlurpsComingSoon", //Just Blurps, but not now yet
 
       optionsArray: [
         {
           blurps: [
+            /**
+             * Ethos is the most important, so make sure I get these blurps!
+             *
+             * Just ask all of them, and see what I can get. Preferably show them the website over a beer and ask them personally
+             *
+             * - Wouter Florijn
+             * - Mark Weeber, Mark van der Linden, Tom, etc.
+             * - Victor, Johnny, Arjan, Jegor, etc.
+             * - Fabian Aussems
+             *
+             * Even less technical blurps are awesome. The endgoal is gaining trust, not technical capability. For that, they can see the code... For example, Marnix would be epic. Steven Van Bruggen... Arnoud... A bit of Social proof is all I need. Obviously it makes a bit less sense, and it may seem a bit weird, but if they talk about my driven nature and commitment to coding and this whole thing... That will be much better than nothing at all.
+             **/
+
             {
               image: require("./assets_dunbar/catherine.png"),
               title: "Catherine Price",
@@ -120,6 +96,38 @@ LECKR offers you four things:
           ]
         }
       ]
+    },
+
+    {
+      type: "Markdown",
+      markdown: `
+I get it... 
+
+Your company is thinking about **making an app**, but it's hard and expensive. You're looking for **a better way**. You need the **benefits** without the drawbacks. 
+
+You're in the right place.
+
+This SDK comprises libraries, documentation, code samples, guides and boilerplates for React Native (Web), Expo, React and Node JS.
+
+The best part? Most of it is **Free** and **Open Source**.
+
+LECKR can help you **kickstart your new app** with an **excellent codebase**, and guide you through the wild west of app development.
+
+Oh, and by the way.. 
+
+LECKR ❤️ extreme sports, adventure, and strives to make [Humane](https://humanetech.com) apps. I hope you do to.
+`
+    },
+
+    {
+      type: "Download"
+    },
+
+    {
+      type: "ImageCover",
+      title: "",
+      description: "",
+      image: require("./assets_leckr/kite.jpg")
     }
   ]
 };
@@ -270,7 +278,7 @@ const hire: Page = {
           markdown: `
 # Hire LECKR
 
-Currently, LECKR is just me, Wijnand. I'm available for short projects or consulting. My hourly rate is €85,- an hour.
+Currently, LECKR is just me, Wijnand. I'm available for short projects or consulting.
 
 When we initiate a collaboration, I'm **fully commited to your project and its success for the time I work for it**. Together with my agile working habits and strong opinion of keeping implementation simple and elegant, development of the app will be at least **[2-5x faster](https://blog.karsens.com/i-just-made-an-app-in-26-hours/)**.
 
@@ -749,25 +757,25 @@ const mailChimpCategories: MCCategory[] = [
   {
     group: 6957,
     value: 2,
-    label: "Hiring LECKR"
+    label: "Free advice"
   },
 
   {
     group: 6957,
     value: 4,
-    label: "LECKR Lifestyle & Workflow"
+    label: "Workflow"
   },
 
   {
     group: 6957,
     value: 8,
-    label: "Working for LECKR"
+    label: "How to get started?"
   },
 
   {
     group: 6957,
     value: 16,
-    label: "Joining LECKR Trips"
+    label: "Extreme sports and adventure"
   }
 ];
 const globalSettings: GlobalSettings = {
@@ -789,7 +797,7 @@ const globalSettings: GlobalSettings = {
   style: {
     fontFamily: {
       title: "Arial Rounded MT Bold",
-      text: "Comic Sans MS"
+      text: "Arial"
     }
   },
 

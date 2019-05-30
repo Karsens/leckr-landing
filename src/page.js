@@ -115,8 +115,34 @@ function deepMap(obj, f, shouldRecurse) {
 }
 
 class PageComponent extends React.Component<Page> {
+  constructor(props) {
+    super(props);
+
+    // Initialize state
+    this.state = {
+      width: 0,
+      height: 0
+    };
+
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render() {
     const { pathname, sections, internalPage, search } = this.props;
+    const { width, height } = this.state;
 
     return (
       <PageLayout pathname={pathname} internalPage={internalPage}>
@@ -189,6 +215,8 @@ class PageComponent extends React.Component<Page> {
               {...translatedOptions}
               pathname={pathname}
               search={search}
+              width={width}
+              height={height}
             />
           );
         })}

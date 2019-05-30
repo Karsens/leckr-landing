@@ -1,6 +1,6 @@
 .navigation {
   border-color: rgba(34, 34, 34, 0.05);
-  background-color: black;
+  background-color: white;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
@@ -8,7 +8,7 @@
   font-weight: 200;
   letter-spacing: 1px; }
   .navigation .navbar-brand {
-    color: white;
+    color: black;
     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px; }
@@ -20,13 +20,13 @@
     letter-spacing: 2px;
     text-transform: uppercase; }
     .navigation .navbar-nav > .nav-item > .nav-link.active {
-      color: #0054b8 !important;
+      color: green !important;
       background-color: transparent; }
       .navigation .navbar-nav > .nav-item > .nav-link.active:hover {
         background-color: transparent; }
   .navigation .navbar-nav > .nav-item > .nav-link,
   .navigation .navbar-nav > .nav-item > .nav-link:focus {
-    color: white; }
+    color: black; }
     .navigation .navbar-nav > .nav-item > .nav-link:hover,
     .navigation .navbar-nav > .nav-item > .nav-link:focus:hover {
       color: #ccc; }
@@ -35,20 +35,20 @@
       transition-duration: 1s;
       height: 100px;
       border-color: transparent;
-      background-color: black; }
+      background-color: white; }
       .navigation .navbar-brand {
-        color: white; }
+        color: black; }
         .navigation .navbar-brand:hover, .navigation .navbar-brand:focus {
-          color: #fff; }
+          color: #000; }
       .navigation.navbar-shrink {
         transition-duration: 1s;
         height: 60px;
         border: 1px solid black;
-        background-color: white; }
+        background-color: #ddd; }
         .navigation.navbar-shrink .navbar-brand {
           color: black; }
           .navigation.navbar-shrink .navbar-brand:hover, .navigation.navbar-shrink .navbar-brand:focus {
-            color: #0054b8; }
+            color: #fff; }
         .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link,
         .navigation.navbar-shrink .navbar-nav > .nav-item > .nav-link:focus {
           color: black; }

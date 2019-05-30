@@ -124,6 +124,13 @@ class Navigation extends Component {
       >
         <Container>
           <Link to="/" className="navbar-brand">
+            <img
+              alt={`${Settings.appName} logo`}
+              src={Settings.assets.logo}
+              width={30}
+              height={30}
+              style={{ borderRadius: 5, marginRight: 5 }}
+            />
             {Settings.appName}
           </Link>
 

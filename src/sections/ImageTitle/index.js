@@ -18,7 +18,7 @@ import "./style.css";
  * The masthead for the home page
  */
 const ImageTitle = ({
-  siteTitle, title, text, image1, includeDownload
+  siteTitle, title, text, image1, includeDownload, width
 }) => {
   const img = <img src={image1} className="img-fluid" alt="" width="100%" height="100%" />;
   return (
@@ -36,14 +36,16 @@ const ImageTitle = ({
           <Col lg="7" xs="12" className="my-auto">
             <div className="header-content mx-auto">
               <div style={{ overflow: "hidden" }}>
-                <div style={{ float: "left", marginRight: 20, marginTop: 5 }}>
-                  <img
-                    alt={`${Settings.appName} logo`}
-                    src={Settings.assets.logo}
-                    width={80}
-                    height={80}
-                  />
-                </div>
+                {width > 992 && (
+                  <div style={{ float: "left", marginRight: 20, marginTop: 5 }}>
+                    <img
+                      alt={`${Settings.appName} logo`}
+                      src={Settings.assets.logo}
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                )}
 
                 <div
                   style={{
