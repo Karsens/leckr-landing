@@ -4,7 +4,8 @@
  * - finish github integration libraries (see paper)
  * - approach network with this website and a beer
  * - get SEO right, ask David for advice
- *
+ * - try undraw.co image of surfing + a mobile phone (phtoshoped)
+ * - put my personal picture at advise page
  * Mailchimp:
  * - set up default mails with content for every interested thing. Send them one extra email 4x a year or so with new blogs (if possible)
  * - find and approach as many react / react native companies as possible.
@@ -59,7 +60,7 @@ const home: Page = {
       title: "High quality apps in no-time",
       image1: require("./assets_leckr/cool.jpg"),
       text:
-        "With LECKR boilerplates and libraries, Expo, and React Native (Web), you can build, deploy, and quickly iterate native iOS, native Android and Web apps from the same JavaScript codebase."
+        "With our **free boilerplates and libraries**, Expo, and React Native (Web), you can build, deploy, and quickly iterate **native iOS, native Android and Web apps** from the same JavaScript codebase."
     },
 
     {
@@ -135,120 +136,71 @@ const roadmap: Page = {
   sections: [
     {
       type: "Timeline",
-      optionsArray: [
+      timeline: [
         {
-          timeline: [
-            {
-              title: "2005 - 2016",
-              markdown: `✅ Started the company. 
+          title: "2005 - 2016",
+          markdown: `✅ Started the company. 
 
 ✅ Did freelance work and a text-based mafia game like [Omerta](https://barafranca.com) for 11 years.`
-            },
+        },
 
-            {
-              title: "2016 - 2018",
-              markdown: `✅ Traveled to Nepal, South East Asia, Tarifa and Bali ([More info](/trips)) while coding and (kite)surfing or hiking
+        {
+          title: "2016 - 2018",
+          markdown: `✅ Traveled to Nepal, South East Asia, Tarifa and Bali ([More info](/trips)) while coding and (kite)surfing or hiking
                 
 ✅ Improved lifestyle and workflow
 
 ✅ Learned how to make apps`
-            },
-            {
-              title: "2019",
-              markdown: `
+        },
+        {
+          title: "2019",
+          markdown: `
 ✅ Make website
 
 ✅ Setup mail form with interests
 
-✅ Articulate what we do better
-
 ✅ Start [Dunbar](https://dunbar.site) and [Booki](https://gobooki.co)
 
-❌ Improve Codebase
+✅ Articulate what we do better
 
-❌ Define Blueprint of Kite Utopia
+❌ Create and release LECKR SDK with documentation
 
-❌ Go to Nepal
+❌ Optimize B2B onboarding funnels
 
-❌ Go to Bali
+❌ Go to Nepal and Bali
 
-❌ Get profitable with Dunbar
+
 `
-            },
+        },
 
-            {
-              title: "Future (2020+)",
-              markdown: "Secret ([ask me](/contact))"
-            }
+        {
+          title: "2020-2021",
+          markdown: `
+❌ Grow LECKR Community
 
-            // - [ ]  Dunbar+Dyme 42h/week coding
-            // - [ ]  Work on LECKR + Booki in evenings and free time
-            // - [ ]  Get profitable with Dunbar and/or Booki
-            // - [ ]  Organize LECKR Codebase very well
-            // - [ ]  Try to find interested coders, but not priority
-            // - [ ]  Work on awareness
-            // - [ ]  Good merch (T-shirt)
-            // - [ ]  Create designs for mansion and kite utopia
+❌ Build a team of ±3 talented people
 
-            //             {
-            //               title: "2020",
-            //               markdown: `
+❌ Eat,code,kite,repeat: 3 months in the winter, from paradise
 
-            // - [ ]  Build a team of ±3 talented people
-            // - [ ]  Eat,code,kite,repeat: 3 months in the winter, from paradise
-            // - [ ]  Create more concrete plans for mansion and kite utopia
+❌ Improve blueprint of LECKR Utopia
+`
+        },
 
-            //                   `
-            //             },
+        {
+          title: "2022 - 2024",
+          markdown: `
+❌ Build LECKR Utopia
 
-            //             {
-            //               title: "2021",
-            //               markdown: `
-            // - [ ]  Grow to ±8
-            // - [ ]  Crystal clear culture
-            //               `
-            //             },
+❌ Open source the blue-print
 
-            //             {
-            //               title: "2022",
-            //               markdown: `
-            // - [ ]  Grow to ±16
-            // - [ ]  Start building remote off-grid mansion and kite spot
-            // `
-            //             },
+`
+        },
 
-            //             {
-            //               title: "2023",
-            //               markdown: `
-
-            // - [ ]  Team of 33
-            // - [ ]  Finish of Mansion + Private Spot
-            // - [ ]  Finish of Kite utopia blueprint and business model
-            // - [ ]  Team should never exceed 33 because 33 x (employee + wife + kids) = ±150
-            // - [ ]  Work out the business model and viral aspects to maximize awareness
-
-            // `
-            //             },
-
-            //             {
-            //               title: "2024",
-            //               markdown: `
-            // - [ ]  Split up company
-            // - [ ]  Create Second village
-            // - [ ]  Optimize blueprint and religion
-            // `
-            //             }
-
-            /**
-             *               In short:
-
-              **2019 - 2021** Define blueprint, grow awareness
-              **2022 - 2024** Build first village + kite spot
-              **2025 - 2027** Split up company, create second village, inspire others to follow.
-              **2028 - 2029** Inspire 1000 villages to start
-
-             */
-          ]
+        {
+          title: "2025+",
+          markdown: `
+❌ Inspire 1000 villages to start
+`
         }
       ]
     },
@@ -259,8 +211,8 @@ const roadmap: Page = {
 };
 
 const hire: Page = {
-  title: "Hire",
-  route: "hire",
+  title: "Advice",
+  route: "advice",
   showInMenu: true,
   showInFooter: true,
   internalPage: true,
@@ -270,11 +222,23 @@ const hire: Page = {
       optionsArray: [
         {
           markdown: `
-# Hire LECKR
+# Free Advice
 
-Currently, LECKR is just me, Wijnand. I'm available for short projects or consulting.
+Currently, LECKR is just me, Wijnand. I give **free advice** sessions about React Native, Expo and use of Open Source Libraries. Here we can see if LECKR could be a **good fit** for you. 
 
-When we initiate a collaboration, I'm **fully commited to your project and its success for the time I work for it**. Together with my agile working habits and strong opinion of keeping implementation simple and elegant, development of the app will be at least **[2-5x faster](https://blog.karsens.com/i-just-made-an-app-in-26-hours/)**.
+Also, I'm available for short projects or further consulting.
+
+When we initiate a collaboration, I'm fully commited to your project and its success for the time I work for it. 
+
+My **expertise** and strongest points:
+
+- Productivity & workflow optimization
+- Agile & Lean
+- Strong opinion of keeping implementation simple and elegant
+- Boilerplate reduction through simplicity and open source
+- Reduction of technical debt through automated documenation generation
+- Startup Strategy, Conceptualization and Validation
+- Migration to React Native & Expo
 
 Need more info? 
 
@@ -345,8 +309,8 @@ const contact: Page = {
 };
 
 const trips: Page = {
-  title: "Trips",
-  route: "trips",
+  title: "Adventure",
+  route: "adventure",
   showInMenu: true,
   showInFooter: false,
   internalPage: true,
@@ -723,7 +687,7 @@ const emailsuccess: Page = {
 
 const pages: Page[] = [
   home,
-  code,
+  // code, #todo github integration
   hire,
   blog,
   trips,

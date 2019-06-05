@@ -16,17 +16,6 @@ Voor broad audience is het te inprersonal.
 Je wil juist mensen zien. maar voor entrepreneurial audience is het wel ok
 
 
-
-
-## Todo: Add content + assets
-
-- [ ] Dunbar.id (people API)
-- [ ] Dunbar.vip (super premium, coaching, affiliate)
-- [ ] Dunbar.doctor/help (psychological help)
-- [ ] Dunbar.business (b2b sales to companies)
-- [ ] Communify.cc (Dunbar for communities)
-- [ ] Hood.li (Dunbar for neighborhoods)
-
 ## Support all browsers
 
 Galaxy S6 has stock Android browser by default, which doesn't support the current setup. A white screen appears.
@@ -47,6 +36,10 @@ Options are
 3. Try to setup clean react project using babel and all recommended polyfills so it works on all old browsers too.
 
 However, it's not that important. There aren't that many old browsers under the early adopters. This has to be done before the #launch, so before August. Let's wait for SDK33 and see if we can convert to RN Web.
+
+
+https://www.ouders.nl/forum/relaties/verwaterenverlopen-van-vriendschappen
+https://spreekwoorden-gezegden.nl/uitdrukkingen-vriendschap-en-betekenis/
 
 */
 
@@ -71,25 +64,28 @@ const home: Page = {
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar",
           title: {
-            nl: "Organiseer je netwerk voor meer kwaliteit en rust",
-            en: "Organize your relationships for quality & calm"
+            nl: "Organiseer je netwerk",
+            nl2: "Organiseer je netwerk voor meer kwaliteit en rust",
+            en: "Organize your network",
+            en2: "Organize your network for quality & calm"
           }, //(sociale) netwerken, berichten applicaties, bellen en meetings)
           text: {
-            en:
-              "Dunbar integrates with all your communication-apps and raises your awareness about how, with who, and about what you communicate.",
             nl:
-              "Dunbar voegt al je communicatie-apps samen en verhoogt je bewustzijn over hoe, met wie, en over wat je communiceert."
+              "Dunbar voegt al je communicatie-apps samen en verhoogt je bewustzijn over hoe, met wie, en over wat je communiceert.",
+            en: "",
+            en2:
+              "With Dunbar you can call, email, sms, and WhatsApp anyone. Become more aware about how, with who, and about what you communicate."
           }
         },
 
         {
-          reference: "praatik",
+          reference: "papa",
           // entrepreneur audience
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar",
           title: {
             en: "Establish connections you can build on",
-            nl: "Hoogwaardig contact. Elke dag." //Beter een goede buur dan een verre vriend. Een dag niet gelachen is een dag niet geleefd.
+            nl: "Bouw hoogwaardige relaties." //Beter een goede buur dan een verre vriend. Een dag niet gelachen is een dag niet geleefd.
           },
           text: {
             en:
@@ -99,15 +95,47 @@ const home: Page = {
           }
         },
 
+        {
+          reference: "ma",
+          // entrepreneur audience
+          image1: require("./assets_dunbar/screen1.png"),
+          siteTitle: "Dunbar",
+          title: {
+            en: "Don't let your friendships get dusty!",
+            nl: "Zie je je ma nog wel genoeg?",
+            nl2: "Gezelligheid kent geen tijd",
+            nl3: "Beter een goede buur dan een verre vriend",
+            nl4: "Een dag niet gelachen is een dag niet geleefd",
+            nl5: "Laat je vriendschappen niet verwateren!", //optioneeldoor digilaties*
+            nl6: "Laat je relaties niet verwateren. Stop met digilaties!"
+          },
+          text: {
+            en:
+              "Plan herhalende activiteiten of contact met vrienden en famillie voor stabielere vriendschap en meer gezelligheid.",
+            nl:
+              "Plan herhalende activiteiten of contact met vrienden en famillie voor stabielere vriendschap en meer gezelligheid."
+          }
+        },
+
         //Organize. Analyse. Improve. --> Probably in a later stage, when analyse and improve are actually implemented.
         {
-          reference: "schogt",
+          reference: "business",
           // entrepreneur audience
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar - CRM for your Friends",
           title: "CRM for your Friends"
           // text:
           //   "According to Robin Dunbar, an extraordinary anthropologist and evolutionary psychologist, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). With Dunbar, we help you to organize, analyse and improve your personal and professional relationships."
+        },
+
+        {
+          reference: "doctor",
+          // entrepreneur audience
+          image1: require("./assets_dunbar/screen1.png"),
+          siteTitle: "Dunbar - Psychose Preventie App",
+          title: "Psychose Preventie App",
+          text:
+            "Deze app helpt psychose en andere mentale klachten te voorkomen door voor jezelf duidelijk te maken met wie je altijd kan praten (of chillen), als het even minder gaat."
         },
 
         {
@@ -128,6 +156,24 @@ const home: Page = {
           title: "Reconnect. Engage. Bond.",
           text:
             "I care about my friends, but FB, other Social Media, and contact apps make it hard to really maintain my relationships. I want to decide who I care about, and not let the algorithms decide who I get information about (e.g. on the FB Timeline). I want to do more meaningful activities with my friends, rather than using flat communication platforms like WhatsApp, Facebook and SnapChat. I want fewer, but stronger friendships."
+        },
+
+        {
+          image1: require("./assets_dunbar/screen1.png"),
+          reference: "producthunt",
+          siteTitle: "Dunbar - Get Human Friends* IRL.",
+          title: "Get Human Friends* IRL.",
+          text:
+            "When I moved to Amsteram I had no friends IRL. So I made this app, so I could easily establish connections I can build on. Now I'm happy. All the time I used to spend on social media goes into IRL interaction now. It's pretty cool.\n\n* = friend = a human being you can build on and share passion"
+        },
+
+        {
+          image1: require("./assets_dunbar/screen1.png"),
+          reference: "student",
+          siteTitle: "Dunbar - Hey snorrelaar! Ben jij wel een echte student?",
+          title: "Hey snorrelaar*! Ben jij wel een echte student?",
+          text:
+            "Tijdens het studeren lijdt snorrelen enorm af. Daardoor heb je minder tijd voor het echte werk en dat is zonde. Stop met snorrelen, ga borrelen!\n\n* = snorrelen = **S**ociaal **N**etwerk **O**nline 'sociaal doen'"
         }
       ]
     },
@@ -225,36 +271,14 @@ const home: Page = {
     },
 
     {
-      type: "ImageTextFeaturesComingSoon",
-      optionsArray: [
+      // paste book logos here and just show them next to eachother, clickable or not, affiliate links could be nice, and could be interswitched with backlinks from author websites later
+      type: "CleanLogoRow",
+      title: "Inspired by New York Times Bestselling Authors of...",
+      logos: [
+        require("./assets_dunbar/howtobreakupwithyourphone.jpg"),
         {
-          features: [
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 1",
-              text: "test text. you know this feature, its so cool brue"
-            },
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 2",
-              text: "test text. you know this feature, its so cool brue"
-            },
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 3",
-              text: "test text. you know this feature, its so cool brue"
-            },
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 4",
-              text: "test text. you know this feature, its so cool brue"
-            },
-            {
-              image: require("./assets_dunbar/screen2.png"),
-              title: "A test tiel 5",
-              text: "test text. you know this feature, its so cool brue"
-            }
-          ]
+          logo: require("./assets_dunbar/howtobreakupwithyourphone.jpg"),
+          url: "https://phonebreakup.com/"
         }
       ]
     },
@@ -927,7 +951,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Dunbar 0.8",
+  appName: "Dunbar 0.11",
   siteTitle: "Dunbar",
   copyrightYear: "2019",
   companyName: "Dunbar"

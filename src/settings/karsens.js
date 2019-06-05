@@ -1,6 +1,30 @@
 import { Page, GlobalSettings, Settings } from "./_types";
 import defaultPages from "./_defaults";
 
+/**
+ *
+ * Idea:
+ *
+ * - Only put the 3 projects on the home page: LECKR, Dunbar, Blog, (Dyme after evaluation, maybe)
+ * - Create a second page with books I read
+ * - Create a third page with past + side projects -> Booki, Communify, OV-Fiets, Bencompare, MYPO, BAWS, MasterCrimeZ, etc. (see CV)
+ * - Create subpages of all old projects that are on CV
+ * - Think about putting this all in a single source of truth: Github.com/karsens repo. From that I can automatically create my CV in many formats, including my website, but also a PDF.
+ *
+ *
+ *
+ * MasterCrimeZ
+ *
+ * - Sunset MasterCrimeZ website, but redirect the traction
+ * - Put the source online (for sale?) on GitHub, send out an email (GMass or MailChimp Pro), engage them a bit for my other work.
+ * - Make them special. Also put it on mastercrimez.nl. Then keep a list of interested people in MailChimp. First, get mailchimp for 99$/month, then decrease the list for engagement.
+ * - Goal:
+ * 1. Get people hyped about the MasterCrimeZ source (website + app!) and get a part of it (this can even be my bootcamp/startup school)
+ * 2. Grow my network by people that know and adore me (weak links)
+ * 3. Direct some of them to my other products
+ * 4. Become a MailChimp Master
+ *
+ */
 const home: Page = {
   title: "Home",
   route: "",
@@ -9,42 +33,70 @@ const home: Page = {
   showInFooter: false,
   sections: [
     {
-      type: "Markdown",
-      markdown: `
-### Wijnand Karsens
-This is my work
-`
-    },
+      type: "Blog",
 
-    {
-      type: "GridView",
-      grid: [
+      optionsArray: [
         {
-          image: require("./assets_karsens/friends.png"),
-          title: "Dunbar - Personal Relations Organizer",
-          url: "https://dunbar.site/"
-        },
-        {
-          image: require("./assets_karsens/leckr.jpg"),
-          title: "LECKR - High quality apps in no-time",
-          url: "https://leckr.io/"
-        },
-        {
-          image: require("./assets_karsens/booki.png"),
-          title: "Go Basic. Go Booki.",
-          url: "https://gobooki.co"
-        },
+          title: "My work",
+          // ghostLink:
+          //   "https://blog.karsens.com/ghost/api/v2/content/posts/?key=f986ca2d588b087644a1790df8&limit=all&filter=tags:dunbar",
+          articles: [
+            {
+              id: 1,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/leckr.jpg"),
+              title: "LECKR",
+              description: "High quality apps in no-time with free advice and an open source SDK",
+              link: "https://leckr.io/"
+            },
 
-        {
-          image: require("./assets_karsens/communify.png"),
-          title: "The Coworking Community Builder",
-          url: "https://communify.cc"
-        },
+            {
+              id: 2,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/friends.png"),
+              title: "Dunbar",
+              description:
+                "Establish connections you can build on - PRO Contact App (Personal Relations Organizer)",
+              link: "https://dunbar.site/"
+            },
 
-        {
-          image: require("./assets_karsens/digitalnomad.jpg"),
-          title: "Blog",
-          url: "https://blog.karsens.com/"
+            {
+              id: 3,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/digitalnomad.jpg"),
+              title: "Blog",
+              description:
+                "Over 100 blogs about mindset/lifestyle, geeky stuff, entrepreneurship & science fiction",
+              link: "https://blog.karsens.com/"
+            },
+
+            {
+              id: 4,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/booki.png"),
+              title: "Go Basic. Go Booki",
+              description: "Current Hobby project",
+              link: "https://gobooki.co"
+            },
+
+            {
+              id: 5,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/communify.png"),
+              title: "Coworking Community App",
+              description: "June 2017 - December 2018",
+              link: "https://communify.cc"
+            },
+
+            {
+              id: 6,
+              date: "Aug 7, 2014, 12:51pm",
+              figure: require("./assets_karsens/ovfiets.png"),
+              title: "OV-Fiets reisplanner",
+              description: "June 2018 - March 2019",
+              link: "https://ovfiets.net"
+            }
+          ]
         }
       ]
     },
@@ -134,7 +186,7 @@ const globalSettings: GlobalSettings = {
 
   apiUrl: null,
   // driftId: "p87nxp8v5kyi",
-  appName: "Karsens",
+  appName: "Wijnand Karsens",
   siteTitle: "Wijnand Karsens",
   copyrightYear: "2019",
   companyName: "LECKR"
