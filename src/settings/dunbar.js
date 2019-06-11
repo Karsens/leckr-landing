@@ -64,18 +64,32 @@ const home: Page = {
           image1: require("./assets_dunbar/screen1.png"),
           siteTitle: "Dunbar",
           title: {
-            nl: "Organiseer je netwerk",
+            nl: "Een dag niet gelachen is een dag niet geleefd",
+            en: "A day without laughter is a day wasted",
             nl2: "Organiseer je netwerk voor meer kwaliteit en rust",
-            en: "Organize your network",
             en2: "Organize your network for quality & calm"
-          }, //(sociale) netwerken, berichten applicaties, bellen en meetings)
+          },
           text: {
-            nl:
-              "Dunbar voegt al je communicatie-apps samen en verhoogt je bewustzijn over hoe, met wie, en over wat je communiceert.",
-            en: "",
+            nl: "Dunbar maakt je netwerk organiseren en vaker afspreken een fluitje van een cent.",
+            en:
+              "Dunbar makes organizing your network and meeting up more frequently a piece of cake.",
+            //nl2: " en kijk bewust naar hoe, met wie, en over wat je communiceert."
+            // nl: "Met Dunbar ga je bewuster om met je contacten, en is het organiseren van activiteiten met je netwerk, vrienden en famillie een fluitje van een cent.",
+            en3:
+              "Organize your network and become aware about how, with whom and about what you communicate.", //do better things, with better people.
             en2:
               "With Dunbar you can call, email, sms, and WhatsApp anyone. Become more aware about how, with who, and about what you communicate."
           }
+        },
+
+        {
+          reference: "business",
+          // entrepreneur audience
+          image1: require("./assets_dunbar/screen1.png"),
+          siteTitle: "Dunbar - CRM for your Friends",
+          title: "CRM for your Friends"
+          // text:
+          //   "According to Robin Dunbar, an extraordinary anthropologist and evolutionary psychologist, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). With Dunbar, we help you to organize, analyse and improve your personal and professional relationships."
         },
 
         {
@@ -118,15 +132,6 @@ const home: Page = {
         },
 
         //Organize. Analyse. Improve. --> Probably in a later stage, when analyse and improve are actually implemented.
-        {
-          reference: "business",
-          // entrepreneur audience
-          image1: require("./assets_dunbar/screen1.png"),
-          siteTitle: "Dunbar - CRM for your Friends",
-          title: "CRM for your Friends"
-          // text:
-          //   "According to Robin Dunbar, an extraordinary anthropologist and evolutionary psychologist, the limit of active stable relationships is [150](https://www.forbes.com/sites/kenmakovsky/2014/08/07/dunbars-number-and-the-need-for-relationship-management/#38dca12e397b). With Dunbar, we help you to organize, analyse and improve your personal and professional relationships."
-        },
 
         {
           reference: "doctor",

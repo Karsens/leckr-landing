@@ -60,8 +60,10 @@ const home: Page = {
       title: "High quality apps in no-time",
       image1: require("./assets_leckr/cool.jpg"),
       text:
-        "With our **free boilerplates and libraries**, Expo, and React Native (Web), you can build, deploy, and quickly iterate **native iOS, native Android and Web apps** from the same JavaScript codebase."
-    },
+        "With LECKR you can create native **iOS, Android, and Web** apps incredibly fast using **JavaScript**, Expo and React Native."
+      // text:
+      //   "With our *free boilerplates and libraries**, Expo, and React Native (Web), you can build, deploy, and quickly iterate **native iOS, native Android and Web apps** from the same JavaScript codebase."
+    }, //our **free boilerplates and libraries**,
 
     {
       type: "BlurpsComingSoon", //Just Blurps, but not now yet
@@ -74,10 +76,11 @@ const home: Page = {
              *
              * Just ask all of them, and see what I can get. Preferably show them the website over a beer and ask them personally
              *
-             * - Wouter Florijn
-             * - Mark Weeber, Mark van der Linden, Tom, etc.
-             * - Victor, Johnny, Arjan, Jegor, etc.
+             * - Dyme
+             * - Target Holding
+             * - MYPO
              * - Fabian Aussems
+             * - Buzzera
              *
              * Even less technical blurps are awesome. The endgoal is gaining trust, not technical capability. For that, they can see the code... For example, Marnix would be epic. Steven Van Bruggen... Arnoud... A bit of Social proof is all I need. Obviously it makes a bit less sense, and it may seem a bit weird, but if they talk about my driven nature and commitment to coding and this whole thing... That will be much better than nothing at all.
              **/
@@ -95,16 +98,15 @@ const home: Page = {
 
     {
       type: "Markdown",
+      //This SDK comprises libraries, documentation, code samples, guides and boilerplates for React Native (Web), Expo, React and Node JS.
+      // The best part? Most of it is **Free** and **Open Source**.
+
       markdown: `
 I get it... 
 
 Your company is thinking about **making an app**, but it's **hard** and **expensive**. You're looking for **a better way**. You need the **benefits** without the drawbacks. 
 
 You're in the right place.
-
-This SDK comprises libraries, documentation, code samples, guides and boilerplates for React Native (Web), Expo, React and Node JS.
-
-The best part? Most of it is **Free** and **Open Source**.
 
 LECKR can help you **kickstart your new app** with an **excellent codebase**, and guide you through the wild west of app development.
 
@@ -194,14 +196,14 @@ const roadmap: Page = {
 ❌ Open source the blue-print
 
 `
-        },
-
-        {
-          title: "2025+",
-          markdown: `
-❌ Inspire 1000 villages to start
-`
         }
+
+        //         {
+        //           title: "2025+",
+        //           markdown: `
+        // ❌ Inspire 1000 villages to start
+        // `
+        //         }
       ]
     },
     {
